@@ -16,6 +16,6 @@ RUN npm install -g serve
 
 COPY --from=build /app/dist /app/dist
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["serve", "-s", "/app/dist", "-l", "tcp://0.0.0.0:8080"]
+CMD ["serve", "-s", "/app/dist", "-l", "tcp://0.0.0.0:80"]
