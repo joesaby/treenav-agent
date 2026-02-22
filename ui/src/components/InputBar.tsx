@@ -40,7 +40,6 @@ export function InputBar({ onSend, disabled }: InputBarProps) {
           className="flex-1 resize-none rounded-lg border px-4 py-2 text-sm focus:outline-none focus:ring-2"
           style={{
             borderColor: "var(--border)",
-            focusRingColor: "var(--primary)",
           }}
         />
         <button
