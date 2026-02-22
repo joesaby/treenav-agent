@@ -18,4 +18,4 @@ COPY --from=build /app/dist /app/dist
 
 ENV PORT=3000
 
-CMD ["sh", "-c", "serve -s /app/dist -l $PORT"]
+CMD ["sh", "-c", "serve -s /app/dist -l tcp://0.0.0.0:$PORT"]
