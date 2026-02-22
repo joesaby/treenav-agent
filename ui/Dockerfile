@@ -10,14 +10,12 @@ COPY ui/ .
 RUN npm run build
 
 # Production stage
-FROM nginx:alpine
+FROM node:20-alpine
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
+RUN npm install -g serve
 
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY ui/nginx.conf /etc/nginx/nginx.conf.template
+COPY --from=build /app/dist /app/dist
 
-ENV PORT=80
+ENV PORT=3000
 
-CMD sh -c "sed 's/__PORT__/'\"$PORT\"'/g' /etc/nginx/nginx.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+CMD ["sh", "-c", "serve -s /app/dist -l $PORT"]
