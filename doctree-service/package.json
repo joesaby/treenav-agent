@@ -1,0 +1,12 @@
+{
+  "name": "docnav-doctree-service",
+  "version": "1.0.0",
+  "description": "doctree-mcp wrapper for DocNav Service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "doctree-mcp": "^1.0.2"
+  }
+}

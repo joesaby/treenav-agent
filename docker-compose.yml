@@ -1,0 +1,63 @@
+services:
+
+  aegra:
+    build:
+      context: ./aegra
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://docnav:docnav@postgres:5432/docnav
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      DOCTREE_MCP_URL: http://doctree-mcp:3001
+      AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me-in-production-32chars}
+      AUTH_MODE: ${AUTH_MODE:-noauth}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      doctree-mcp:
+        condition: service_started
+    restart: unless-stopped
+
+  doctree-mcp:
+    build:
+      context: ./doctree-service
+      dockerfile: Dockerfile
+    expose:
+      - "3001"
+    environment:
+      DOCS_SOURCE: ${DOCS_SOURCE:-filesystem}
+      DOCS_PATH: /docs
+    volumes:
+      - ./doctree-service/docs:/docs:ro
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    environment:
+      VITE_API_URL: ${VITE_API_URL:-http://localhost:8000}
+    depends_on:
+      - aegra
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: docnav
+      POSTGRES_USER: docnav
+      POSTGRES_PASSWORD: docnav
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docnav"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres-data:

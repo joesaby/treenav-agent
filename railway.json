@@ -1,0 +1,23 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": { "builder": "DOCKERFILE" },
+  "services": {
+    "aegra": {
+      "dockerfilePath": "aegra/Dockerfile",
+      "startCommand": "python run_server.py",
+      "healthcheckPath": "/health",
+      "healthcheckTimeout": 300,
+      "restartPolicyType": "ON_FAILURE"
+    },
+    "doctree-mcp": {
+      "dockerfilePath": "doctree-service/Dockerfile",
+      "startCommand": "node server.js",
+      "healthcheckPath": "/health",
+      "restartPolicyType": "ON_FAILURE"
+    },
+    "ui": {
+      "dockerfilePath": "ui/Dockerfile",
+      "restartPolicyType": "ON_FAILURE"
+    }
+  }
+}

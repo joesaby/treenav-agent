@@ -1,0 +1,64 @@
+# Docker Compose — Phase 2: Enterprise Self-Hosted
+#
+# Usage:
+#   cp .env.example .env
+#   # Edit .env with production values
+#   docker compose -f docker-compose.prod.yml up -d
+
+services:
+
+  aegra:
+    image: your-registry/docnav-aegra:latest
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      DOCTREE_MCP_URL: http://doctree-mcp:3001
+      AUTH_MODE: oidc
+      OIDC_ISSUER: ${OIDC_ISSUER}
+      AUTH_SECRET: ${AUTH_SECRET}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      doctree-mcp:
+        condition: service_started
+    restart: unless-stopped
+
+  doctree-mcp:
+    image: your-registry/docnav-doctree-mcp:latest
+    expose:
+      - "3001"
+    environment:
+      DOCS_SOURCE: filesystem
+      DOCS_PATH: /docs
+    volumes:
+      - ./customer-docs:/docs:ro
+    restart: unless-stopped
+
+  ui:
+    image: your-registry/docnav-ui:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      VITE_API_URL: ${DOCNAV_PUBLIC_URL}
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: docnav
+      POSTGRES_USER: docnav
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docnav"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
