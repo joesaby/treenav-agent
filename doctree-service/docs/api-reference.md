@@ -100,7 +100,7 @@ POST /threads/{thread_id}/runs/stream
     "configurable": {
       "customer_id": "acme",
       "max_nav_depth": 3,
-      "model": "claude-sonnet-4-5"
+      "model": "gpt-4o"
     }
   }
 }

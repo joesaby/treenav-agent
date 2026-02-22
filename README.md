@@ -21,7 +21,7 @@ A LangGraph agent traverses a live document tree to locate and synthesise precis
 
 ```bash
 cp .env.example .env
-# Edit .env — add your ANTHROPIC_API_KEY
+# Edit .env — add your OPENAI_API_KEY
 
 docker compose up
 ```

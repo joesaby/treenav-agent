@@ -9,7 +9,7 @@ and synthesise precise answers from structured documentation.
 import os
 from typing import TypedDict
 
-from langchain_anthropic import ChatAnthropic
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import AnyMessage, HumanMessage, SystemMessage
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.graph import END, StateGraph
@@ -19,7 +19,7 @@ from langgraph.graph import END, StateGraph
 # ---------------------------------------------------------------------------
 
 MAX_NAV_DEPTH = int(os.environ.get("MAX_NAV_DEPTH", "5"))
-DEFAULT_MODEL = os.environ.get("DOCNAV_MODEL", "claude-sonnet-4-5")
+DEFAULT_MODEL = os.environ.get("DOCNAV_MODEL", "gpt-4o")
 DOCTREE_MCP_URL = os.environ.get("DOCTREE_MCP_URL", "http://doctree-mcp:3001")
 
 SYSTEM_PROMPT = """You are DocNav, an intelligent document navigation assistant.
@@ -74,10 +74,10 @@ def get_mcp_client():
 
 
 def get_llm(model: str | None = None):
-    """Create a ChatAnthropic instance."""
-    return ChatAnthropic(
+    """Create a ChatOpenAI instance."""
+    return ChatOpenAI(
         model=model or DEFAULT_MODEL,
-        anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY"),
+        api_key=os.environ.get("OPENAI_API_KEY"),
         max_tokens=4096,
     )
 
