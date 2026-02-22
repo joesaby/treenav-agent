@@ -77,7 +77,7 @@ def get_llm(model: str | None = None):
     """Create a ChatOpenAI instance."""
     return ChatOpenAI(
         model=model or DEFAULT_MODEL,
-        api_key=os.environ.get("OPENAI_API_KEY"),
+        api_key=os.environ.get("OPENAI_KEY"),
         max_tokens=4096,
     )
 

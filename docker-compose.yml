@@ -8,7 +8,7 @@ services:
       - "8000:8000"
     environment:
       DATABASE_URL: postgresql://docnav:docnav@postgres:5432/docnav
-      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_KEY: ${OPENAI_KEY}
       DOCTREE_MCP_URL: http://doctree-mcp:3001
       AUTH_SECRET: ${AUTH_SECRET:-dev-secret-change-me-in-production-32chars}
       AUTH_MODE: ${AUTH_MODE:-noauth}
