@@ -7,4 +7,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["aegra", "serve", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "DATABASE_URL=${SUPERBASE_DB_URL} aegra serve --host 0.0.0.0 --port 8000"]
