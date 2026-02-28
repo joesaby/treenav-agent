@@ -1,14 +1,10 @@
-FROM ibbybuilds/aegra:latest
-
+FROM python:3.12-slim-bookworm
 WORKDIR /app
 
-# Install additional Python dependencies
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+RUN pip install --no-cache-dir aegra-cli langchain-mcp-adapters langchain-openai
 
-# Copy custom LangGraph graph
-COPY graphs/ /app/graphs/
+COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "run_server.py"]
+CMD ["aegra", "serve", "--host", "0.0.0.0", "--port", "8000"]

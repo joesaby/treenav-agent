@@ -298,7 +298,7 @@ railway variable set DATABASE_URL="postgresql://postgres:${SUPERBASE}@db.eosmkrr
 railway variable set AUTH_TYPE=noop -s aegra
 ```
 
-> `SUPERBASE` password is in `.env`. `OPENAI_KEY` is in Railway Shared Variables (production environment) — automatically injected into all services, no per-service set needed.
+> `OPENAI_KEY` and `SUPERBASE_DB_URL` are in Railway Shared Variables — automatically injected into all services. `DATABASE_URL` for aegra is set as `${{SUPERBASE_DB_URL}}` to reference it.
 
 **Step 3: Verify services in Railway**
 
@@ -353,9 +353,9 @@ git push origin main
 **Step 4: Set remaining Railway env vars and verify deploy**
 
 ```bash
-railway variable set DATABASE_URL="postgresql://postgres:${SUPERBASE}@db.eosmkrryzcjjfzxtakwe.supabase.co:5432/postgres?sslmode=require" -s aegra
+railway variable set DATABASE_URL='${{SUPERBASE_DB_URL}}' -s aegra
 railway variable set AUTH_TYPE=noop -s aegra
-# OPENAI_KEY — already in Railway Shared Variables, no action needed
+# OPENAI_KEY and SUPERBASE_DB_URL — both in Railway Shared Variables, auto-injected
 
 # Watch deployment
 railway logs -s aegra --latest
