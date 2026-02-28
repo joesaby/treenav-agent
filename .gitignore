@@ -36,3 +36,6 @@ npm-debug.log*
 coverage/
 .coverage
 htmlcov/
+
+# Git worktrees
+.worktrees/
