@@ -7,7 +7,6 @@ RUN bun install --production --frozen-lockfile 2>/dev/null || bun install --prod
 COPY . .
 
 ENV PORT=3100
-ENV DOCS_ROOT=/docs
 EXPOSE 3100
 
 CMD ["bun", "run", "src/server-http.ts"]
