@@ -117,9 +117,10 @@ def planner(state: DocNavState) -> DocNavState:
     messages = [
         SystemMessage(
             content=(
-                "You are planning which document nodes to visit to answer the user's question. "
-                "First, call doctree__get_tree to see the document structure. "
-                "Then decide which node IDs to explore. Return a list of node IDs."
+                "You are planning which documents to read to answer the user's question. "
+                "First, call treenav__list_documents to find relevant documents. "
+                "Then call treenav__get_tree with a doc_id to explore a document's section structure. "
+                "Identify the most relevant document(s). Return their doc_ids via treenav__get_tree calls."
             )
         ),
         HumanMessage(content=state["query"]),
@@ -127,12 +128,12 @@ def planner(state: DocNavState) -> DocNavState:
 
     response = llm.bind_tools(tools).invoke(messages)
 
-    # Extract planned node IDs from tool calls and response
+    # Extract planned doc IDs from treenav__get_tree tool calls
     plan = []
     if hasattr(response, "tool_calls") and response.tool_calls:
         for tool_call in response.tool_calls:
-            if "nodeId" in tool_call.get("args", {}):
-                plan.append(tool_call["args"]["nodeId"])
+            if "doc_id" in tool_call.get("args", {}):
+                plan.append(tool_call["args"]["doc_id"])
 
     return {
         **state,
@@ -154,9 +155,9 @@ def navigator(state: DocNavState) -> DocNavState:
     context = list(state["tree_context"])
     depth = state["depth"]
 
-    # Visit next unvisited node from the plan
-    for node_id in plan:
-        if node_id in visited:
+    # Visit next unvisited document from the plan
+    for doc_id in plan:
+        if doc_id in visited:
             continue
         if depth >= MAX_NAV_DEPTH:
             break
@@ -164,11 +165,12 @@ def navigator(state: DocNavState) -> DocNavState:
         messages = [
             SystemMessage(
                 content=(
-                    f"Fetch the content of document node '{node_id}' using doctree__get_node. "
-                    f"Also get its children using doctree__get_children if it has sub-sections."
+                    f"Fetch content from document '{doc_id}' to answer the user's question. "
+                    f"Use treenav__get_node_content with doc_id='{doc_id}' and a node_ids array to read specific sections, "
+                    f"or treenav__navigate_tree with doc_id='{doc_id}' and a node_id to read a section and all its children."
                 )
             ),
-            HumanMessage(content=f"Get content for node: {node_id}"),
+            HumanMessage(content=f"Get content for document: {doc_id}"),
         ]
 
         response = llm.bind_tools(tools).invoke(messages)
@@ -180,11 +182,11 @@ def navigator(state: DocNavState) -> DocNavState:
                     {
                         "tool": tool_call.get("name", ""),
                         "args": tool_call.get("args", {}),
-                        "node_id": node_id,
+                        "doc_id": doc_id,
                     }
                 )
 
-        visited.append(node_id)
+        visited.append(doc_id)
         depth += 1
 
     return {
