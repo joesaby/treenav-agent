@@ -7,4 +7,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "aegra serve --host 0.0.0.0 --port 8000 2>&1; sleep 30"]
+CMD ["sh", "-c", "echo '=== AEGRA STARTING ===' && aegra serve --host 0.0.0.0 --port 8000 2>&1; echo '=== AEGRA EXIT:'$?' ==='; sleep 600"]
