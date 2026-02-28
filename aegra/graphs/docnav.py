@@ -20,7 +20,7 @@ from langgraph.graph import END, StateGraph
 
 MAX_NAV_DEPTH = int(os.environ.get("MAX_NAV_DEPTH", "5"))
 DEFAULT_MODEL = os.environ.get("DOCNAV_MODEL", "gpt-4o")
-DOCTREE_MCP_URL = os.environ.get("DOCTREE_MCP_URL", "http://doctree-mcp:3001")
+TREENAV_MCP_URL = os.environ.get("TREENAV_MCP_URL", "http://treenav-service:3100")
 
 SYSTEM_PROMPT = """You are DocNav, an intelligent document navigation assistant.
 You help users find information in documentation by navigating a document tree structure.
@@ -57,11 +57,11 @@ class DocNavState(TypedDict):
 
 
 def get_mcp_client():
-    """Create an MCP client configured for the doctree-mcp server."""
+    """Create an MCP client configured for the treenav-mcp server."""
     return MultiServerMCPClient(
         {
-            "doctree": {
-                "url": DOCTREE_MCP_URL + "/mcp",
+            "treenav": {
+                "url": TREENAV_MCP_URL + "/mcp",
                 "transport": "streamable_http",
             }
         }
