@@ -1,0 +1,24 @@
+---
+title: "Set your Webex Meetings general preferences"
+product: "Webex Meetings"
+article_id: "m0trp7"
+url: "https://help.webex.com/en-us/article/m0trp7/Set-your-Webex-Meetings-general-preferences"
+last_updated: "2024-09-21"
+description: "Customize your general preferences in your Webex site to fit your needs. Change
+things like language and time zone, or link to a Facebook, Microsoft Office 365,
+or Apple account."
+tags: ["webex-meetings"]
+source: "help.webex.com"
+---
+
+# Set your Webex Meetings general preferences
+
+| 1 | Sign in to [User Hub](https://globalpage-prod.webex.com/signin), then select Settings.                                                                                                                                                                                                                                                                           |
+| - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select Meetings \>  General, and in the Location section, set your time zone.                                                                                                                                                                                                                                                                                    |
+| 3 | Select your [preferred language](https://help.webex.com/en-us/41odpo/). The language defaults to the one set by your site administrator. If sign in to your site, you can set a different language. Your selected language gets set in browser cookie and works whenever you sign in. The language for guests defaults to the one set by the site administrator. |
+| 4 | Select your region.                                                                                                                                                                                                                                                                                                                                              |
+| 5 | For Sign-in accounts, select Connect to connect your Webex account to your Google, Microsoft Office 365, Facebook, or Apple account and then follow the on-screen instructions. Select Disconnect to remove a linked account.                                                                                                                                    |
+| 6 | For 3rd party integration, select Revoke authorization access to remove all third-party integrations.                                                                                                                                                                                                                                                            |
+| 7 | For Calendar integration, select Authorize to integrate Microsoft Office 365 with your Cisco Webex site Meetings. You can access the meetings scheduled in Microsoft Office 365 from Meetings. If you decide that you don't want to see the meetings scheduled in Microsoft Office 365 from Meetings, select Remove.                                             |
+| 8 | Select Save.                                                                                                                                                                                                                                                                                                                                                     |

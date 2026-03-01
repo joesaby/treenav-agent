@@ -1,0 +1,48 @@
+---
+title: "Webex App | Add-In for Microsoft Office 365"
+product: "Webex Messaging"
+article_id: "nlibscbb"
+url: "https://help.webex.com/en-us/article/nlibscbb/Webex-App-Add-In-for-Microsoft-Office-365"
+last_updated: "2024-09-14"
+description: "You can use the Webex App add-in to access your Webex App spaces directly from
+Microsoft Excel, Word or PowerPoint. You can reference messages from Webex App
+or send a message to someone."
+tags: ["webex-messaging"]
+source: "help.webex.com"
+---
+
+# Webex App | Add-In for Microsoft Office 365
+
+## Install Cisco Webex App Add-In
+
+**What You Need**
+
+- System requirements:
+
+  - Mac—MacOS 10.10 or later
+  - Windows PCs—Windows 10 or later
+- Webex App account—For more information, see <https://www.webex.com/products/teams/index.html>.
+- Microsoft Office 365 subscription
+- Supported Microsoft versions:
+
+  - Microsoft Excel, Word, or PowerPoint desktop version 16.0.11629 or later
+  - Microsoft Excel, Word or PowerPoint Online
+
+For more information on Webex App Add-In, see [Webex in the Microsoft AppSource](https://appsource.microsoft.com/en-us/product/office/WA200000068).
+
+You can install the Webex App add-in once using either Microsoft Excel, Word or PowerPoint and then the add-in is available on the other Microsoft Office applications. The following steps apply to Microsoft Word and can also be applied to Microsoft Excel or PowerPoint.
+
+| 1 | Open a Microsoft Word document, click Insert, click the arrow beside Add-ins and then choose Get Add-ins. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/500001-600000/500001-510000/502001-503000/502412.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2 | Choose the Store tab, enter Webex App and click Search. If you don't see Webex App listed in the search results, contact your IT administrator for access.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 3 | Click Get it now for Webex App and follow the instructions to install the Add-in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| 4 | In Microsoft Word, click Home and then click Webex App ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427005.jpg) in the ribbon menu. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/500001-600000/500001-510000/502001-503000/502372.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 5 | Sign in with your Webex App credentials. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/500001-600000/500001-510000/502001-503000/502371.jpg) Webex App shows the spaces that you're a member of. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/500001-600000/500001-510000/502001-503000/502370.jpg) You can do the following with Webex App: View your recent spaces in Webex App Click Search ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417390.jpg) and enter a space name to search for an existing Webex App space. Create a new space, click on ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417379.jpg), enter a name and then add people to the space. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/500001-600000/500001-510000/502001-503000/502411.jpg) Webex App remembers the space you were in while working on a document, then the next time you open this Microsoft Word document and you open the Webex App add-in, Webex App automatically opens that space again. You can sign out from Webex App, click on your profile picture and then click Sign Out. |
+
+## Tips About Using Webex App Add-In for Microsoft Office 365 
+
+- You can only see messages for spaces where you are a participant.
+- You can run the add-in only for the supported Microsoft Office 365 applications - Microsoft Excel, Word and PowerPoint.
+- The add-in works best on the latest version of Microsoft Office 365\. You can check for updates, click Help \> Check for Updates.
+- You can add people one at a time to spaces, make sure to click Enter after adding their email address. After they are added, you can see their profile pictures.
+- Your administrator or IT department can silently and centrally deploy the add-in to your Microsoft Office 365 organization. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](https://docs.microsoft.com/en-us/office365/admin/manage/centralized-deployment-of-add-ins).

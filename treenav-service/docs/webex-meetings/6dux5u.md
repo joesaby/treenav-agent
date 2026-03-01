@@ -1,0 +1,16 @@
+---
+title: "Switch your audio connection in a Webex Meeting"
+product: "Webex Meetings"
+article_id: "6dux5u"
+url: "https://help.webex.com/en-us/article/6dux5u/Switch-your-audio-connection-in-a-Webex-Meeting"
+last_updated: "2024-09-15"
+description: "Switch your audio connection in a Webex Meeting"
+tags: ["webex-meetings"]
+source: "help.webex.com"
+---
+
+# Switch your audio connection in a Webex Meeting
+
+| 1 | In the meeting, select More Options![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/423001-424000/423879.jpg), then Audio Connection and choose the option you want to use. Depending on your meeting type, you may not see every option. Use Computer for Audio—Click Switch to connect audio using your computer, this option gives you the most robust meeting experience. Call me at—Enter a phone number and click Switch to have the meeting call you. Connecting to the meeting on your phone gives you the freedom to move around while still being able to participate in the meeting discussion. Call in—Click View to see a phone number and access code to connect audio on your phone. Much like Call me at, calling in lets you call into the meeting when you're ready to join. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/438001-439000/438979.jpg) |
+| - | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | To switch to a Webex device, select More Options![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/423001-424000/423879.jpg), then Connect to a Device. You can select from nearby video devices, search for a device, or enter a video address. You can learn more about how to connect to a video system [here](https://help.webex.com/by1t1x/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |

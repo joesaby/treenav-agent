@@ -1,0 +1,24 @@
+---
+title: "Webex App | Make work calls over a mobile phone connection"
+product: "Calling in Webex (Unified CM)"
+article_id: "nh0pglcb"
+url: "https://help.webex.com/en-us/article/nh0pglcb/Webex-App-Make-work-calls-over-a-mobile-phone-connection"
+last_updated: "2024-09-11"
+description: "If your administrator has set you up with Dial-via-Office (DvO), you can choose
+how calls happen in Webex App. You can make work calls using your mobile phone
+connection, which ensures your calls are uninterrupted, even if data is
+unavailable. So when you make a call in Webex App, you&#x27;re immediately called
+back. No matter what option you choose, your work number is always used as the
+caller ID so people can easily identify you."
+tags: ["calling-in-webex-(unified-cm)"]
+source: "help.webex.com"
+---
+
+# Webex App | Make work calls over a mobile phone connection
+
+On your desktop app, add your mobile number or the number of another device as a Single Number Reach number. For information about how to set this up, go [here ](https://help.webex.com/v28hmc/) and look at the Unified CM section under the Desktop tab.
+
+| 1 | Tap your profile picture, go to Settings , and then tap Calls .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Scroll to PLACE CALLS USING  and then choose an option: **Voice Over IP**—Work calls only go through the Voice Over IP (VoIP) internet connection. This setting is recommended if you typically stay in one location or have steady access to internet at work or home. **Mobile voice network**—Work calls only go through the mobile voice network. This setting is recommended if you're regularly in locations where internet access isn't available. **Autoselect**—Let Webex App decide the best choice for your work calls. This setting automatically chooses VoIP or mobile voice, depending on environmental conditions. |
+| 3 | If you choose Mobile voice network , when you make a call from your mobile app, your phone starts to ring and you receive a notification about an incoming call. Answer the call and then your phone will ring the person you're trying to reach.                                                                                                                                                                                                                                                                                                                                                                                  |

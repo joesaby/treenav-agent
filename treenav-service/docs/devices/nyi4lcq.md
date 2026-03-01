@@ -1,0 +1,35 @@
+---
+title: "External monitor settings for Room Series devices"
+product: "Devices"
+article_id: "nyi4lcq"
+url: "https://help.webex.com/en-us/article/nyi4lcq/Recommended-Screen-Settings-for-SX10-SX20-and-Room-Kits"
+last_updated: "2025-06-06"
+description: "A couple of tips on how to best set-up an external screen connected to your Room
+Series device."
+tags: ["devices"]
+source: "help.webex.com"
+---
+
+# External monitor settings for Room Series devices
+
+For a list of certified screens, see details on [Cisco collaboration devices certification program ](https://help.webex.com/en-us/7sw4gab/).
+
+## Recommended settings
+
+To prevent the screen from going to sleep during a call or a presentation, turn off automatic standby settings.
+
+To achieve the best possible synchronization of audio and video, check the screen's settings:
+
+- Choose the ‘Game Mode’ or ‘PC Mode’ setting if the screen is equipped with it. These settings help reduce the response time and delay.
+- Switch off any additional audio processing effects, as these effects can cause unsynchronized audio and video.
+
+## No image on the screen
+
+If you can’t see an image from your Room series device on the screen, you can check the following points to find out what the issue is.
+
+- Make sure that the cables are connected to the right ports on the monitor and Room device.
+- Check that you have selected the correct input on your monitor.
+- Check that the cable works with other equipment.
+- Swap the suspected cable to another standard cable. Use one that is within the specifications for the cable type. If you are running cables at the limits of length specifications, try a cable that is well within the specifications and has no extenders, splitters, or converters attached. Then restart all equipment.
+- Check if another device connected to same input on the screen is displayed correctly.
+- If possible, connect the Room series device to another monitor to check if the issue is with the monitor.

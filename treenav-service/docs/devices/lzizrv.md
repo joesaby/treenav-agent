@@ -1,0 +1,87 @@
+---
+title: "Annotate on Board and Desk Series"
+product: "Devices"
+article_id: "lzizrv"
+url: "https://help.webex.com/en-us/article/lzizrv/Save-annotations-from-Webex-Board-and-Desk-Series-devices-to-Cisco-Webex-App"
+last_updated: "2025-11-27"
+description: "You can draw and make notes on the content you&#x27;re sharing on Cisco Board and
+Desk Series devices in the same way as you work on digital whiteboards. Drawing
+is available whether you are presenting locally, in an instant meeting, or when
+you have opened an existing space on the device."
+tags: ["devices"]
+source: "help.webex.com"
+---
+
+# Annotate on Board and Desk Series
+
+This article does not apply to DX 70 and DX 80 devices.
+
+## Annotate on screen share
+
+You can annotate on screen share, whether you're in a call or not.
+
+| 1 | Share your laptop or mobile phone screen on the board. Read [this article](https://help.webex.com/en-us/pceb9t/Webex-Teams-Share-Content-Wirelessly-to-Cisco-Webex-Devices) to learn how to do it wirelessly and [this article](https://help.webex.com/en-us/c0jgpv/Share-Content-from-Your-Laptop-Screen-to-Webex-Devices-With-an-HDMI-Cable) with a cable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| - | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Tap ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/453001-454000/453212.jpg) to start annotating. Then choose either:  Point and annotate on share  is the new live annotation mode. or  Annotate on screenshot is the old mode - that opens up a whiteboard with the content you want to annotate as the background.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 3 | Draw on the screen share with the available colors. You can use the eraser to remove what you don’t want to keep. To go back one step, tap ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/428001-429000/428541.jpg). To change the pen size, tap the pen icon to open the options ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/438001-439000/438759.jpg). Tap to select the line thickness you wish to use. To zoom in and out on the picture, pinch out and in on the touchscreen. You can zoom in up to 3x. While zoomed in, you can move the whiteboard around by pressing with two fingers and swiping to the direction you want to move the picture to. Read [this article](https://help.webex.com/en-us/article/zfhy55/Use-the-whiteboard-on-Board-and-Desk-Series) for more detailed information about the whiteboard drawing tools. |
+| 4 | Exit the screen share by swiping up from the bottom of the screen and choosing a different app or the home screen. To save the screen share with your annotations, tap the Save button on the bottom right corner of the screen, and save your work to a new or existing Webex space or to your OneDrive account. When you're annotating during a call with your personal mode device, you'll also find your annotations in the Content tab of the Webex app space as a whiteboard that can be exported as a pdf. Everyone in that space can view the whiteboard and continue working on it.                                                                                                                                                                                                                                                                                                                                                  |
+
+## Live annotation on shared content
+
+With live annotation, meeting participants can mark and highlight directly on shared content in real time, easily drawing attention to or clarifying something onscreen. Participants can annotate live even on presentations shared from RoomOS devices without a touch screen.
+
+During a meeting if another participant wants to annotate on your shared content, you'll get a notification on your screen. If your device has a touch screen, you can tap Reject or Accept on the incoming annotation request. If you don't have a touch screen, reject or accept the request on the connected touch controller. If you allow the request, the meeting participant can start annotating on the content live.
+
+Tap the  button on your touch screen device if you want to start annotating on your own shared content, or, to send a request if you want to start live annotating content somebody else is sharing.
+
+Live annotation is supported on 8GB RoomOS devices with or without touch screen, on converged meeting sites. It's not supported on 4GB devices, including Boards, Desk, and Desk Mini.
+
+[See this article](https://help.webex.com/article/q1hs6cb/Live-annotation-on-Board-and-Desk-Series) for more detailed information about live annotation.
+
+## Annotate files shared in Webex spaces
+
+You can annotate the files that you've shared in a Webex space, including Enterprise Content Management (ECM) files.
+
+| 1 | Open a Webex space on the Board or Desk Series device and tap Files ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/460001-461000/460292.jpg) . See [this article](https://help.webex.com/en-us/ngybf7w/Use-Cisco-Webex-Board-with-Existing-Spaces) for more information about viewing a file on your device.                                                                        |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Tap the annotation button to start annotating. If it is not visible, tap the screen once. Opening the drawing function can take a couple of seconds.                                                                                                                                                                                                                                                                                |
+| 3 | When you're done with your annotations, exit the file by swiping up from the bottom of the screen and choosing a different app or the home screen. To save the file with your annotations, tap More ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/470001-480000/472001-473000/472941.jpg) and select Save board to save your work to a new or existing Webex space, or to your OneDrive account. |
+
+## Annotate Web Apps
+
+You can annotate web apps that are opened on your Board and Desk Series devices.
+
+| 1 | Tap ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/453001-454000/453212.jpg) to start annotating. If it is not visible, tap the screen once. Opening the drawing function can take a couple of seconds.                                                                                                                                                                                   |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Draw on the screen with the available tools.                                                                                                                                                                                                                                                                                                                                                                                              |
+| 3 | When you're done with your annotations, exit the web app by swiping up from the bottom of the screen and choosing a different app or the home screen. To save the web app with your annotations, tap More ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/470001-480000/472001-473000/472941.jpg) and select Save board to save your work to a new or existing Webex space, or to your OneDrive account. |
+
+## Create a copy of the annotated image
+
+You can copy your annotated image. The copy is saved to the Files menu. When you open it again, you can continue working on it like you would on any other whiteboard.
+
+| 1 | Tap ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/453001-454000/453212.jpg) to start annotating. If it is not visible, tap the screen once. Opening the drawing function may take a couple of seconds. |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | To create a copy of the annotated image, tap More and then select Duplicate whiteboard.                                                                                                                                                                 |
+
+## Save annotations to the Webex App
+
+You can open a Webex space on your Board or Desk device when it's connected to the Webex app. The annotations you create are automatically saved in that space. If you're on a shared device, make sure you save the annotations to avoid them being deleted in a system cleanup. All the people in the space can access the annotations and make further changes. For more on how to open a space on a board, see [Open a Space on Cisco Board and Desk Devices](https://help.webex.com/en-us/article/ngybf7w/Use-Board-Series-with-Webex-spaces).
+
+If you're not connected to the Webex app, you can save your annotations by creating a new Webex space for it.
+
+| 1 | Share your laptop or mobile phone screen on the device. Read [this article](https://help.webex.com/en-us/pceb9t/Webex-Teams-Share-Content-Wirelessly-to-Cisco-Webex-Devices) to learn how to do it wirelessly and [this article](https://help.webex.com/en-us/c0jgpv/Share-Content-from-Your-Laptop-Screen-to-Webex-Devices-With-an-HDMI-Cable) with an HDMI cable. |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | When you are done annotating, tap More ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/470001-480000/472001-473000/472941.jpg) and Save board. I                                                                                                                                                                                   |
+| 3 | Select Create a New Space or Save to an Existing Space. When you have a space already opened on your device, you can select below the names of the people in that space. Select the work that you want to save in that space.                                                                                                                                       |
+| 4 | Tap the check mark to complete the process.                                                                                                                                                                                                                                                                                                                         |
+
+## Send annotations by email
+
+ You can send your annotations by email, which a great way to collaborate with people inside or outside your organization. 
+
+| 1 | Share your laptop or mobile phone screen on the device. Read [this article](https://help.webex.com/en-us/pceb9t/Webex-Teams-Share-Content-Wirelessly-to-Cisco-Webex-Devices) to learn how to do it wirelessly and [this article](https://help.webex.com/en-us/c0jgpv/Share-Content-from-Your-Laptop-Screen-to-Webex-Devices-With-an-HDMI-Cable) with an HDMI cable. |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Tap ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/453001-454000/453212.jpg) on the bottom left corner of the screen to start annotating. If it is not visible, tap the screen once. Opening the drawing function may take a couple of seconds.                                                                     |
+| 3 | When you're done annotating and you're ready to send, tap More ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/470001-480000/472001-473000/472941.jpg) and Send to email.                                                                                                                                                          |
+| 4 | Enter the email address of the people you want to send the annotated image to. The email containing the annotated image is available a few minutes after being sent. The recipient receives an email with a .pdf file of the annotation.                                                                                                                            |

@@ -1,0 +1,33 @@
+---
+title: "Integrated Audio for Webex Calling"
+product: "Webex Calling"
+article_id: "nb8s63q"
+url: "https://help.webex.com/en-us/article/nb8s63q/Integrated-Audio-for-Webex-Calling"
+last_updated: "2024-08-31"
+description: "With Webex Calling, when using call-in numbers for Webex Meetings, these calls
+stay in the Webex cloud, which means there is no additional PSTN cost to call in
+to Webex Meetings from Webex Calling endpoints."
+tags: ["webex-calling"]
+source: "help.webex.com"
+---
+
+# Integrated Audio for Webex Calling
+
+Meeting attendees may wish to call in if they’re having bandwidth issues or if they’re out and about and would prefer to join using audio only.
+
+Integrated audio for call-in calls is enabled, by default. You can disable this setting for your organization in Control Hub, if needed. 
+
+| 1 | From the customer view in <https://admin.webex.com>, go to Services.                                                                                                                                                                                                                                                          |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select Calling \> Service Settings.                                                                                                                                                                                                                                                                                           |
+| 3 | Scroll down to Call Routing for Webex Meetings Dial-in calls and choose one of the following: Optimized On-net—This is the default and recommended option to achieve PSTN cost savings and optimized call routing. PSTN (not recommended)—This option disables on-net routing optimized for Webex Meetings for call-in calls. |
+| 4 | Click Save.                                                                                                                                                                                                                                                                                                                   |
+
+What to do next
+
+Integrated Audio for Webex Calling enables on-net routing of Webex Meetings 'Call me' calls for Webex Calling users. To configure a Webex Meetings site to use this feature, see: [Configure a Webex Meeting site to use Integrated Audio for Webex Calling](https://help.webex.com/article/d86h26).
+
+Call-back functionality is not available on Webex sites configured for:
+
+- CCA SP
+- CCA-Enterprise

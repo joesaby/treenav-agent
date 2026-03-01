@@ -1,0 +1,20 @@
+---
+title: "Remove Hybrid Services From a Resource"
+product: "Hybrid Services"
+article_id: "nu1tjlm"
+url: "https://help.webex.com/en-us/article/nu1tjlm/Remove-Cisco-Webex-Hybrid-Services-From-a-Resource"
+last_updated: "2024-09-15"
+description: "Use this task to remove Cisco Webex Hybrid Services, user access to features,
+and related configuration from your on-premises resources."
+tags: ["hybrid-services"]
+source: "help.webex.com"
+---
+
+# Remove Hybrid Services From a Resource
+
+By removing any Hybrid Services from your on-premises resources, you are not only removing user access to the features. You are also removing the related configuration. 
+
+| 1 | From the customer view in <https://admin.webex.com>, go to **Services \> Hybrid**, and then click **View settings** on a hybrid service card.                                                             |
+| - | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Scroll to the Deactivate section and click Deactivate.                                                                                                                                                    |
+| 3 | Read the caution that appears, and then proceed if you're sure. The service is no longer available to your organization and any on-premises connector software is removed from your registered resources. |
