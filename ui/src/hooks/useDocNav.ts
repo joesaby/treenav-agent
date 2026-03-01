@@ -24,6 +24,7 @@ export function useDocNav() {
   const [isStreaming, setIsStreaming] = useState(false);
   const threadIdRef = useRef<string | null>(null);
   const assistantIdRef = useRef<string | null>(null);
+  const seenToolCallIds = useRef<Set<string>>(new Set());
 
   const ensureThread = useCallback(async () => {
     if (threadIdRef.current) return threadIdRef.current;
@@ -80,6 +81,7 @@ export function useDocNav() {
       setMessages((prev) => [...prev, userMessage]);
       setIsStreaming(true);
       setTraces([]);
+      seenToolCallIds.current = new Set();
 
       try {
         const threadId = await ensureThread();
@@ -158,17 +160,22 @@ export function useDocNav() {
                     );
                   }
 
-                  // Capture tool call traces for NavigationTrace panel
+                  // Capture tool call traces — deduplicate by ID since
+                  // messages/partial re-emits full tool_calls on every token
                   if (msg.tool_calls?.length) {
                     for (const tc of msg.tool_calls) {
-                      setTraces((prev) => [
-                        ...prev,
-                        {
-                          tool: tc.name || "unknown",
-                          nodeId: tc.args?.node_id || tc.args?.doc_id || "",
-                          timestamp: new Date().toISOString(),
-                        },
-                      ]);
+                      const tcId = tc.id || `${tc.name}-${JSON.stringify(tc.args)}`;
+                      if (!seenToolCallIds.current.has(tcId)) {
+                        seenToolCallIds.current.add(tcId);
+                        setTraces((prev) => [
+                          ...prev,
+                          {
+                            tool: tc.name || "unknown",
+                            nodeId: tc.args?.node_id || tc.args?.doc_id || "",
+                            timestamp: new Date().toISOString(),
+                          },
+                        ]);
+                      }
                     }
                   }
                 }
