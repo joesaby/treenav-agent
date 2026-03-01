@@ -25,7 +25,7 @@ export function MessageBubble({ message, isStreaming }: MessageBubbleProps) {
         {isUser ? (
           <div className="whitespace-pre-wrap text-sm">{message.content}</div>
         ) : (
-          <div className="prose prose-sm max-w-none dark:prose-invert text-sm [&_li+li]:mt-3 [&_li>p]:my-1">
+          <div className="prose prose-sm max-w-none dark:prose-invert">
             <ReactMarkdown
               components={{
                 code({ className, children, ...props }) {
