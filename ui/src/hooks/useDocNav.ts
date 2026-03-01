@@ -96,13 +96,6 @@ export function useDocNav() {
               assistant_id: assistantId,
               input: {
                 messages: [{ type: "human", content }],
-                query: content,
-                tree_context: [],
-                navigation_plan: [],
-                visited_nodes: [],
-                answer: "",
-                needs_docs: false,
-                depth: 0,
               },
               stream_mode: "messages",
             }),
