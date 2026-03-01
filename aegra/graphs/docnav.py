@@ -105,28 +105,27 @@ def router(state: DocNavState) -> DocNavState:
     return {**state, "needs_docs": needs_docs}
 
 
-def planner(state: DocNavState) -> DocNavState:
+async def planner(state: DocNavState) -> DocNavState:
     """Load the document tree and plan which nodes to visit."""
     llm = get_llm()
 
-    # Get the tree structure via MCP
-    mcp_client = get_mcp_client()
-    tools = mcp_client.get_tools()
+    async with get_mcp_client() as mcp_client:
+        tools = mcp_client.get_tools()
 
-    # Use the LLM with tools to plan navigation
-    messages = [
-        SystemMessage(
-            content=(
-                "You are planning which documents to read to answer the user's question. "
-                "First, call treenav__list_documents to find relevant documents. "
-                "Then call treenav__get_tree with a doc_id to explore a document's section structure. "
-                "Identify the most relevant document(s). Return their doc_ids via treenav__get_tree calls."
-            )
-        ),
-        HumanMessage(content=state["query"]),
-    ]
+        # Use the LLM with tools to plan navigation
+        messages = [
+            SystemMessage(
+                content=(
+                    "You are planning which documents to read to answer the user's question. "
+                    "First, call treenav__list_documents to find relevant documents. "
+                    "Then call treenav__get_tree with a doc_id to explore a document's section structure. "
+                    "Identify the most relevant document(s). Return their doc_ids via treenav__get_tree calls."
+                )
+            ),
+            HumanMessage(content=state["query"]),
+        ]
 
-    response = llm.bind_tools(tools).invoke(messages)
+        response = await llm.bind_tools(tools).ainvoke(messages)
 
     # Extract planned doc IDs from treenav__get_tree tool calls
     plan = []
@@ -144,50 +143,51 @@ def planner(state: DocNavState) -> DocNavState:
     }
 
 
-def navigator(state: DocNavState) -> DocNavState:
+async def navigator(state: DocNavState) -> DocNavState:
     """Navigate through planned nodes, fetching content."""
     llm = get_llm()
-    mcp_client = get_mcp_client()
-    tools = mcp_client.get_tools()
 
     plan = state["navigation_plan"]
     visited = list(state["visited_nodes"])
     context = list(state["tree_context"])
     depth = state["depth"]
 
-    # Visit next unvisited document from the plan
-    for doc_id in plan:
-        if doc_id in visited:
-            continue
-        if depth >= MAX_NAV_DEPTH:
-            break
+    async with get_mcp_client() as mcp_client:
+        tools = mcp_client.get_tools()
 
-        messages = [
-            SystemMessage(
-                content=(
-                    f"Fetch content from document '{doc_id}' to answer the user's question. "
-                    f"Use treenav__get_node_content with doc_id='{doc_id}' and a node_ids array to read specific sections, "
-                    f"or treenav__navigate_tree with doc_id='{doc_id}' and a node_id to read a section and all its children."
-                )
-            ),
-            HumanMessage(content=f"Get content for document: {doc_id}"),
-        ]
+        # Visit next unvisited document from the plan
+        for doc_id in plan:
+            if doc_id in visited:
+                continue
+            if depth >= MAX_NAV_DEPTH:
+                break
 
-        response = llm.bind_tools(tools).invoke(messages)
+            messages = [
+                SystemMessage(
+                    content=(
+                        f"Fetch content from document '{doc_id}' to answer the user's question. "
+                        f"Use treenav__get_node_content with doc_id='{doc_id}' and a node_ids array to read specific sections, "
+                        f"or treenav__navigate_tree with doc_id='{doc_id}' and a node_id to read a section and all its children."
+                    )
+                ),
+                HumanMessage(content=f"Get content for document: {doc_id}"),
+            ]
 
-        # Collect any content from tool responses
-        if hasattr(response, "tool_calls") and response.tool_calls:
-            for tool_call in response.tool_calls:
-                context.append(
-                    {
-                        "tool": tool_call.get("name", ""),
-                        "args": tool_call.get("args", {}),
-                        "doc_id": doc_id,
-                    }
-                )
+            response = await llm.bind_tools(tools).ainvoke(messages)
 
-        visited.append(doc_id)
-        depth += 1
+            # Collect any content from tool responses
+            if hasattr(response, "tool_calls") and response.tool_calls:
+                for tool_call in response.tool_calls:
+                    context.append(
+                        {
+                            "tool": tool_call.get("name", ""),
+                            "args": tool_call.get("args", {}),
+                            "doc_id": doc_id,
+                        }
+                    )
+
+            visited.append(doc_id)
+            depth += 1
 
     return {
         **state,
