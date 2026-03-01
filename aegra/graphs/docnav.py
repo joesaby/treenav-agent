@@ -7,6 +7,7 @@ and synthesise precise answers from structured documentation.
 """
 
 import os
+import re
 from typing import TypedDict
 
 from langchain_openai import ChatOpenAI
@@ -162,16 +163,21 @@ async def navigator(state: DocNavState) -> DocNavState:
         if depth >= MAX_NAV_DEPTH:
             break
 
-        # Fetch full document content via navigate_tree from the root node
-        try:
+        # Get tree outline to find the first (root-level) node_id
+        tree_outline = await tools_by_name["get_tree"].ainvoke({"doc_id": doc_id})
+        tree_text = str(tree_outline)
+
+        # Parse the first node_id from the outline (format: [doc_id:n1] ...)
+        first_node_match = re.search(r'\[(' + re.escape(doc_id) + r':n\d+)\]', tree_text)
+
+        if first_node_match:
+            # Fetch full content via navigate_tree from the real root node
             content = await tools_by_name["navigate_tree"].ainvoke(
-                {"doc_id": doc_id, "node_id": "root"}
+                {"doc_id": doc_id, "node_id": first_node_match.group(1)}
             )
-        except Exception:
-            # Fallback: get the tree structure so we at least know what's there
-            content = await tools_by_name["get_tree"].ainvoke(
-                {"doc_id": doc_id}
-            )
+        else:
+            # Fallback: use the tree outline as context
+            content = tree_outline
 
         context.append(
             {
