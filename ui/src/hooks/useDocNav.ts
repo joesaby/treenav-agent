@@ -16,7 +16,7 @@ const API_URL = import.meta.env.VITE_API_URL || "";
 
 /**
  * Hook for communicating with the DocNav agent backend.
- * Supports SSE streaming for real-time responses.
+ * Supports SSE streaming (LangGraph messages/partial format) for real-time responses.
  */
 export function useDocNav() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -33,6 +33,7 @@ export function useDocNav() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({}),
     });
+    if (!res.ok) throw new Error(`Failed to create thread: ${res.status}`);
     const data = await res.json();
     threadIdRef.current = data.thread_id;
     return data.thread_id;
@@ -46,6 +47,22 @@ export function useDocNav() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ graph_id: "docnav" }),
     });
+
+    if (res.status === 409) {
+      // Assistant already exists — find it via search
+      const searchRes = await fetch(`${API_URL}/assistants/search`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ graph_id: "docnav" }),
+      });
+      if (!searchRes.ok) throw new Error(`Failed to find assistant: ${searchRes.status}`);
+      const results = await searchRes.json();
+      if (!results?.length) throw new Error("No assistant found for graph 'docnav'");
+      assistantIdRef.current = results[0].assistant_id;
+      return assistantIdRef.current;
+    }
+
+    if (!res.ok) throw new Error(`Failed to create assistant: ${res.status}`);
     const data = await res.json();
     assistantIdRef.current = data.assistant_id;
     return data.assistant_id;
@@ -77,7 +94,15 @@ export function useDocNav() {
               assistant_id: assistantId,
               input: {
                 messages: [{ type: "human", content }],
+                query: content,
+                tree_context: [],
+                navigation_plan: [],
+                visited_nodes: [],
+                answer: "",
+                needs_docs: false,
+                depth: 0,
               },
+              stream_mode: "messages",
             }),
           }
         );
@@ -90,70 +115,70 @@ export function useDocNav() {
         if (!reader) throw new Error("No response body");
 
         const decoder = new TextDecoder();
-        let assistantContent = "";
-        const assistantId2 = crypto.randomUUID();
+        const assistantMsgId = crypto.randomUUID();
 
-        // Add empty assistant message that we'll stream into
         setMessages((prev) => [
           ...prev,
-          { id: assistantId2, role: "assistant", content: "" },
+          { id: assistantMsgId, role: "assistant", content: "" },
         ]);
 
-        let buffer = "";
+        let lineBuffer = "";
+        let currentEventType = "";
+
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
 
-          buffer += decoder.decode(value, { stream: true });
-          const lines = buffer.split("\n");
-          buffer = lines.pop() || "";
+          lineBuffer += decoder.decode(value, { stream: true });
+          const lines = lineBuffer.split("\n");
+          lineBuffer = lines.pop() || "";
 
           for (const line of lines) {
-            if (!line.startsWith("data: ")) continue;
-            const data = line.slice(6);
-            if (data === "[DONE]") continue;
+            if (line.startsWith("event: ")) {
+              currentEventType = line.slice(7).trim();
+            } else if (line.startsWith("data: ")) {
+              const raw = line.slice(6);
+              if (raw === "[DONE]") continue;
 
-            try {
-              const event = JSON.parse(data);
+              try {
+                const payload = JSON.parse(raw);
 
-              // Handle different SSE event types
-              if (event.type === "token" || event.content) {
-                assistantContent += event.content || event.token || "";
-                setMessages((prev) =>
-                  prev.map((m) =>
-                    m.id === assistantId2
-                      ? { ...m, content: assistantContent }
-                      : m
-                  )
-                );
+                if (currentEventType === "messages/partial") {
+                  const msg = Array.isArray(payload) ? payload[0] : null;
+                  if (!msg) continue;
+
+                  // Update displayed content (content is cumulative per run)
+                  if (typeof msg.content === "string" && msg.content && msg.type === "ai") {
+                    setMessages((prev) =>
+                      prev.map((m) =>
+                        m.id === assistantMsgId
+                          ? { ...m, content: msg.content }
+                          : m
+                      )
+                    );
+                  }
+
+                  // Capture tool call traces for NavigationTrace panel
+                  if (msg.tool_calls?.length) {
+                    for (const tc of msg.tool_calls) {
+                      setTraces((prev) => [
+                        ...prev,
+                        {
+                          tool: tc.name || "unknown",
+                          nodeId: tc.args?.node_id || tc.args?.doc_id || "",
+                          timestamp: new Date().toISOString(),
+                        },
+                      ]);
+                    }
+                  }
+                }
+              } catch {
+                // Skip malformed JSON
               }
-
-              // Handle tool call traces
-              if (event.type === "tool_call" || event.tool) {
-                setTraces((prev) => [
-                  ...prev,
-                  {
-                    tool: event.tool || event.name || "unknown",
-                    nodeId: event.args?.nodeId || event.nodeId || "",
-                    timestamp: new Date().toISOString(),
-                  },
-                ]);
-              }
-            } catch {
-              // Skip malformed JSON lines
+            } else if (line === "") {
+              currentEventType = "";
             }
           }
-        }
-
-        // If no streaming content was received, set a fallback
-        if (!assistantContent) {
-          setMessages((prev) =>
-            prev.map((m) =>
-              m.id === assistantId2
-                ? { ...m, content: "I couldn't generate a response. Please try again." }
-                : m
-            )
-          );
         }
       } catch (error) {
         const errorMessage =
