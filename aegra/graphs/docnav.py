@@ -114,7 +114,7 @@ async def planner(state: DocNavState) -> DocNavState:
     tools_by_name = {t.name: t for t in tools}
 
     # Execute list_documents to get the real available doc IDs
-    doc_list = await tools_by_name["treenav__list_documents"].ainvoke({})
+    doc_list = await tools_by_name["list_documents"].ainvoke({})
 
     # Ask LLM to select the most relevant documents for the query
     messages = [
@@ -164,12 +164,12 @@ async def navigator(state: DocNavState) -> DocNavState:
 
         # Fetch full document content via navigate_tree from the root node
         try:
-            content = await tools_by_name["treenav__navigate_tree"].ainvoke(
+            content = await tools_by_name["navigate_tree"].ainvoke(
                 {"doc_id": doc_id, "node_id": "root"}
             )
         except Exception:
             # Fallback: get the tree structure so we at least know what's there
-            content = await tools_by_name["treenav__get_tree"].ainvoke(
+            content = await tools_by_name["get_tree"].ainvoke(
                 {"doc_id": doc_id}
             )
 
