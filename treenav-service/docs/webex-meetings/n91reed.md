@@ -1,0 +1,31 @@
+---
+title: "View Active or Inactive Users in Cisco Webex Site Administration"
+product: "Webex Meetings"
+article_id: "n91reed"
+url: "https://help.webex.com/en-us/article/n91reed/View-Active-or-Inactive-Users-in-Cisco-Webex-Site-Administration"
+last_updated: "2025-11-27"
+description: "If you have a lot of users to manage, you can choose to only see active or
+inactive users, and export a CSV file of active or inactive users in Webex Site
+Administration."
+tags: ["webex-meetings"]
+source: "help.webex.com"
+---
+
+# View Active or Inactive Users in Cisco Webex Site Administration
+
+## View Active or Inactive Users
+
+You can see a list of active or inactive users in Webex Site Administration.
+
+| 1 | Sign in to Webex Site Administration, and go to User Management \> Edit User.                 |
+| - | --------------------------------------------------------------------------------------------- |
+| 2 | Click on the drop-down list next to Show and select Active Users Only or Inactive Users Only. |
+
+## Export Active or Inactive Users to a CSV File
+
+You can export a list of active or inactive users to manage their accounts.
+
+| 1 | Sign in to Webex Site Administration, and go to User Management \> Import/Export Users. |
+| - | --------------------------------------------------------------------------------------- |
+| 2 | Click Export Active Users Only or Export Inactive Users Only.                           |
+| 3 | Click OK.                                                                               |

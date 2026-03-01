@@ -1,0 +1,59 @@
+---
+title: "Integrated Audio configuration for Dedicated Instance for Webex Calling"
+product: "Dedicated Instance"
+article_id: "iegzxq"
+url: "https://help.webex.com/en-us/article/iegzxq/Integrated-Audio-configuration-for-Dedicated-Instance-for-Webex-Calling"
+last_updated: "2024-08-31"
+description: "you can join your Webex meeting with call-in and call-back features using on-net
+calling and having PSTN backup method."
+tags: ["dedicated-instance", "webex-calling", "edge-audio"]
+source: "help.webex.com"
+---
+
+# Integrated Audio configuration for Dedicated Instance for Webex Calling
+
+## Overview
+
+Integrated audio allows you to join Webex Meetings using the call-in and call back features without incurring PSTN charges by enabling on-net calling for Dedicated Instance customers and have PSTN as a back-up routing method.
+
+Meeting licenses for the users must be procured explicitly.
+
+##  Cisco configured components
+
+In Unified CM, SIP Trunks/Route Group/Route List are configured for Webex Meetings.
+
+- The above configuration in Unified CM have names that are pre-fixed with an x (e.g., xUS1\_AMER\_WEA\_TRK1, xUS\_WEA\_RG, xUS\_WEA\_RL)
+- Customer administrators are advised not to modify or delete any of the above pre-configured elements.
+
+## Integrated Audio for Webex configuration (partner/customer administrator)
+
+### **I. Configure Webex Meeting Audio settings in Control Hub** 
+
+Partner or customer admins are required to configure Integrated Audio call back numbers by adding the DNS SRV record in Audio Settings, so that when a call back is being requested the system is aware that the call is coming on an extension, and this is the internal number on which the meetings call back is to be redirected.
+
+1. Configure the following under Audio Settings in Webex Meetings:
+
+  1. Generate the LUA script
+
+    - In Control Hub, Go to Meeting and choose the default configured site, on the right-hand panel click Configure Site.  
+      Go to Audio Settings under Common Settings tile and scroll down to Edge Audio Custom Call-in Numbers configure the required parameters, and click Generate Lua Script.  
+      You must generate and apply a new Lua script each time you change the allowed or custom call-in numbers.
+  2. Add the Dial In numbers
+
+    - Navigate to Site Default Global Call-in Numbers and add up to two numbers as default call-in numbers for your site.
+  3. Configure DNS SRV records
+
+    - Navigate to Edge Audio Allowed Callback Numbers and configure Expressway DNS SRV to call back to extension of a particular customer.  
+      Enter the Expressway DNS SRV value wea.<customer>.<region>.wxc-di.webex.com (e.g., wea.acme.amer.wxc-di.webex.com) and click **Add**.  
+      Retry call using PSTN Audio is enabled by default.  
+Make sure that the Webex Meeting licenses for all the users in Control Hub is enabled for both Dedicated Instance and Webex Calling.
+
+### II. Unified CM configuration for Integrated Audio 
+
+1. Copy the LUA script information to SIP normalization script in Unified CM.
+
+  - Navigate to Device → Device Settings →  SIP Normalization Script, copy and paste the Lua script information that was generated in [Step 1](#lua%5Fscript) and click Save.
+2. Map the SIP normalization script to WEA Trunk
+
+  - Go to Device → Device Settings → Trunk, select the SIP normalization script from the Normalization Script drop down list and click Save.
+3. Create a Route Pattern(s) in Unified CM to Webex Meeting toll-free number(s) and point it to the WEA-Route List.

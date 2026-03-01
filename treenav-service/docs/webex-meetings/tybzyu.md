@@ -1,0 +1,26 @@
+---
+title: "Connect to audio using call me in Webex Meetings and Webex Events"
+product: "Webex Meetings"
+article_id: "tybzyu"
+url: "https://help.webex.com/en-us/article/tybzyu/Connect-to-audio-using-call-me-in-Webex-Meetings-and-Webex-Events"
+last_updated: "2024-09-21"
+description: "You can connect to the audio portion of a meeting or event by having Webex call
+you. This is handy when it might not be possible to use your computer for audio.
+You get the audio portion of the meeting through your mobile phone or land line
+and the content portion of the meeting through your computer."
+tags: ["webex-meetings", "webex-events-(classic)", "webex-suite", "webex-webinars", "webex-training"]
+source: "help.webex.com"
+---
+
+# Connect to audio using call me in Webex Meetings and Webex Events
+
+Before you begin
+
+You may not see the  Call me  option, depending on your Webex plan and the type of meeting that you're joining.
+
+| 1 | After you've clicked Join  in your email invitation, select the audio connection options. ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/450001-451000/450705.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select Call me at  and enter or select a phone number, including the area code, that you want Webex to call you at. If you prefer that Webexcall you at your internal number at your corporate site, select the arrow, check the  Call me at an internal number  check box, and then enter your internal number. This option is available only if your Webex administrator has enabled callback to internal numbers. To connect to audio easily the next time, save your phone number. Then, you can select the number instead of having to enter it. Select the arrow, select Manage my phone numbers , and then follow the instructions to save your phone number. By default, when the meeting calls you, you'll be prompted to press  1  on your phone to connect to audio. You can check the  Connect to audio without pressing 1 on my phone  check box to connect to the meeting audio immediately after you answer the call from Webex. We recommend keeping this option unchecked to prevent disruptions to the meeting, such as the call going straight to voicemail. |
+| 3 | After you click Join meeting , answer the call when your phone rings. If prompted, press 1  to connect to the meeting audio.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+Review [a list of considerations for using Call me ](https://help.webex.com/WBX48240/).

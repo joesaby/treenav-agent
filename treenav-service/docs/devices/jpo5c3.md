@@ -1,0 +1,22 @@
+---
+title: "Restart a Desk Phone or Analog Telephone Adapter"
+product: "Devices"
+article_id: "jpo5c3"
+url: "https://help.webex.com/en-us/article/jpo5c3/Restart-a-Desk-Phone-or-Analog-Telephone-Adapter"
+last_updated: "2024-11-14"
+description: "Restarting a device in Cisco Webex Control Hub can often help resolve any issues
+you may encounter. If the device is being used in an active call, the system
+waits for the call to end before the device is restarted."
+tags: ["devices"]
+source: "help.webex.com"
+---
+
+# Restart a Desk Phone or Analog Telephone Adapter
+
+Before you begin
+
+Restarting a device can take some time. We recommend that you restart the device during off-peak hours, when possible. If you're attempting to resolve an issue that a user is encountering though, give the user a heads-up about the impending reboot. 
+
+| 1 | From the customer view in <https://admin.webex.com>, go to Devices, and then select the device that you want to reboot. |
+| - | ----------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select Actions \> Reboot.                                                                                               |

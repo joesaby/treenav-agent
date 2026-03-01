@@ -1,0 +1,31 @@
+---
+title: "Schedule meetings for another host in Microsoft Exchange with the Webex Scheduler"
+product: "Webex Meetings"
+article_id: "nlx8vr9"
+url: "https://help.webex.com/en-us/article/nlx8vr9/Schedule-meetings-for-another-host-in-Microsoft-Exchange-with-the-Webex-Scheduler"
+last_updated: "2024-09-21"
+description: "If you have a host account and another host has given you scheduling permission,
+you can schedule meetings on their behalf using the Webex Scheduler. Choose the
+other host from the Webex Scheduler preferences to schedule meetings for them."
+tags: ["webex-meetings", "webex-training"]
+source: "help.webex.com"
+---
+
+# Schedule meetings for another host in Microsoft Exchange with the Webex Scheduler
+
+These instructions detail how to schedule meetings for another host if you're using Outlook in Microsoft Exchange. If you're using Microsoft Outlook with a Microsoft 365 account, you can also [schedule, manage, and start meetings for another host in Microsoft Outlook](https://help.webex.com/n0895kq/).
+
+Before you begin
+
+Before you can schedule meetings on behalf of someone else, do the following:
+
+- Make sure that you and the actual host are both using the same version of Webex Scheduler.
+- Make sure that the actual host has [given you scheduling permission on their Webex site](https://help.webex.com/nub7z8c/).
+- Sign in to your own Webex account in Webex Scheduler.
+
+| 1 | From the Calendar in Microsoft Outlook, create a new appointment.  |
+| - | ------------------------------------------------------------------ |
+| 2 | Click Webex Preferences from the Appointment ribbon.               |
+| 3 | Select the Schedule for drop-down list and select the actual host. |
+| 4 | (Optional) Set the default meeting type and template.              |
+| 5 | Click Add Webex Meeting and then click Save & Close.               |

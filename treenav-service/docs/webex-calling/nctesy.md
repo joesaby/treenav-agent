@@ -1,0 +1,48 @@
+---
+title: "Provisioning and Subscription Statuses in Control Hub"
+product: "Webex Calling"
+article_id: "nctesy"
+url: "https://help.webex.com/en-us/article/nctesy/Provisioning-and-Subscription-Statuses-in-Cisco-Webex-Control-Hub"
+last_updated: "2025-02-13"
+description: "You can use Control Hub to manage your customers and see which services or
+subscriptions you must follow up on."
+tags: ["webex-calling", "webex-contact-center", "webex-events-(classic)", "webex-events", "webex-for-cisco-broadworks", "webex-meetings", "webex-messaging", "webex-support", "webex-training", "webex-webinars"]
+source: "help.webex.com"
+---
+
+# Provisioning and Subscription Statuses in Control Hub
+
+**Coming Soon! We're giving you a sneak peek of the new designs and features in Cisco Webex Control Hub.**
+
+## Provisioning Status Details
+
+The Provisioning Status column in the Customers tab tells you which services need your attention. If a subscription has multiple services, the status of the service that's most important is shown in the column.
+
+- Provisioned—The service set up is successful, and you can now assign service licenses to your users.
+- Provisioning—The service is being set up for your organization to use.
+- Manual Provisioning (Cisco)—The service is waiting for Cisco to complete the service set up.
+- Manual Provisioning (Partner)—The service is waiting for your service provider to complete the service set up.
+- Awaiting Provisioning Details—The admin of your organization has to complete the service set up in Control Hub to start the provisioning process.
+- Unable to Provision—The service encountered an error during the set up. [Contact Cisco Support](https://collaborationhelp.cisco.com/contact) for more help.
+
+## Subscription Status Details
+
+The Subscription Status column tells you if a customer's subscription is active, if it's a trial account, if it's about to expire, or if it has been suspended.
+
+- Active—The customer has an active subscription.
+- Suspended—The customer hasn't paid for or renewed their subscription.
+- Expires within 30 days—The customer's subscription expires within 30 days.
+- Expires within 60 days—The customer's subscription expires within 60 days.
+- Trial Active—The customer has an active trial.
+- Trial Expires within 30 days—The customer's trial subscription expires within 30 days.
+- Trial Expires within 60 days—The customer's trial subscription expires within 60 days.
+- Trial Expired—The customer's trial has expired.
+
+## Filters for Provisioning and Subscription Status
+
+You can set filters to see the statuses of customers that need your attention. Filters include all customers who have at least one subscription status that matches what you select.
+
+| 1 | From the partner view in <https://admin.webex.com>, go to Customers. |
+| - | -------------------------------------------------------------------- |
+| 2 | Click Select a filter....                                            |
+| 3 | Select the filters that you want to see.                             |
