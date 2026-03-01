@@ -28,7 +28,11 @@ export function useDocNav() {
   const ensureThread = useCallback(async () => {
     if (threadIdRef.current) return threadIdRef.current;
 
-    const res = await fetch(`${API_URL}/threads`, { method: "POST" });
+    const res = await fetch(`${API_URL}/threads`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({}),
+    });
     const data = await res.json();
     threadIdRef.current = data.thread_id;
     return data.thread_id;
