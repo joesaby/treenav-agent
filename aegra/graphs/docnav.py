@@ -8,7 +8,7 @@ and synthesise precise answers from structured documentation.
 
 import os
 import re
-from typing import TypedDict
+from typing import Any, TypedDict
 
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import AnyMessage, HumanMessage, SystemMessage
@@ -50,6 +50,36 @@ class DocNavState(TypedDict):
     answer: str  # synthesised answer
     needs_docs: bool  # did router decide to navigate?
     depth: int  # navigation depth counter
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+
+def _extract_text(result: Any) -> str:
+    """Extract plain text from an MCP tool result.
+
+    langchain-mcp-adapters may return a plain str, a list of content dicts,
+    or a LangChain message object.  Normalise all of these to a plain string
+    so we never pass internal LangChain IDs (lc_<uuid>) to the LLM.
+    """
+    if isinstance(result, str):
+        return result
+    if isinstance(result, list):
+        parts = []
+        for item in result:
+            if isinstance(item, dict):
+                parts.append(item.get("text", str(item)))
+            elif hasattr(item, "text"):
+                parts.append(item.text)
+            else:
+                parts.append(str(item))
+        return "\n".join(parts)
+    # LangChain message / ToolMessage / AIMessage
+    if hasattr(result, "content"):
+        return _extract_text(result.content)
+    return str(result)
 
 
 # ---------------------------------------------------------------------------
@@ -115,7 +145,12 @@ async def planner(state: DocNavState) -> DocNavState:
     tools_by_name = {t.name: t for t in tools}
 
     # Execute list_documents to get the real available doc IDs
-    doc_list = await tools_by_name["list_documents"].ainvoke({})
+    raw_doc_list = await tools_by_name["list_documents"].ainvoke({})
+    doc_list_text = _extract_text(raw_doc_list)
+
+    # Extract valid doc_ids from the list (format: collection:name)
+    # Use as allowlist to prevent LLM from hallucinating non-existent IDs
+    valid_doc_ids = set(re.findall(r'\b(\w[\w\-]*:\w[\w\-:/]*)', doc_list_text))
 
     # Ask LLM to select the most relevant documents for the query
     messages = [
@@ -126,13 +161,14 @@ async def planner(state: DocNavState) -> DocNavState:
                 "No explanation, no extra text — just the doc_ids."
             )
         ),
-        HumanMessage(content=f"Query: {state['query']}\n\nAvailable documents:\n{doc_list}"),
+        HumanMessage(content=f"Query: {state['query']}\n\nAvailable documents:\n{doc_list_text}"),
     ]
 
     response = await llm.ainvoke(messages)
-    # Parse doc IDs from the LLM response (comma-separated)
+    # Parse doc IDs from the LLM response; filter to only real doc_ids
     raw = response.content.strip()
-    plan = [d.strip() for d in raw.replace("\n", ",").split(",") if d.strip()]
+    candidates = [d.strip() for d in raw.replace("\n", ",").split(",") if d.strip()]
+    plan = [d for d in candidates if d in valid_doc_ids] if valid_doc_ids else candidates
 
     return {
         **state,
@@ -164,26 +200,27 @@ async def navigator(state: DocNavState) -> DocNavState:
             break
 
         # Get tree outline to find the first (root-level) node_id
-        tree_outline = await tools_by_name["get_tree"].ainvoke({"doc_id": doc_id})
-        tree_text = str(tree_outline)
+        raw_tree = await tools_by_name["get_tree"].ainvoke({"doc_id": doc_id})
+        tree_text = _extract_text(raw_tree)
 
         # Parse the first node_id from the outline (format: [doc_id:n1] ...)
         first_node_match = re.search(r'\[(' + re.escape(doc_id) + r':n\d+)\]', tree_text)
 
         if first_node_match:
             # Fetch full content via navigate_tree from the real root node
-            content = await tools_by_name["navigate_tree"].ainvoke(
+            raw_content = await tools_by_name["navigate_tree"].ainvoke(
                 {"doc_id": doc_id, "node_id": first_node_match.group(1)}
             )
+            content = _extract_text(raw_content)
         else:
             # Fallback: use the tree outline as context
-            content = tree_outline
+            content = tree_text
 
         context.append(
             {
                 "tool": "navigate_tree",
                 "doc_id": doc_id,
-                "content": str(content),
+                "content": content,
             }
         )
 
