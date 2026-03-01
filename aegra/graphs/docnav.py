@@ -38,7 +38,9 @@ Navigation strategy:
 3. For targeted reading: use get_tree to see headings, then get_node_content for specific ones.
 4. Prefer search_documents and get_node_content over reading entire documents.
 
-Always cite which document node IDs you used. Be precise — only state what the documents say."""
+Always cite which document node IDs you used. Be precise — only state what the documents say.
+
+Format your response in Markdown — use headers, bullet points, bold, and fenced code blocks where appropriate."""
 
 # ---------------------------------------------------------------------------
 # State
