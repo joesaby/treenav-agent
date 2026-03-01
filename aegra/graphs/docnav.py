@@ -111,28 +111,27 @@ async def planner(state: DocNavState) -> DocNavState:
 
     mcp_client = get_mcp_client()
     tools = await mcp_client.get_tools()
+    tools_by_name = {t.name: t for t in tools}
 
-    # Use the LLM with tools to plan navigation
+    # Execute list_documents to get the real available doc IDs
+    doc_list = await tools_by_name["treenav__list_documents"].ainvoke({})
+
+    # Ask LLM to select the most relevant documents for the query
     messages = [
         SystemMessage(
             content=(
-                "You are planning which documents to read to answer the user's question. "
-                "First, call treenav__list_documents to find relevant documents. "
-                "Then call treenav__get_tree with a doc_id to explore a document's section structure. "
-                "Identify the most relevant document(s). Return their doc_ids via treenav__get_tree calls."
+                "You are selecting which documents to read to answer the user's question. "
+                "Return ONLY a comma-separated list of the most relevant doc_ids. "
+                "No explanation, no extra text — just the doc_ids."
             )
         ),
-        HumanMessage(content=state["query"]),
+        HumanMessage(content=f"Query: {state['query']}\n\nAvailable documents:\n{doc_list}"),
     ]
 
-    response = await llm.bind_tools(tools).ainvoke(messages)
-
-    # Extract planned doc IDs from treenav__get_tree tool calls
-    plan = []
-    if hasattr(response, "tool_calls") and response.tool_calls:
-        for tool_call in response.tool_calls:
-            if "doc_id" in tool_call.get("args", {}):
-                plan.append(tool_call["args"]["doc_id"])
+    response = await llm.ainvoke(messages)
+    # Parse doc IDs from the LLM response (comma-separated)
+    raw = response.content.strip()
+    plan = [d.strip() for d in raw.replace("\n", ",").split(",") if d.strip()]
 
     return {
         **state,
@@ -154,6 +153,7 @@ async def navigator(state: DocNavState) -> DocNavState:
 
     mcp_client = get_mcp_client()
     tools = await mcp_client.get_tools()
+    tools_by_name = {t.name: t for t in tools}
 
     # Visit next unvisited document from the plan
     for doc_id in plan:
@@ -162,29 +162,24 @@ async def navigator(state: DocNavState) -> DocNavState:
         if depth >= MAX_NAV_DEPTH:
             break
 
-        messages = [
-            SystemMessage(
-                content=(
-                    f"Fetch content from document '{doc_id}' to answer the user's question. "
-                    f"Use treenav__get_node_content with doc_id='{doc_id}' and a node_ids array to read specific sections, "
-                    f"or treenav__navigate_tree with doc_id='{doc_id}' and a node_id to read a section and all its children."
-                )
-            ),
-            HumanMessage(content=f"Get content for document: {doc_id}"),
-        ]
+        # Fetch full document content via navigate_tree from the root node
+        try:
+            content = await tools_by_name["treenav__navigate_tree"].ainvoke(
+                {"doc_id": doc_id, "node_id": "root"}
+            )
+        except Exception:
+            # Fallback: get the tree structure so we at least know what's there
+            content = await tools_by_name["treenav__get_tree"].ainvoke(
+                {"doc_id": doc_id}
+            )
 
-        response = await llm.bind_tools(tools).ainvoke(messages)
-
-        # Collect any content from tool responses
-        if hasattr(response, "tool_calls") and response.tool_calls:
-            for tool_call in response.tool_calls:
-                context.append(
-                    {
-                        "tool": tool_call.get("name", ""),
-                        "args": tool_call.get("args", {}),
-                        "doc_id": doc_id,
-                    }
-                )
+        context.append(
+            {
+                "tool": "navigate_tree",
+                "doc_id": doc_id,
+                "content": str(content),
+            }
+        )
 
         visited.append(doc_id)
         depth += 1
@@ -202,7 +197,8 @@ def synthesiser(state: DocNavState) -> DocNavState:
     llm = get_llm()
 
     context_text = "\n\n".join(
-        f"[Node: {c.get('node_id', 'unknown')}] {c}" for c in state["tree_context"]
+        f"[Document: {c.get('doc_id', 'unknown')}]\n{c.get('content', str(c))}"
+        for c in state["tree_context"]
     )
 
     messages = [
