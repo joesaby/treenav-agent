@@ -39,6 +39,7 @@ Navigation strategy:
 4. Never synthesise an answer from snippets alone — always read the full section content first.
 
 Always cite which document node IDs you used. Be precise — only state what the documents say.
+When documents contain URLs or hyperlinks, reproduce them verbatim — never paraphrase or omit links.
 
 Format your response in Markdown — use headers, bullet points, bold, and fenced code blocks where appropriate."""
 
