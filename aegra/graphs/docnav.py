@@ -102,6 +102,49 @@ def _extract_text(result: Any) -> str:
     return str(result)
 
 
+def _agent_context(messages: list[AnyMessage]) -> list[AnyMessage]:
+    """Context for the agent node: prior turns compressed to Q+A, current turn in full.
+
+    Prior-turn tool messages are dropped (already summarised in the AI answer).
+    The current in-progress turn is kept intact so the agent can continue its
+    reasoning loop with its own tool results still visible.
+    """
+    return _trim_messages(messages)
+
+
+def _critique_context(messages: list[AnyMessage]) -> list[AnyMessage]:
+    """Minimal context for the critique node: prior Q+A pairs + current question + proposed answer.
+
+    Critique doesn't need to see any tool call/result pairs — it only needs to
+    know what the user asked and what the agent answered.  Stripping all tool
+    messages collapses the input from ~20K tokens to ~2K.
+    """
+    turns: list[list[AnyMessage]] = []
+    current: list[AnyMessage] = []
+    for msg in messages:
+        if isinstance(msg, HumanMessage) and current:
+            turns.append(current)
+            current = [msg]
+        else:
+            current.append(msg)
+    if current:
+        turns.append(current)
+
+    pruned: list[AnyMessage] = []
+    for turn in turns:
+        human_msgs = [m for m in turn if isinstance(m, HumanMessage)]
+        # The final AI answer is the last AIMessage without tool_calls.
+        ai_answers = [
+            m for m in turn
+            if isinstance(m, AIMessage) and not getattr(m, "tool_calls", None)
+        ]
+        pruned.extend(human_msgs)
+        if ai_answers:
+            pruned.append(ai_answers[-1])
+
+    return pruned
+
+
 def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
     """Prune history so only the current turn retains full tool context.
 
@@ -180,7 +223,7 @@ async def agent(state: DocNavState) -> DocNavState:
     mcp_tools = await client.get_tools()
     llm = get_llm().bind_tools(mcp_tools)
 
-    messages = _trim_messages(list(state["messages"]))
+    messages = _agent_context(list(state["messages"]))
     if not isinstance(messages[0], SystemMessage):
         messages = [SystemMessage(content=SYSTEM_PROMPT)] + messages
 
@@ -219,7 +262,7 @@ async def critique(state: DocNavState) -> DocNavState:
     mcp_tools = await client.get_tools()
     llm = get_llm().bind_tools(mcp_tools)
 
-    messages = _trim_messages(list(state["messages"]))
+    messages = _critique_context(list(state["messages"]))
     if not isinstance(messages[0], SystemMessage):
         messages = [SystemMessage(content=SYSTEM_PROMPT)] + messages
 
