@@ -24,6 +24,7 @@ import type {
   FacetCounts,
 } from "./types";
 import { DEFAULT_RANKING } from "./types";
+import { extractGlossaryEntries } from "./indexer";
 
 export class DocumentStore {
   private docs: Map<string, IndexedDocument> = new Map();
@@ -58,6 +59,10 @@ export class DocumentStore {
   // like "CLI" also match "command line interface"
   private glossary: Map<string, string[]> = new Map();
 
+  // ── Ref map for cross-reference resolution ────────────────────────
+  // basename(file_path) → { doc_id, tree }
+  private refMap: Map<string, { doc_id: string; tree: TreeNode[] }> = new Map();
+
   // ── Load / Refresh ──────────────────────────────────────────────
 
   load(documents: IndexedDocument[]): void {
@@ -74,10 +79,13 @@ export class DocumentStore {
 
     this.buildIndex();
     this.buildFilterIndex();
+    this.buildAutoGlossary(documents);
+    this.buildRefMap();
 
     console.log(
       `Store loaded: ${this.docs.size} docs, ${this.totalNodes} nodes, ` +
         `${this.index.size} terms, ${this.filters.size} facet keys, ` +
+        `${this.glossary.size} glossary mappings, ` +
         `avg node length: ${this.avgNodeLength.toFixed(0)} tokens`
     );
   }
@@ -104,6 +112,7 @@ export class DocumentStore {
     this.indexDocument(doc);
     this.indexDocumentFilters(doc);
     this.recalcCorpusStats();
+    this.buildRefMap();
   }
 
   /**
@@ -197,6 +206,83 @@ export class DocumentStore {
       }
     }
     return [...expanded];
+  }
+
+  // ── Auto-glossary from content ────────────────────────────────────
+  //
+  private buildRefMap(): void {
+    this.refMap.clear();
+    for (const doc of this.docs.values()) {
+      const basename = doc.meta.file_path.split("/").pop() ?? doc.meta.file_path;
+      this.refMap.set(basename, { doc_id: doc.meta.doc_id, tree: doc.tree });
+    }
+  }
+
+  // Scan all document content for acronym definitions like
+  // "CLI (Command Line Interface)" and add them to the glossary.
+  // Does NOT overwrite entries from an explicitly loaded glossary file.
+
+  private buildAutoGlossary(documents: IndexedDocument[]): void {
+    const autoEntries: Record<string, string[]> = {};
+
+    for (const doc of documents) {
+      for (const node of doc.tree) {
+        const nodeEntries = extractGlossaryEntries(node.content);
+        for (const [acronym, expansions] of Object.entries(nodeEntries)) {
+          if (!autoEntries[acronym]) autoEntries[acronym] = [];
+          for (const exp of expansions) {
+            if (!autoEntries[acronym].includes(exp)) {
+              autoEntries[acronym].push(exp);
+            }
+          }
+        }
+      }
+      // Also check title and description
+      const metaEntries = extractGlossaryEntries(
+        `${doc.meta.title} ${doc.meta.description}`
+      );
+      for (const [acronym, expansions] of Object.entries(metaEntries)) {
+        if (!autoEntries[acronym]) autoEntries[acronym] = [];
+        for (const exp of expansions) {
+          if (!autoEntries[acronym].includes(exp)) {
+            autoEntries[acronym].push(exp);
+          }
+        }
+      }
+    }
+
+    // Merge auto-entries into the glossary without overwriting explicit entries
+    let added = 0;
+    for (const [key, expansions] of Object.entries(autoEntries)) {
+      const normalizedKey = key.toLowerCase();
+      for (const expansion of expansions) {
+        // Forward: acronym → expansion
+        if (!this.glossary.has(normalizedKey)) {
+          this.glossary.set(normalizedKey, [expansion]);
+          added++;
+        } else {
+          const existing = this.glossary.get(normalizedKey)!;
+          if (!existing.includes(expansion)) {
+            existing.push(expansion);
+            added++;
+          }
+        }
+        // Reverse: expansion terms → acronym
+        const expTokens = expansion.toLowerCase();
+        if (!this.glossary.has(expTokens)) {
+          this.glossary.set(expTokens, [normalizedKey]);
+        } else {
+          const existing = this.glossary.get(expTokens)!;
+          if (!existing.includes(normalizedKey)) {
+            existing.push(normalizedKey);
+          }
+        }
+      }
+    }
+
+    if (added > 0) {
+      console.log(`Auto-glossary: extracted ${added} entries from content`);
+    }
   }
 
   // ── Remove old postings for incremental update ──────────────────
@@ -809,6 +895,37 @@ export class DocumentStore {
 
   hasDocument(doc_id: string): boolean {
     return this.docs.has(doc_id);
+  }
+
+  /**
+   * Resolve a markdown cross-reference path to a doc_id and optional node_id.
+   * Path may be a basename ("admin-guide.md"), relative ("../foo/admin-guide.md"),
+   * or include a heading fragment ("admin-guide.md#user-provisioning").
+   * Returns null if the file cannot be matched to any indexed document.
+   */
+  resolveRef(path: string): { doc_id: string; node_id?: string } | null {
+    const [filePart, fragment] = path.split("#");
+    const basename = filePart.split("/").pop() ?? filePart;
+    const entry = this.refMap.get(basename);
+    if (!entry) return null;
+
+    if (!fragment) return { doc_id: entry.doc_id };
+
+    // Match fragment to node via title slug (GitHub-style: lowercase, non-alphanumeric → hyphen)
+    const slug = fragment.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const node = entry.tree.find((n) => {
+      const nodeSlug = n.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      return nodeSlug === slug || n.node_id === fragment;
+    });
+
+    return { doc_id: entry.doc_id, node_id: node?.node_id };
+  }
+
+  /**
+   * Return the DocumentMeta for a doc_id, or null if not found.
+   */
+  getDocMeta(doc_id: string): DocumentMeta | null {
+    return this.docs.get(doc_id)?.meta ?? null;
   }
 }
 

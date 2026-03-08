@@ -34,6 +34,7 @@ import { parseTypeScript, TYPESCRIPT_EXTENSIONS } from "./parsers/typescript";
 import { parsePython, PYTHON_EXTENSIONS } from "./parsers/python";
 import { parseJava, JAVA_EXTENSIONS } from "./parsers/java";
 import { parseGo, GO_EXTENSIONS } from "./parsers/go";
+import { parseRust, RUST_EXTENSIONS } from "./parsers/rust";
 import { parseGeneric, GENERIC_EXTENSIONS } from "./parsers/generic";
 
 // ── Code symbol intermediate representation ──────────────────────────
@@ -71,6 +72,7 @@ export const CODE_EXTENSIONS = new Set([
   ...PYTHON_EXTENSIONS,
   ...JAVA_EXTENSIONS,
   ...GO_EXTENSIONS,
+  ...RUST_EXTENSIONS,
   ...GENERIC_EXTENSIONS,
 ]);
 
@@ -180,6 +182,9 @@ function parseSourceFile(source: string, docId: string, filePath: string): CodeS
   if (GO_EXTENSIONS.has(ext)) {
     return parseGo(source, docId);
   }
+  if (RUST_EXTENSIONS.has(ext)) {
+    return parseRust(source, docId);
+  }
   if (GENERIC_EXTENSIONS.has(ext)) {
     return parseGeneric(source, docId, ext);
   }
@@ -272,6 +277,7 @@ export async function indexCodeFile(
     content_hash,
     collection: collectionName,
     facets,
+    references: [], // Code files don't have markdown links
   };
 
   return { meta, tree, root_nodes };

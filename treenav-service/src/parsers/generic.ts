@@ -13,7 +13,7 @@ import type { CodeSymbol } from "../code-indexer";
 
 /** Language detection from file extension */
 export const GENERIC_EXTENSIONS = new Set([
-  ".rs", ".kt", ".scala",
+  ".kt", ".scala",
   ".c", ".cpp", ".cc", ".h", ".hpp",
   ".cs", ".rb", ".swift", ".php",
   ".lua", ".r", ".R", ".sh", ".bash", ".zsh",
@@ -22,11 +22,10 @@ export const GENERIC_EXTENSIONS = new Set([
 /**
  * Detect language from file extension for tuned pattern matching.
  */
-type Lang = "go" | "rust" | "java" | "c" | "ruby" | "shell" | "other";
+type Lang = "go" | "java" | "c" | "ruby" | "shell" | "other";
 
 function detectLang(ext: string): Lang {
   if (ext === ".go") return "go";
-  if (ext === ".rs") return "rust";
   if ([".kt", ".scala", ".cs"].includes(ext)) return "java";
   if ([".c", ".cpp", ".cc", ".h", ".hpp"].includes(ext)) return "c";
   if (ext === ".rb") return "ruby";
@@ -47,7 +46,6 @@ export function parseGeneric(source: string, docId: string, ext: string): CodeSy
 
   const importPatterns: Record<Lang, RegExp> = {
     go: /^(?:import\s|import\s*\()/,
-    rust: /^(?:use\s|extern\s+crate)/,
     java: /^(?:import\s|package\s)/,
     c: /^#\s*include\s/,
     ruby: /^(?:require\s|require_relative\s|include\s)/,
@@ -141,7 +139,7 @@ export function parseGeneric(source: string, docId: string, ext: string): CodeSy
 
     // --- Interface / trait ---
     const ifaceMatch =
-      trimmed.match(/^(?:pub\s+)?(?:export\s+)?(?:interface|trait|protocol)\s+(\w+)/) ||
+      trimmed.match(/^(?:(?:pub(?:lic)?|export)\s+)?(?:interface|trait|protocol)\s+(\w+)/) ||
       (lang === "go" && trimmed.match(/^type\s+(\w+)\s+interface\b/));
 
     if (ifaceMatch) {
@@ -277,8 +275,7 @@ export function parseGeneric(source: string, docId: string, ext: string): CodeSy
 
     // --- Constant / type alias ---
     const constMatch =
-      (lang === "go" && trimmed.match(/^(?:var|const)\s+(\w+)/)) ||
-      (lang === "rust" && trimmed.match(/^(?:pub\s+)?(?:const|static|type)\s+(\w+)/));
+      (lang === "go" && trimmed.match(/^(?:var|const)\s+(\w+)/));
 
     if (constMatch) {
       const name = constMatch[1];
@@ -338,7 +335,7 @@ function parseGenericMembers(
       trimmed.match(/^(?:pub\s+)?(?:(?:async\s+)?fn|func|function|def)\s+(\w+)\s*\(/) ||
       (lang === "go" && trimmed.match(/^func\s+(\w+)\s*\(/)) ||
       (lang === "ruby" && trimmed.match(/^def\s+(\w+)/)) ||
-      (lang === "java" && trimmed.match(/^(?:(?:public|private|protected|static|final|abstract|synchronized|native|override)\s+)*\w+(?:\s*<[^>]*>)?\s+(\w+)\s*\(/));
+      (lang === "java" && trimmed.match(/^(?:(?:public|private|protected|static|final|abstract|synchronized|native|override|async|await)\s+)*\w+(?:\s*<[^>]*>)?\s+(\w+)\s*\(/));
 
     if (methodMatch) {
       const name = methodMatch[1];
@@ -399,8 +396,6 @@ function isExported(line: string, lang: Lang, name: string): boolean {
   switch (lang) {
     case "go":
       return /^[A-Z]/.test(name); // Go: uppercase = exported
-    case "rust":
-      return line.includes("pub ");
     case "java":
       return line.includes("public ");
     case "ruby":
