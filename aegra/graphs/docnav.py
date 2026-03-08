@@ -33,7 +33,7 @@ You have access to these tools — use them to find precise answers:
 - find_symbol: Look up code symbols (functions, classes, types) by name
 
 Navigation strategy:
-1. For specific questions: use search_documents — the results include full section content for the top matches, so you can answer directly from the tool output.
+1. For specific questions: use search_documents — the results include full section content for the top matches, so you can often answer directly from the tool output. Results also show "→ References" listing doc IDs that the matched section links to; use navigate_tree(doc_id) or get_node_content(doc_id, node_id) to follow them when the question needs broader context.
 2. For structural/overview questions: use list_documents then navigate_tree on the root.
 3. For targeted reading: use get_tree to see headings, then get_node_content for specific ones.
 4. Never synthesise an answer from snippets alone — always read the full section content first.
@@ -49,6 +49,7 @@ Format your response in Markdown — use headers, bullet points, bold, and fence
 
 class DocNavState(TypedDict):
     messages: Annotated[list[AnyMessage], add_messages]
+    mcp_tools: list[Any]  # fetched once at entry
 
 
 # ---------------------------------------------------------------------------
@@ -108,9 +109,17 @@ def get_llm(model: str | None = None) -> ChatOpenAI:
 # ---------------------------------------------------------------------------
 
 
+async def init(state: DocNavState) -> dict[str, Any]:
+    if state.get("mcp_tools"):
+        return {}  # already initialized
+    client = get_mcp_client()
+    tools = await client.get_tools()
+    return {"mcp_tools": tools}
+
+
 async def agent(state: DocNavState) -> DocNavState:
     """Call the LLM with MCP tools bound. The LLM decides what to call."""
-    mcp_tools = await get_mcp_client().get_tools()
+    mcp_tools = state.get("mcp_tools", [])
     llm = get_llm().bind_tools(mcp_tools)
 
     messages = list(state["messages"])
@@ -124,7 +133,7 @@ async def agent(state: DocNavState) -> DocNavState:
 
 async def tools(state: DocNavState) -> DocNavState:
     """Execute tool calls made by the LLM in the last AI message."""
-    mcp_tools = await get_mcp_client().get_tools()
+    mcp_tools = state.get("mcp_tools", [])
     tools_by_name = {t.name: t for t in mcp_tools}
 
     last_msg = state["messages"][-1]
@@ -164,10 +173,12 @@ def build_graph():
     """Build and compile the DocNav ReAct graph."""
     g = StateGraph(DocNavState)
 
+    g.add_node("init", init)
     g.add_node("agent", agent)
     g.add_node("tools", tools)
 
-    g.set_entry_point("agent")
+    g.set_entry_point("init")
+    g.add_edge("init", "agent")
     g.add_conditional_edges("agent", should_continue, {"tools": "tools", END: END})
     g.add_edge("tools", "agent")
 
