@@ -1,12 +1,12 @@
 """
 DocNav LangGraph ReAct Agent
 
-Three-phase pipeline:
-  plan  →  agent ↔ tools (ReAct loop)  →  critique  →  agent ↔ tools (if gaps found)  →  END
+Two-phase pipeline:
+  agent ↔ tools (ReAct loop)  →  critique  →  agent ↔ tools (if gaps found)  →  END
 
-- plan:     Reformulates the raw question into a structured search strategy so the
-            ReAct loop starts with a clear decomposition rather than guessing.
 - agent:    Calls the LLM with tools bound; the LLM decides which MCP tools to call.
+            The system prompt instructs the agent to decompose multi-part questions
+            and plan its search strategy before calling tools.
 - tools:    Executes the tool calls requested by the LLM.
 - critique: Reviews the proposed answer for completeness and either approves it or
             triggers another tool round to fill gaps.  Runs once per user turn.
@@ -39,8 +39,14 @@ You have access to these tools — use them to find precise answers:
 - navigate_tree: Fetch a section and ALL its sub-sections (use for broad topics)
 - find_symbol: Look up code symbols (functions, classes, types) by name
 
+Before calling any tools, silently decompose the question into distinct sub-topics and plan your search:
+- Identify each sub-topic (e.g. "BYOP overview", "BYOP options", "comparison table")
+- Choose the best tool and keyword for each sub-topic
+- Flag terms that need exact matches (vendor names, version numbers, port numbers)
+Then execute your plan, fetching each sub-topic in turn.
+
 Navigation strategy:
-1. For specific questions: use search_documents — the results include full section content for the top matches, so you can often answer directly from the tool output. Results also show "→ References" listing doc IDs that the matched section links to; use navigate_tree(doc_id) or get_node_content(doc_id, node_id) to follow them when the question needs broader context.
+1. For specific questions: use search_documents — results include full section content and "→ References" showing linked doc IDs; follow references when the question needs broader context.
 2. For structural/overview questions: use list_documents then navigate_tree on the root.
 3. For targeted reading: use get_tree to see headings, then get_node_content for specific ones.
 4. Never synthesise an answer from snippets alone — always read the full section content first.
@@ -49,16 +55,6 @@ Always cite which document node IDs you used. Be precise — only state what the
 When documents contain URLs or hyperlinks, reproduce them verbatim — never paraphrase or omit links.
 
 Format your response in Markdown — use headers, bullet points, bold, and fenced code blocks where appropriate."""
-
-PLAN_PROMPT = """You are a search strategist for a document navigation agent.
-
-Given the user's question, produce a brief structured search plan that the agent will follow.
-Your plan should:
-1. Identify the distinct sub-topics in the question (e.g. "SBC types", "port reference", "local gateway overview")
-2. Suggest the best tool sequence for each sub-topic (search_documents keyword, then get_node_content for specifics)
-3. Flag any terms that likely need exact document IDs (e.g. version numbers, vendor names, port numbers)
-
-Output only the plan — a short bulleted list. Do NOT answer the question itself. Do NOT call any tools."""
 
 CRITIQUE_PROMPT = """You are a completeness reviewer for a document navigation agent.
 
@@ -178,25 +174,6 @@ def get_llm(model: str | None = None) -> ChatOpenAI:
 # ---------------------------------------------------------------------------
 
 
-async def plan(state: DocNavState) -> DocNavState:
-    """Reformulate the user's question into a structured search plan.
-
-    Runs once at the start of each user turn.  The plan is injected as an
-    AIMessage so the agent node sees it as prior context and follows it.
-    """
-    messages = _trim_messages(list(state["messages"]))
-    llm = get_llm()  # No tools — plan node only reasons, never calls tools.
-
-    plan_messages = [
-        SystemMessage(content=PLAN_PROMPT),
-        *[m for m in messages if isinstance(m, HumanMessage)][-1:],  # last question only
-    ]
-    response = await llm.ainvoke(plan_messages)
-    # Inject plan as an AI message so the agent sees it as prior reasoning.
-    plan_msg = AIMessage(content=f"[Search plan]\n{response.content}")
-    return {"messages": [plan_msg], "critique_done": False}
-
-
 async def agent(state: DocNavState) -> DocNavState:
     """Call the LLM with MCP tools bound. The LLM decides what to call."""
     client = get_mcp_client()
@@ -259,10 +236,6 @@ async def critique(state: DocNavState) -> DocNavState:
 # ---------------------------------------------------------------------------
 
 
-def after_plan(state: DocNavState) -> str:
-    return "agent"
-
-
 def after_agent(state: DocNavState) -> str:
     """Route to tools, critique, or END depending on agent output."""
     last_msg = state["messages"][-1]
@@ -289,16 +262,14 @@ def after_critique(state: DocNavState) -> str:
 
 
 def build_graph():
-    """Build and compile the DocNav plan→ReAct→critique graph."""
+    """Build and compile the DocNav ReAct→critique graph."""
     g = StateGraph(DocNavState)
 
-    g.add_node("plan", plan)
     g.add_node("agent", agent)
     g.add_node("tools", tools)
     g.add_node("critique", critique)
 
-    g.set_entry_point("plan")
-    g.add_conditional_edges("plan", after_plan, {"agent": "agent"})
+    g.set_entry_point("agent")
     g.add_conditional_edges("agent", after_agent, {"tools": "tools", "critique": "critique", END: END})
     g.add_edge("tools", "agent")
     g.add_conditional_edges("critique", after_critique, {"tools": "tools", END: END})
