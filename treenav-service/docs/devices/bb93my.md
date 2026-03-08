@@ -2,7 +2,7 @@
 title: "Get started with your Cisco ATA 191 and 192"
 product: "Devices"
 article_id: "bb93my"
-url: "https://help.webex.com/en-us/article/bb93my/Get-Started-with-Your-Cisco-ATA-191-and-192"
+url: "https://help.webex.com/en-us/article/bb93my"
 last_updated: "2025-11-25"
 description: "Use the information in the following articles to help you install your Cisco ATA
 191 and 192."

@@ -2,7 +2,7 @@
 title: "Decline a ringing call on all devices for a user"
 product: "Webex Calling"
 article_id: "vwydeq"
-url: "https://help.webex.com/en-us/article/vwydeq/Decline-a-ringing-call-on-all-devices-for-a-user"
+url: "https://help.webex.com/en-us/article/vwydeq"
 last_updated: "2025-02-12"
 description: "Users can reject incoming calls on multiple devices or shared lines. When
 declining on the Webex Client or any device, all devices stop ringing and the

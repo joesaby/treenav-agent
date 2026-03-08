@@ -2,7 +2,7 @@
 title: "Board, Desk, and Room Series device settings menu"
 product: "Devices"
 article_id: "nwz8r3o"
-url: "https://help.webex.com/en-us/article/nwz8r3o/Board-Desk-and-Room-Series-device-Settings-menu"
+url: "https://help.webex.com/en-us/article/nwz8r3o"
 last_updated: "2025-11-10"
 description: "You can find information about your device or change your device&#x27;s settings, in
 the Settings menu."

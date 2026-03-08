@@ -2,7 +2,7 @@
 title: "Set or reset your voicemail PIN"
 product: "Webex Calling"
 article_id: "nbhhvl9"
-url: "https://help.webex.com/en-us/article/nbhhvl9/Set-up-and-manage-your-voicemail"
+url: "https://help.webex.com/en-us/article/nbhhvl9"
 last_updated: "2026-01-19"
 description: "You can create a voicemail PIN if your administrator hasn&#x27;t provided you, or
 change your PIN if you forget it at any time from User Hub."

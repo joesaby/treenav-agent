@@ -2,7 +2,7 @@
 title: "Delete or restore a Webex recording"
 product: "Webex Meetings"
 article_id: "ncfz8gcb"
-url: "https://help.webex.com/en-us/article/ncfz8gcb/Delete-or-restore-a-Webex-recording"
+url: "https://help.webex.com/en-us/article/ncfz8gcb"
 last_updated: "2025-10-21"
 description: "Delete the recording of a meeting, webinar, call, or training session that you
 hosted and recorded. When you delete a recording, it disappears from every

@@ -2,7 +2,7 @@
 title: "Configure your Webex Calling dial plan"
 product: "Webex Calling"
 article_id: "pxtu15"
-url: "https://help.webex.com/en-us/article/pxtu15/Configure-your-Webex-Calling-dial-plan"
+url: "https://help.webex.com/en-us/article/pxtu15"
 last_updated: "2025-12-16"
 description: "You can control the dial plan for your Webex Calling deployment with outbound
 dialing codes. Customize extension lengths, routing prefixes, and dialing

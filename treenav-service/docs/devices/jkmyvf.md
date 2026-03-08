@@ -2,7 +2,7 @@
 title: "Make a call from Desk Series"
 product: "Devices"
 article_id: "jkmyvf"
-url: "https://help.webex.com/en-us/article/jkmyvf/Make-a-call-from-Desk-Series"
+url: "https://help.webex.com/en-us/article/jkmyvf"
 last_updated: "2025-06-06"
 description: "Find out about how you can make calls from your Cisco Desk, Desk Mini, Desk Pro,
 and DX80 devices."

@@ -2,7 +2,7 @@
 title: "In-room booking with a touch controller"
 product: "Devices"
 article_id: "i3yudu"
-url: "https://help.webex.com/en-us/article/i3yudu/In-room-booking-with-a-touch-controller"
+url: "https://help.webex.com/en-us/article/i3yudu"
 last_updated: "2025-06-11"
 description: "Using in-room booking, you have the option to either extend your existing
 meeting room reservation or spontaneously book a room for a quick meeting. This

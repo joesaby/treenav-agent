@@ -2,7 +2,7 @@
 title: "RoomOS 9 known and resolved issues"
 product: "Devices"
 article_id: "llygcp"
-url: "https://help.webex.com/en-us/article/llygcp/RoomOS-9-known-and-resolved-issues"
+url: "https://help.webex.com/en-us/article/llygcp"
 last_updated: "2025-06-06"
 description: "Here you can read what we have fixed in the latest releases of RoomOS 9. You can
 also find an overview of which issues we’re still working on and possible

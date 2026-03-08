@@ -2,7 +2,7 @@
 title: "Enable business texting"
 product: "Webex Calling"
 article_id: "n1rlhy4"
-url: "https://help.webex.com/en-us/article/n1rlhy4/Enable-Business-Texting"
+url: "https://help.webex.com/en-us/article/n1rlhy4"
 last_updated: "2025-12-15"
 description: "Business texting seamlessly integrates into the Webex App. This feature provides
 a flexible communication method to embrace a hybrid work environment. Users can

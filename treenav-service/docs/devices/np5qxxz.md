@@ -2,7 +2,7 @@
 title: "Manage Board, Desk, and Room Series logs from Control Hub"
 product: "Devices"
 article_id: "np5qxxz"
-url: "https://help.webex.com/en-us/article/np5qxxz/Manage-Cisco-Webex-Rooms-Logs-from-Control-Hub"
+url: "https://help.webex.com/en-us/article/np5qxxz"
 last_updated: "2025-06-06"
 description: "Download and manage logs from Control Hub to troubleshoot and manage devices in
 your organization."

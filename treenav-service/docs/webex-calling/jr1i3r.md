@@ -2,7 +2,7 @@
 title: "Configure Local Gateway on Cisco IOS XE for Webex Calling"
 product: "Webex Calling"
 article_id: "jr1i3r"
-url: "https://help.webex.com/en-us/article/jr1i3r/Configure-Local-Gateway-on-Cisco-IOS-XE-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/jr1i3r"
 last_updated: "2020-11-07"
 description: "After you configure Webex Calling for your organization, you can configure a
 trunk to connect your Local Gateway to Webex Calling. SIP TLS transport secures

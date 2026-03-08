@@ -2,7 +2,7 @@
 title: "Local user administration on Desk, Board, and Room devices"
 product: "Devices"
 article_id: "jkhs20"
-url: "https://help.webex.com/en-us/article/jkhs20/Local-User-Administration-on-Room-and-Desk-Devices"
+url: "https://help.webex.com/en-us/article/jkhs20"
 last_updated: "2025-06-06"
 description: "Site administrators can set up distinct user roles Cisco devices, granting them
 access to a wider range of configurations."

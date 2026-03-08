@@ -2,7 +2,7 @@
 title: "Get Started with the Cisco Calling Plans"
 product: "Webex Calling"
 article_id: "nousk9ab"
-url: "https://help.webex.com/en-us/article/nousk9ab/Get-Started-with-the-Cisco-Calling-Plan"
+url: "https://help.webex.com/en-us/article/nousk9ab/Get-Started-with-the-Cisco-Calling-Plans"
 last_updated: "2025-09-24"
 description: "The Cisco Calling Plans offer a bundled solution to simplify your cloud calling
 experience. As a Webex Calling customer, you can order new PSTN numbers, or port

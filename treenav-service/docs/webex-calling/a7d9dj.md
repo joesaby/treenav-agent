@@ -2,7 +2,7 @@
 title: "Monitor other user's line status and call park extensions"
 product: "Webex Calling"
 article_id: "a7d9dj"
-url: "https://help.webex.com/en-us/article/a7d9dj/Monitoring-List-Other-Users-and-Call-Park-Extentions"
+url: "https://help.webex.com/en-us/article/a7d9dj"
 last_updated: "2025-10-28"
 description: "Allow users to track the line status of other users, workspaces, and call park
 extensions. Users in the monitoring group can see if the monitored user is

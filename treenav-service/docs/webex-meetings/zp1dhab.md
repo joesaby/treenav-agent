@@ -2,7 +2,7 @@
 title: "Screen layouts for Cisco devices"
 product: "Webex Meetings"
 article_id: "zp1dhab"
-url: "https://help.webex.com/en-us/article/zp1dhab/Webex-Rooms-Video-Stream-Layouts"
+url: "https://help.webex.com/en-us/article/zp1dhab"
 last_updated: "2025-07-02"
 description: "Cisco video conferencing devices are purpose built to help teams collaborate and
 create together in real time, no matter how far the distance. When enabled with

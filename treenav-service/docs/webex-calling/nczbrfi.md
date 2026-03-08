@@ -2,7 +2,7 @@
 title: "Block inbound spam calls"
 product: "Webex Calling"
 article_id: "nczbrfi"
-url: "https://help.webex.com/en-us/article/nczbrfi/Block-Inbound-Spam-Calls"
+url: "https://help.webex.com/en-us/article/nczbrfi/Block-inbound-spam-calls"
 last_updated: "2025-03-19"
 description: "Webex Calling supports blocking inbound calls coming from Public Switched
 Telephone Network (PSTN). You can reject certain calls based on the incoming

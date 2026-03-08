@@ -2,7 +2,7 @@
 title: "Network Requirements for Webex Cloud-Connected UC"
 product: "Webex Cloud-Connected UC"
 article_id: "fg3qim"
-url: "https://help.webex.com/en-us/article/fg3qim/Network-Requirements-for-Webex-Cloud-Connected-UC"
+url: "https://help.webex.com/en-us/article/fg3qim"
 last_updated: "2025-09-22"
 description: "Use this information to learn about the port numbers, protocols, IP address
 ranges, domains you must approve before you use Cloud-Connected UC."

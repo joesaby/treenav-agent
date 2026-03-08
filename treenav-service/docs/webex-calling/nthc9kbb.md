@@ -2,7 +2,7 @@
 title: "Multi line support in Webex Calling using virtual lines"
 product: "Webex Calling"
 article_id: "nthc9kbb"
-url: "https://help.webex.com/en-us/article/nthc9kbb/Multi-line-support-in-Webex-Calling-using-virtual-lines"
+url: "https://help.webex.com/en-us/article/nthc9kbb"
 last_updated: "2026-02-03"
 description: "In today’s multitasking environment, phone power users like contact center
 agents may need to communicate on multiple lines. Multi line in Webex Calling

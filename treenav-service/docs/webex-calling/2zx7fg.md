@@ -2,7 +2,7 @@
 title: "Validate Cisco Local Gateway configuration through Control Hub"
 product: "Webex Calling"
 article_id: "2zx7fg"
-url: "https://help.webex.com/en-us/article/2zx7fg/Validate-Cisco-Local-Gateway-Configuration-through-Control-Hub"
+url: "https://help.webex.com/en-us/article/2zx7fg"
 last_updated: "2025-09-23"
 description: "After enrolling your managed gateway device to the Webex Control Hub and
 assigning a local gateway service, use the Config Validation option available in

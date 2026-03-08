@@ -2,7 +2,7 @@
 title: "Create a Contact Center AI configuration"
 product: "Webex Contact Center"
 article_id: "npbt02j"
-url: "https://help.webex.com/en-us/article/npbt02j/Create-a-Contact-Center-AI-configuration"
+url: "https://help.webex.com/en-us/article/npbt02j"
 last_updated: "2025-11-03"
 description: "Use this article to create the Contact Center AI (CCAI) configuration for
 features such as Virtual Agent–voice and Agent Answers."

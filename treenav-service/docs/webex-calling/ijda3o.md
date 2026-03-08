@@ -2,7 +2,7 @@
 title: "Manage user calling data"
 product: "Webex Calling"
 article_id: "ijda3o"
-url: "https://help.webex.com/en-us/article/ijda3o/Manage-User-Calling-Data"
+url: "https://help.webex.com/en-us/article/ijda3o"
 last_updated: "2025-12-12"
 description: "You can bulk manage user calling data with bulk inserts or updates for user
 features. Administrators can import or export features with a CSV file."

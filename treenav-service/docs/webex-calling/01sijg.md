@@ -2,7 +2,7 @@
 title: "Cisco Calling Plan number porting guidelines and policies"
 product: "Webex Calling"
 article_id: "01sijg"
-url: "https://help.webex.com/en-us/article/01sijg/Cisco-VoIP-Number-Policy"
+url: "https://help.webex.com/en-us/article/01sijg/Porting-and-number-policy-for-Cisco-calling-plans"
 last_updated: "2025-05-21"
 description: "As an administrator, use this article to port existing PSTN numbers to Cisco
 easily with the full support of Cisco and our partners."

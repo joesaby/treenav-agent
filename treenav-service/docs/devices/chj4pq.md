@@ -2,7 +2,7 @@
 title: "Host controls for raise hand on Board, Desk, and Room Series"
 product: "Devices"
 article_id: "chj4pq"
-url: "https://help.webex.com/en-us/article/chj4pq/Host-controls-for-raise-hand-on-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/chj4pq"
 last_updated: "2026-01-16"
 description: "As the host or co-host of a meeting, you can lower the hands participants have
 raised if they forget to do so themselves."

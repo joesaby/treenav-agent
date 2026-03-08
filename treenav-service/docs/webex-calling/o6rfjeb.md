@@ -2,7 +2,7 @@
 title: "Manage hunt groups in Control Hub"
 product: "Webex Calling"
 article_id: "o6rfjeb"
-url: "https://help.webex.com/en-us/article/o6rfjeb/Manage-hunt-groups-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/o6rfjeb"
 last_updated: "2025-12-12"
 description: "You can use hunt groups to ensure that all of your incoming calls are answered
 by the right people or routed to voicemail for later response."

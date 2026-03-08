@@ -2,7 +2,7 @@
 title: "Enhanced emergency calling for Webex Calling"
 product: "Webex Calling"
 article_id: "av6oo3"
-url: "https://help.webex.com/en-us/article/av6oo3/Enhanced-Emergency-Calling-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/av6oo3"
 last_updated: "2026-02-12"
 description: "Webex Calling&#x27;s E911 service provides dynamic, location-based emergency call
 routing to Public Safety Answering Points (PSAPs) across the U.S., its

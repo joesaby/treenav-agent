@@ -2,7 +2,7 @@
 title: "Use Board and Desk Series with Webex spaces"
 product: "Devices"
 article_id: "ngybf7w"
-url: "https://help.webex.com/en-us/article/ngybf7w/Use-Board-Series-with-Webex-spaces"
+url: "https://help.webex.com/en-us/article/ngybf7w/Use-Board-and-Desk-Series-with-Webex-spaces"
 last_updated: "2025-06-06"
 description: "You can work together and communicate with people in an existing Webex App space
 using a Board or Desk device. When you link your app to the device, you can

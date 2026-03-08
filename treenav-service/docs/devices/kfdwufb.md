@@ -2,7 +2,7 @@
 title: "Wireless sharing with Miracast®"
 product: "Devices"
 article_id: "kfdwufb"
-url: "https://help.webex.com/en-us/article/kfdwufb/Wireless-sharing-with-Miracast"
+url: "https://help.webex.com/en-us/article/kfdwufb"
 last_updated: "2025-11-11"
 description: "When Miracast® is enabled, you can share content wirelessly from your laptop to
 a Cisco Board, Desk, or Room Series device without the need for a client."

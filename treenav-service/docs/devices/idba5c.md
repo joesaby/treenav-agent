@@ -2,8 +2,8 @@
 title: "RoomOS software upgrades"
 product: "Devices"
 article_id: "idba5c"
-url: "https://help.webex.com/en-us/article/idba5c/RoomOS-software-upgrades"
-last_updated: "2025-11-12"
+url: "https://help.webex.com/en-us/article/idba5c"
+last_updated: "2026-03-02"
 description: "RoomOS software upgrades"
 tags: ["devices"]
 source: "help.webex.com"
@@ -23,6 +23,7 @@ In Control Hub, you can see the changes to software versions on a single device 
 
 - RoomOS 26 and RoomOS 11 are released on a monthly cadence, but they do not follow the same release schedule.
 - The advanced software upgrade option is available for Board, Desk, and Room Series running RoomOS 11 and later.
+- Devices that remain on the RoomOS 11 branch continue to receive important bug fixes until April 2027 and security updates until April 2030\.
 - The Preview channel doesn’t have the advanced software upgrade option available.
 - RoomOS 9 software releases no longer follow a monthly cadence.
 

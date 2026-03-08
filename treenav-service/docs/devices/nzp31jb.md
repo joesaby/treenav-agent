@@ -2,7 +2,7 @@
 title: "Enable room booking for shared mode devices"
 product: "Devices"
 article_id: "nzp31jb"
-url: "https://help.webex.com/en-us/article/nzp31jb/Enable-room-booking-for-shared-mode-Board-and-Room-Series-devices"
+url: "https://help.webex.com/en-us/article/nzp31jb"
 last_updated: "2026-02-27"
 description: "With room booking, users can book meeting spaces directly through a shared
 device, eliminating the need to search for available rooms on a calendar."

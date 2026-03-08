@@ -2,7 +2,7 @@
 title: "Manage multiple users in Control Hub with the CSV template"
 product: "Webex Calling"
 article_id: "nlkiw8e"
-url: "https://help.webex.com/en-us/article/nlkiw8e/Add-Multiple-Users-in-Cisco-Webex-Control-Hub-with-the-CSV-Template"
+url: "https://help.webex.com/en-us/article/nlkiw8e"
 last_updated: "2025-12-12"
 description: "The CSV template enables you to add up to 20,000 users to your organization, and
 assign services at the same time. You can also export users in your organization

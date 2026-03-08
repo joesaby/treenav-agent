@@ -2,7 +2,7 @@
 title: "Configure voice portals for Webex Calling in Control Hub"
 product: "Webex Calling"
 article_id: "nojp8ej"
-url: "https://help.webex.com/en-us/article/nojp8ej/Configure-voice-portals-for-Webex-Calling-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/nojp8ej"
 last_updated: "2025-10-07"
 description: "Voice portals provide an interactive voice response (IVR) system so
 administrators can manage auto attendant anouncements. Users from the location

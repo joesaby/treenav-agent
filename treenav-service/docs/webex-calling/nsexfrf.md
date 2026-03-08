@@ -2,7 +2,7 @@
 title: "Configure in-call features from Control Hub"
 product: "Webex Calling"
 article_id: "nsexfrf"
-url: "https://help.webex.com/en-us/article/nsexfrf/Enable-or-Disable-Remote-Desktop-Control-for-Calling-in-the-Webex-App"
+url: "https://help.webex.com/en-us/article/nsexfrf"
 last_updated: "2025-12-16"
 description: "Use the incoming call(in-call) setting to turn on available features when
 joining a webex call."

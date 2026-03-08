@@ -2,7 +2,7 @@
 title: "Search for meetings and recordings on User Hub"
 product: "Webex Meetings"
 article_id: "xzeme2"
-url: "https://help.webex.com/en-us/article/xzeme2/Search-for-meetings-and-recordings-on-your-Webex-site"
+url: "https://help.webex.com/en-us/article/xzeme2"
 last_updated: "2024-09-21"
 description: "Search for an upcoming scheduled meeting, a Personal Room, or a previous
 meeting. You can also search for meeting recordings that you want to play back."

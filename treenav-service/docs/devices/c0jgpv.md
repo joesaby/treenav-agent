@@ -2,7 +2,7 @@
 title: "Share content to Board, Desk, and Room Series"
 product: "Devices"
 article_id: "c0jgpv"
-url: "https://help.webex.com/en-us/article/c0jgpv/Share-content-from-your-laptop-screen-through-a-cable-to-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/c0jgpv"
 last_updated: "2025-11-11"
 description: "You can share content from your laptop screen to your Board, Desk, or Room
 Series device with a USB-C or HDMI cable. You can also share wirelessly. The

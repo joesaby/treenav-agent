@@ -2,7 +2,7 @@
 title: "View reports for your Webex site"
 product: "Webex Meetings"
 article_id: "nhfuodx"
-url: "https://help.webex.com/en-us/article/nhfuodx/View-Reports-for-Your-Cisco-Webex-Site"
+url: "https://help.webex.com/en-us/article/nhfuodx"
 last_updated: "2025-02-14"
 description: "Site Administrators can view and download usage reports for their Webex site.
 Reports can include information about video storage allocation, access reports,

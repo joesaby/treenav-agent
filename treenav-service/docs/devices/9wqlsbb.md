@@ -2,7 +2,7 @@
 title: "Add a Desk Phone or Analog Telephone Adapter to a User"
 product: "Devices"
 article_id: "9wqlsbb"
-url: "https://help.webex.com/en-us/article/9wqlsbb/Add-a-Desk-Phone-or-Analog-Telephone-Adapter-to-a-User"
+url: "https://help.webex.com/en-us/article/9wqlsbb"
 last_updated: "2025-11-13"
 description: "You can add these devices for users in Cisco Webex Control Hub."
 tags: ["devices"]

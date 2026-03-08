@@ -2,11 +2,11 @@
 title: "Control Hub"
 product: "Webex Calling"
 article_id: "nuylwki"
-url: "https://help.webex.com/en-us/article/nuylwki/Cisco-Webex-Control-Hub"
-last_updated: "2025-09-10"
+url: "https://help.webex.com/en-us/article/nuylwki"
+last_updated: "2026-03-03"
 description: "Control Hub is the central interface to manage your organization, manage your
 users, assign services, view usage analytics, and more."
-tags: ["webex-calling", "webex-contact-center", "webex-events", "webex-events-(classic)", "webex-for-cisco-broadworks", "webex-meetings", "webex-messaging", "webex-support", "webex-training", "webex-webinars"]
+tags: ["webex-calling", "webex-contact-center", "webex-events", "webex-events-(classic)", "webex-meetings", "webex-messaging", "webex-support", "webex-training", "webex-webinars"]
 source: "help.webex.com"
 ---
 

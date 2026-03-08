@@ -2,7 +2,7 @@
 title: "Add your customer managed device"
 product: "Webex Calling"
 article_id: "nemh93t"
-url: "https://help.webex.com/en-us/article/nemh93t/Add-your-customer-managed-device"
+url: "https://help.webex.com/en-us/article/nemh93t"
 last_updated: "2026-02-09"
 description: "Enterprise administrators can add third-party SIP devices like door phones,
 overhead pagers and ATAs, and digital fax solutions."

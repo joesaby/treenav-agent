@@ -2,7 +2,7 @@
 title: "Host and co-host roles and privileges on Board, Desk, and Room Series"
 product: "Devices"
 article_id: "oprvt9"
-url: "https://help.webex.com/en-us/article/oprvt9/Host-and-co-host-roles-and-privileges-on-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/oprvt9"
 last_updated: "2025-06-06"
 description: "When you are the host or co-host of a meeting on a Board, Desk, or Room Series
 device, there are extra privileges available to you. These options let the host

@@ -2,7 +2,7 @@
 title: "Cisco Jabber User and Administration Articles"
 product: "Cisco Jabber"
 article_id: "xs31odb"
-url: "https://help.webex.com/en-us/article/xs31odb/Set-Audio-Output-for-Voice-Messages-in-Cisco-Jabber"
+url: "https://help.webex.com/en-us/article/xs31odb"
 last_updated: "2025-04-11"
 description: "All Jabber documentation can now be found on Cisco.com."
 tags: ["cisco-jabber"]

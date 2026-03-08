@@ -2,7 +2,7 @@
 title: "Check your voicemail on your Cisco IP Phone"
 product: "Devices"
 article_id: "nhved1q"
-url: "https://help.webex.com/en-us/article/nhved1q/Check-Your-Voicemail"
+url: "https://help.webex.com/en-us/article/nhved1q"
 last_updated: "2024-12-05"
 description: "Find and access your voicemail messages from your phone and avoid missing
 important messages from your customers or coworkers."

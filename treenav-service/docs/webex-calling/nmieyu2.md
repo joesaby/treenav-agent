@@ -2,7 +2,7 @@
 title: "Control your call recordings on your desk phone"
 product: "Webex Calling"
 article_id: "nmieyu2"
-url: "https://help.webex.com/en-us/article/nmieyu2/Control-Your-Call-Recordings-on-Your-Desk-Phone"
+url: "https://help.webex.com/en-us/article/nmieyu2"
 last_updated: "2024-08-30"
 description: "Your administrator determines how much control you have over recording your
 calls. Depending on your setup, your incoming and outgoing calls may be recorded

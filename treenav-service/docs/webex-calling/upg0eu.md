@@ -2,7 +2,7 @@
 title: "Comparison of call routing methods"
 product: "Webex Calling"
 article_id: "upg0eu"
-url: "https://help.webex.com/en-us/article/upg0eu/Comparison-of-call-routing-methods"
+url: "https://help.webex.com/en-us/article/upg0eu"
 last_updated: "2024-08-30"
 description: "Call routing service gets the user to the right person or department in an
 organization. The service directs the incoming calls to individual user or group

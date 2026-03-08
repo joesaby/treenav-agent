@@ -2,7 +2,7 @@
 title: "Supported Certificate Authorities for Webex Hybrid Services"
 product: "Hybrid Services"
 article_id: "0q4utq"
-url: "https://help.webex.com/en-us/article/0q4utq/Supported-Certificate-Authorities-for-Cisco-Webex-Hybrid-Services"
+url: "https://help.webex.com/en-us/article/0q4utq"
 last_updated: "2025-02-03"
 description: "You can use this list of supported certificate authorities to establish a secure
 connection between your on-premises environment and Cisco Webex Hybrid Services."

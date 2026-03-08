@@ -2,7 +2,7 @@
 title: "Outgoing call permissions for Webex Calling locations"
 product: "Webex Calling"
 article_id: "nt2lz3d"
-url: "https://help.webex.com/en-us/article/nt2lz3d/Outgoing-Calling-Permissions-for-Webex-Calling-Locations"
+url: "https://help.webex.com/en-us/article/nt2lz3d"
 last_updated: "2025-10-16"
 description: "You can determine the types of calls that users or workspaces or virtual lines
 at a location are allowed to make."

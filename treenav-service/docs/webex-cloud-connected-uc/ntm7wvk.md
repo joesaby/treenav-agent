@@ -2,7 +2,7 @@
 title: "Analytics for Your Webex Cloud-Connected UC"
 product: "Webex Cloud-Connected UC"
 article_id: "ntm7wvk"
-url: "https://help.webex.com/en-us/article/ntm7wvk/Analytics-for-Your-Webex-Cloud-Connected-UC"
+url: "https://help.webex.com/en-us/article/ntm7wvk"
 last_updated: "2025-01-21"
 description: "Analytics in Control Hub provides you with a visual representation of
 information about your on-premise UC installation, such as endpoint inventory,

@@ -2,7 +2,7 @@
 title: "Unified CM call quality grades"
 product: "Webex Cloud-Connected UC"
 article_id: "nfeu3q7"
-url: "https://help.webex.com/en-us/article/nfeu3q7/Unified-CM-Call-Quality-Grades"
+url: "https://help.webex.com/en-us/article/nfeu3q7"
 last_updated: "2025-05-16"
 description: "Learn more about how call quality grades are determined for Unified CM."
 tags: ["webex-cloud-connected-uc", "calling-in-webex-(unified-cm)"]

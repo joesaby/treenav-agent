@@ -2,7 +2,7 @@
 title: "Link Webex App to Microsoft Outlook for users"
 product: "Webex Events (Classic)"
 article_id: "gk4yog"
-url: "https://help.webex.com/en-us/article/gk4yog/Enable-Webex-App-Users-Status-to-Display-in-Microsoft-Outlook"
+url: "https://help.webex.com/en-us/article/gk4yog"
 last_updated: "2024-09-15"
 description: "This article describes how to link Webex App to Microsoft Outlook for your
 users. They can then see each other&#x27;s status in Outlook, and use Webex to call

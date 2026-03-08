@@ -2,7 +2,7 @@
 title: "Configure Webex Calling for your organization"
 product: "Webex Calling"
 article_id: "njvdjf2"
-url: "https://help.webex.com/en-us/article/njvdjf2/Configure-Webex-Calling-for-your-organization"
+url: "https://help.webex.com/en-us/article/njvdjf2"
 last_updated: "2025-09-23"
 description: "Customize your organization for Webex Calling in Control Hub. After activating
 your first location through the First Time Setup Wizard, you can set up and

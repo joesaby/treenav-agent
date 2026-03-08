@@ -2,7 +2,7 @@
 title: "Best practices for using the Web Engine"
 product: "Devices"
 article_id: "pdybr5"
-url: "https://help.webex.com/en-us/article/pdybr5/Best-Practices-For-Using-the-Web-Engine"
+url: "https://help.webex.com/en-us/article/pdybr5"
 last_updated: "2025-02-27"
 description: "Follow these recommendations for a better usage of the web engine on your Board,
 Desk, or Room Series device. When the web engine is enabled, you can configure

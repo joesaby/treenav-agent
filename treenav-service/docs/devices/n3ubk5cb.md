@@ -2,7 +2,7 @@
 title: "Sign up for face recognition and name labels"
 product: "Devices"
 article_id: "n3ubk5cb"
-url: "https://help.webex.com/en-us/article/n3ubk5cb/Sign-up-for-face-recognition-and-name-labels"
+url: "https://help.webex.com/en-us/article/n3ubk5cb"
 last_updated: "2025-06-06"
 description: "Make it easier for people in your organization to become familiar with each
 other. By using face recognition and name labels during meetings, you can match

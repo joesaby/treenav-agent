@@ -2,7 +2,7 @@
 title: "Troubleshoot Webex Cloud-Connected UC"
 product: "Webex Cloud-Connected UC"
 article_id: "x8s8vs"
-url: "https://help.webex.com/en-us/article/x8s8vs/Troubleshoot-Webex-Cloud-Connected-UC"
+url: "https://help.webex.com/en-us/article/x8s8vs"
 last_updated: "2025-03-13"
 description: "Use this article to resolve issues that might occur when you are using the Webex
 Cloud-Connected UC Telemetry and Analytics service."

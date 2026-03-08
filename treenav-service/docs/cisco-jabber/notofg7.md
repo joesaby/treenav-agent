@@ -2,7 +2,7 @@
 title: "Cisco Jabber User and Administration Articles"
 product: "Cisco Jabber"
 article_id: "notofg7"
-url: "https://help.webex.com/en-us/article/notofg7/Welcome-to-Cisco-Jabber"
+url: "https://help.webex.com/en-us/article/notofg7"
 last_updated: "2025-04-11"
 description: "All Jabber documentation can now be found on Cisco.com."
 tags: ["cisco-jabber"]

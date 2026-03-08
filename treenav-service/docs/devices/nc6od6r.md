@@ -2,7 +2,7 @@
 title: "Utilization and environmental metrics for workspaces"
 product: "Devices"
 article_id: "nc6od6r"
-url: "https://help.webex.com/en-us/article/nc6od6r/Historical-Data-for-Webex-Rooms-Workspaces"
+url: "https://help.webex.com/en-us/article/nc6od6r"
 last_updated: "2025-06-06"
 description: "On the utilization and environmental metrics page for a workspace, you can view
 historical data from environmental and ultrasound sensors on Board, Desk, and

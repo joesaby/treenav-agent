@@ -2,7 +2,7 @@
 title: "Cisco Jabber User and Administration Articles"
 product: "Cisco Jabber"
 article_id: "cglvhbb"
-url: "https://help.webex.com/en-us/article/cglvhbb/Set-Up-a-Voicemail-Account-in-Cisco-Jabber-for-iPhone-and-iPad"
+url: "https://help.webex.com/en-us/article/cglvhbb"
 last_updated: "2025-04-11"
 description: "All Jabber documentation can now be found on Cisco.com."
 tags: ["cisco-jabber"]

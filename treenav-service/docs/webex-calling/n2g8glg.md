@@ -2,10 +2,10 @@
 title: "Webex App | Test Your Connection with the Health Checker"
 product: "Webex Calling"
 article_id: "n2g8glg"
-url: "https://help.webex.com/en-us/article/n2g8glg/Webex-App-Test-Your-Connection-with-the-Health-Checker"
-last_updated: "2024-09-11"
+url: "https://help.webex.com/en-us/article/n2g8glg"
+last_updated: "2026-03-07"
 description: "Webex App | Test Your Connection with the Health Checker"
-tags: ["webex-calling", "webex-meetings", "webex-messaging", "calling-in-webex-(unified-cm)"]
+tags: ["webex-calling", "webex-meetings", "webex-messaging", "calling-in-webex-(unified-cm)", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

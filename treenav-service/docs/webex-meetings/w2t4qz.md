@@ -2,7 +2,7 @@
 title: "Webex App | Show or hide names in thumbnail videos"
 product: "Webex Meetings"
 article_id: "w2t4qz"
-url: "https://help.webex.com/en-us/article/w2t4qz/Webex-App-Show-or-Hide-Names-in-Thumbnail-Videos"
+url: "https://help.webex.com/en-us/article/w2t4qz"
 last_updated: "2026-01-19"
 description: "During a meeting, we hide participants’ names in their thumbnail videos, by
 default. If you don&#x27;t know everyone in the meeting, show their names."

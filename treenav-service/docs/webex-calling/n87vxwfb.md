@@ -2,7 +2,7 @@
 title: "Webex App | Click to call from another app"
 product: "Webex Calling"
 article_id: "n87vxwfb"
-url: "https://help.webex.com/en-us/article/n87vxwfb/Webex-App-Click-to-call-from-another-app"
+url: "https://help.webex.com/en-us/article/n87vxwfb"
 last_updated: "2025-11-27"
 description: "You can set up your Windows or Mac computer so that Webex App is the default
 option for calling numbers that you click outside of the app, for example, in

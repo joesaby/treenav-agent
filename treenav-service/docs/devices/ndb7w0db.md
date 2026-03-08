@@ -2,7 +2,7 @@
 title: "Generate an activation code for a device"
 product: "Devices"
 article_id: "ndb7w0db"
-url: "https://help.webex.com/en-us/article/ndb7w0db/Generate-an-Activation-Code-for-a-Device"
+url: "https://help.webex.com/en-us/article/ndb7w0db"
 last_updated: "2026-01-12"
 description: "You must activate devices that you add to Webex, and we provide activation codes
 to help you do that. You need a unique activation code for each device, which

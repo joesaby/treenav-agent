@@ -2,7 +2,7 @@
 title: "Create schedules in Control Hub"
 product: "Webex Calling"
 article_id: "n6wyx8t"
-url: "https://help.webex.com/en-us/article/n6wyx8t/Create-and-Configure-a-Schedule-in-Cisco-Webex-Control-Hub"
+url: "https://help.webex.com/en-us/article/n6wyx8t"
 last_updated: "2025-06-18"
 description: "Create different schedules and apply them to auto attendants and user call
 settings to efficiently route calls based on business hours, holidays, or user

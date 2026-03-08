@@ -2,7 +2,7 @@
 title: "Configure and manage your Webex Calling users"
 product: "Webex Calling"
 article_id: "nz0krq9"
-url: "https://help.webex.com/en-us/article/nz0krq9/Configure-and-manage-your-Webex-Calling-users"
+url: "https://help.webex.com/en-us/article/nz0krq9"
 last_updated: "2025-02-24"
 description: "Add each user in Control Hub to take advantage of the Webex Calling services.
 You can either add users manually or use a CSV file to add multiple users."

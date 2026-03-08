@@ -2,7 +2,7 @@
 title: "Toll-free and non-geographical numbers support for Webex Calling"
 product: "Webex Calling"
 article_id: "g1gtsdb"
-url: "https://help.webex.com/en-us/article/g1gtsdb/Toll-free-and-non-geographical-numbers-support-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/g1gtsdb"
 last_updated: "2026-01-13"
 description: "Use this article to know the toll-free numbers supported by Webex Calling for
 each location. Also, know the restrictions when making outbound calls from

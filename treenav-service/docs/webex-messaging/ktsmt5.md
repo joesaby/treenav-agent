@@ -2,13 +2,13 @@
 title: "Webex App | Edit space settings"
 product: "Webex Messaging"
 article_id: "ktsmt5"
-url: "https://help.webex.com/en-us/article/ktsmt5/Webex-App-Update-a-space-name-picture-and-cover-image"
-last_updated: "2025-09-16"
+url: "https://help.webex.com/en-us/article/ktsmt5"
+last_updated: "2026-03-07"
 description: "You can change a space picture from a round icon with the first letter of the
 space name, by uploading a picture for the space. Or, if you change the space
 name, the icon letter changes too. You can also add a cover image to the space,
 to add a personal touch."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

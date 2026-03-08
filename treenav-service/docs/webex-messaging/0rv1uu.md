@@ -2,7 +2,7 @@
 title: "Webex App | Shortcodes for Emojis"
 product: "Webex Messaging"
 article_id: "0rv1uu"
-url: "https://help.webex.com/en-us/article/0rv1uu/Webex-App-Shortcodes-for-Emojis"
+url: "https://help.webex.com/en-us/article/0rv1uu"
 last_updated: "2024-09-19"
 description: "Instantly express yourself and add some fun when writing a message, by using
 emoji shortcodes."

@@ -2,7 +2,7 @@
 title: "Remove the Webex Video Integration (CVI) for Microsoft Teams"
 product: "Hybrid Services"
 article_id: "wurtvz"
-url: "https://help.webex.com/en-us/article/wurtvz/Remove-the-Cisco-Webex-Video-Integration-CVI-for-Microsoft-Teams"
+url: "https://help.webex.com/en-us/article/wurtvz"
 last_updated: "2025-06-16"
 description: "Use this task to remove the video integration between your Webex organization
 and your Microsoft 365 tenant."

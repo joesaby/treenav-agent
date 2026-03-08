@@ -2,7 +2,7 @@
 title: "Prepare your environment"
 product: "Webex Calling"
 article_id: "n4cprps"
-url: "https://help.webex.com/en-us/article/n4cprps/Prepare-Your-Environment-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/n4cprps"
 last_updated: "2025-08-15"
 description: "Read through the Local gateway requirements for Webex Calling. The local gateway
 helps you migrate to Webex Calling at your own pace."

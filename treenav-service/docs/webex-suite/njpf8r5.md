@@ -2,11 +2,11 @@
 title: "Webex App | Find Your App Version"
 product: "Webex Suite"
 article_id: "njpf8r5"
-url: "https://help.webex.com/en-us/article/njpf8r5/Webex-App-Find-Your-App-Version"
-last_updated: "2024-09-17"
+url: "https://help.webex.com/en-us/article/njpf8r5"
+last_updated: "2026-03-07"
 description: "You can find the version of your Webex App to help you identify if you&#x27;re on the
 latest version and what features are available to you."
-tags: ["webex-suite"]
+tags: ["webex-suite", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

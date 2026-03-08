@@ -2,7 +2,7 @@
 title: "Manage call park in Control Hub"
 product: "Webex Calling"
 article_id: "nfoxd2m"
-url: "https://help.webex.com/en-us/article/nfoxd2m/Call-Park-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/nfoxd2m"
 last_updated: "2025-08-05"
 description: "The call park service allows a user to park a call against a user’s extension or
 to a call park extension."

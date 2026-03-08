@@ -2,7 +2,7 @@
 title: "Specify caller ID for users and workspaces"
 product: "Webex Calling"
 article_id: "nh3x9zt"
-url: "https://help.webex.com/en-us/article/nh3x9zt/Specify-caller-ID-options-for-users-and-workspaces"
+url: "https://help.webex.com/en-us/article/nh3x9zt"
 last_updated: "2025-10-07"
 description: "In Control Hub, you can specify the caller ID (CLID) information to be shown
 when a user, virtual line, or a workspace makes an external call."

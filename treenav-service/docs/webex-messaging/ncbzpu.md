@@ -2,7 +2,7 @@
 title: "Webex App | Unable to share or download files"
 product: "Webex Messaging"
 article_id: "ncbzpu"
-url: "https://help.webex.com/en-us/article/ncbzpu/Webex-App-Unable-to-share-or-download-files"
+url: "https://help.webex.com/en-us/article/ncbzpu"
 last_updated: "2024-09-19"
 description: "Your company can apply policies to restrict you from downloading, previewing, or
 uploading files in Webex App. They can apply this restriction to Webex App on

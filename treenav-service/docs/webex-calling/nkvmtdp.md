@@ -2,7 +2,7 @@
 title: "Change the time zone of your device"
 product: "Webex Calling"
 article_id: "nkvmtdp"
-url: "https://help.webex.com/en-us/article/nkvmtdp/Change-the-Time-Zone-of-Your-Device"
+url: "https://help.webex.com/en-us/article/nkvmtdp"
 last_updated: "2024-09-09"
 description: "Your administrator sets the time zone for all the devices in your company. If
 you often travel or work regularly in a different time zone, you can change the

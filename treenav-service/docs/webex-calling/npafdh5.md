@@ -2,7 +2,7 @@
 title: "Configure a default voicemail passcode for all new users"
 product: "Webex Calling"
 article_id: "npafdh5"
-url: "https://help.webex.com/en-us/article/npafdh5/Configure-a-Default-Voicemail-Passcode-for-All-New-Users"
+url: "https://help.webex.com/en-us/article/npafdh5"
 last_updated: "2025-05-20"
 description: "As an administrator, you can assign a default voicemail passcode (PIN) to new
 users."

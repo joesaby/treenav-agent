@@ -2,7 +2,7 @@
 title: "Update audio announcement and email communication language"
 product: "Webex Calling"
 article_id: "h12djs"
-url: "https://help.webex.com/en-us/article/h12djs/Configure-the-language-for-your-audio-announcements-and-email-communication-in-the-calling-user-portal"
+url: "https://help.webex.com/en-us/article/h12djs"
 last_updated: "2024-09-09"
 description: "You can change the language for your audio announcements, voice prompts, IP
 phone display, and email communication. If you don’t want to change the

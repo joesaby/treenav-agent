@@ -2,7 +2,7 @@
 title: "Webex App | Join a Team"
 product: "Webex Messaging"
 article_id: "fr4sm5"
-url: "https://help.webex.com/en-us/article/fr4sm5/Webex-App-Join-a-Team"
+url: "https://help.webex.com/en-us/article/fr4sm5"
 last_updated: "2024-09-19"
 description: "The only way to join a team in Webex App is if a moderator adds you to it.
 Sometimes you&#x27;ll just get added to a team because you&#x27;re part of a project or

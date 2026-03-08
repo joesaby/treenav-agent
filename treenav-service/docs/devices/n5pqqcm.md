@@ -2,7 +2,7 @@
 title: "Device configurations for Board, Desk, and Room Series devices"
 product: "Devices"
 article_id: "n5pqqcm"
-url: "https://help.webex.com/en-us/article/n5pqqcm/Device-configurations-for-Board-Desk-and-Room-Series-devices"
+url: "https://help.webex.com/en-us/article/n5pqqcm"
 last_updated: "2026-01-30"
 description: "To set up certain features, you need to access the device’s configurations. You
 can access them either directly from Control Hub or use the device web

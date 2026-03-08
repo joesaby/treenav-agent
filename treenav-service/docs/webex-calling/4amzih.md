@@ -2,7 +2,7 @@
 title: "Configure in-call features from Control Hub"
 product: "Webex Calling"
 article_id: "4amzih"
-url: "https://help.webex.com/en-us/article/4amzih/Configure-in-call-features"
+url: "https://help.webex.com/en-us/article/4amzih/Enable-or-disable-incoming-call-experience"
 last_updated: "2025-12-16"
 description: "Use the incoming call(in-call) setting to turn on available features when
 joining a webex call."

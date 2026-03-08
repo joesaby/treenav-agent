@@ -2,13 +2,13 @@
 title: "Webex App | Connect your tools and automate tasks"
 product: "Webex Messaging"
 article_id: "n0qp3oeb"
-url: "https://help.webex.com/en-us/article/n0qp3oeb/Webex-App-Connect-your-tools-and-automate-tasks"
-last_updated: "2024-09-14"
+url: "https://help.webex.com/en-us/article/n0qp3oeb"
+last_updated: "2026-03-07"
 description: "Simplify your daily routines, accelerate business outcomes, and automate
 everyday tasks using Webex App bots and integrations. Connect your favorite
 tools to Webex App and get notified when tasks are done, follow up on team
 status, or simply translate a message."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

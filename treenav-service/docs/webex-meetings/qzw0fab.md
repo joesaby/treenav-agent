@@ -2,12 +2,12 @@
 title: "Hide or show non-video participants during meetings and webinars"
 product: "Webex Meetings"
 article_id: "qzw0fab"
-url: "https://help.webex.com/en-us/article/qzw0fab/Hide-or-show-non-video-participants-during-Webex-meetings-webinars-and-events"
-last_updated: "2025-04-25"
+url: "https://help.webex.com/en-us/article/qzw0fab"
+last_updated: "2026-03-03"
 description: "Focus on the people who are showing video during a meeting or webinar by hiding
 all the participants who aren&#x27;t on video. By default, you can see all of the
 participants in a meeting, whether they show their video or not."
-tags: ["webex-meetings", "webex-webinars", "webex-events-(classic)"]
+tags: ["webex-meetings", "webex-webinars", "webex-events-(classic)", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

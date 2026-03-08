@@ -2,7 +2,7 @@
 title: "Configure multi call window for Calling in Webex App (Unified CM)"
 product: "Webex Suite"
 article_id: "l8xf9l"
-url: "https://help.webex.com/en-us/article/l8xf9l/Configure-multi-call-window-for-Calling-in-Webex-App-Unified-CM"
+url: "https://help.webex.com/en-us/article/l8xf9l"
 last_updated: "2024-09-22"
 description: "The multi call window is a separate, floating window that helps Webex App users
 to manage multiple or shared lines. As well as making and receiving calls on

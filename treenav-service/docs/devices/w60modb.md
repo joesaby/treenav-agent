@@ -2,7 +2,7 @@
 title: "Configure wireless sharing with Miracast®"
 product: "Devices"
 article_id: "w60modb"
-url: "https://help.webex.com/en-us/article/w60modb/Configure-wireless-sharing-with-Miracast"
+url: "https://help.webex.com/en-us/article/w60modb"
 last_updated: "2025-09-19"
 description: "Enabling Miracast® allows meeting participants to share content wirelessly from
 their laptop to a Cisco Board, Desk, or Room Series device without the need for

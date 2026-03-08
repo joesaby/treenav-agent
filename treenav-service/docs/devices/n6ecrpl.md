@@ -1,0 +1,35 @@
+---
+title: "Transfer a call on 9800/8875 (Unified CM)"
+product: "Devices"
+article_id: "n6ecrpl"
+url: "https://help.webex.com/en-us/article/n6ecrpl"
+last_updated: "2026-01-20"
+description: "This Help article is for Cisco Desk Phone 9800 Series and Cisco Video Phone 8875
+registered to Cisco Unified Communications Manager (Unified CM)."
+tags: ["devices"]
+source: "help.webex.com"
+---
+
+# Transfer a call on 9800/8875 (Unified CM)
+
+Call Transfer allows you to move an active call to another person, with the flexibility to choose how the transfer is handled. You can either consult the recipient before completing the transfer to ensure availability and provide context, or perform a direct transfer to quickly pass the call along. 
+
+When you transfer the call, the current call is put on hold. The call ends on your phone after you transfer it. 
+
+- [9811 / 9841 / 9851 / 9861 ](#reference-template%5F9d513c4a-3618-468a-9a0f-3c98fbe524f7)
+- [9871 / 8875](#generic-template%5F29eb4191-dcfd-412b-a922-f97c599203dd)
+
+| 1 | On an active call, press ![the Transfer key](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/470001-480000/478001-479000/478221.png) or More (…) \> Transfer.                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select the person that you want to transfer the call to. Do one of the following actions as needed: To transfer the call to a contact, select Favorites or Directories, locate the person, then select Call.To transfer the call to someone from the call history, select Recents, locate the person, then select Call.To transfer the call to an on-hold call, select Calls to open the list, then select the desired call and select Transfer. The Calls tab appears only when there are on-hold calls on the phone. Tapping a desired call in the list completes the transfer.Dial a phone number using the keypad. |
+| 3 | Talk to the call recipient, when answered.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 4 | Press Transfer to complete the transfer. If you press Transfer before the recipient answers the call, the transfer completes and the call continues ringing for the recipient.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
+## 
+
+When you transfer a call, you can wait until the other person to answer. This allows you to make sure that the other person is available to have a conversation with the caller before you remove yourself from the call. You can also do a quick transfer without consulting the receiver.
+
+When you transfer the call, the current call is put on hold. The call automatically ends on your phone after you transfer it.
+
+| On an active call, do one of the following actions: Consult the receiver before you transfer the call: Tap More ![More Options button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/466001-467000/466557.png) \> Transfer.In the Recents or Directories tab, tap the contact that you want to transfer the call to.Talk to the call receiver and tap Transfer ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/467001-468000/467199.png) to complete the transfer.You can also tap Transfer ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/467001-468000/467199.png) before the receiver answers the call. Transfer the call to the person who has been put on hold:Tap More ![More Options button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/466001-467000/466557.png)  \> Transfer.In the Calls tab, tap the contact that you want to transfer the call to.The call is transferred immediately to the person without the need to confirm the action. The Calls tab is available only on phones registered to Cisco Unified Communications Manager. Vary with configurations on your phone, the Calls tab displays the calls for your line or all the calls on the phone. |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

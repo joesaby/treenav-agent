@@ -2,12 +2,12 @@
 title: "Find the Data Residency Region That Maps to a Country"
 product: "Dedicated Instance"
 article_id: "wej14b"
-url: "https://help.webex.com/en-us/article/wej14b/Find-the-Data-Residency-Region-That-Maps-to-a-Country"
-last_updated: "2025-04-14"
+url: "https://help.webex.com/en-us/article/wej14b/"
+last_updated: "2026-03-05"
 description: "During provisioning, the Country Selector determines which region stores a new
 customer organization&#x27;s data (organization identity, users&#x27; personal identities,
 user-generated content, and encryption keys)."
-tags: ["dedicated-instance", "edge-audio", "hybrid-services", "ucm-cloud", "webex-calling", "webex-cloud-connected-uc", "webex-contact-center", "webex-contact-center-enterprise", "webex-lti", "webex-events-(classic)", "webex-expert-on-demand", "webex-for-cisco-broadworks", "webex-go", "webex-instant-connect", "webex-meetings", "webex-suite", "webex-training", "webex-webinars", "webex-support", "webex-messaging", "devices"]
+tags: ["dedicated-instance", "edge-audio", "hybrid-services", "ucm-cloud", "webex-calling", "webex-cloud-connected-uc", "webex-contact-center", "webex-contact-center-enterprise", "webex-lti", "webex-events-(classic)", "webex-expert-on-demand", "webex-go", "webex-instant-connect", "webex-meetings", "webex-suite", "webex-training", "webex-webinars", "webex-support", "webex-messaging", "devices"]
 source: "help.webex.com"
 ---
 

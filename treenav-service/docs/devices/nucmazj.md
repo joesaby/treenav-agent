@@ -2,7 +2,7 @@
 title: "Delete whiteboards and end your session on Board and Desk Series"
 product: "Devices"
 article_id: "nucmazj"
-url: "https://help.webex.com/en-us/article/nucmazj/Delete-whiteboards-and-end-your-session-on-Board-and-Desk-Series"
+url: "https://help.webex.com/en-us/article/nucmazj"
 last_updated: "2025-06-06"
 description: "You can end your session at any time from your Board or Desk Series device,
 clearing up all whiteboards and browsing data for the next user."

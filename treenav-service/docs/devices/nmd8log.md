@@ -2,7 +2,7 @@
 title: "Enable digital signage on Board, Desk, and Room Series devices"
 product: "Devices"
 article_id: "nmd8log"
-url: "https://help.webex.com/en-us/article/nmd8log/Enable-digital-signage-on-Board-Desk-and-Room-Series-devices"
+url: "https://help.webex.com/en-us/article/nmd8log"
 last_updated: "2026-02-02"
 description: "Digital signage allows you to show custom content on Board, Desk, and Room
 Series devices when they are in half-wake state. Digital signage is a great way

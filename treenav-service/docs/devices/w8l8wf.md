@@ -2,7 +2,7 @@
 title: "Reactions in meetings on Cisco devices"
 product: "Devices"
 article_id: "w8l8wf"
-url: "https://help.webex.com/en-us/article/w8l8wf/Reactions-in-meetings-on-Cisco-devices"
+url: "https://help.webex.com/en-us/article/w8l8wf"
 last_updated: "2025-04-25"
 description: "With reactions, you can send on-screen emojis without interrupting the flow of
 the meeting."

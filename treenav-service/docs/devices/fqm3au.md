@@ -2,7 +2,7 @@
 title: "Connecting a touch controller to Board, Desk, and Room Series devices"
 product: "Devices"
 article_id: "fqm3au"
-url: "https://help.webex.com/en-us/article/fqm3au/Connecting-a-touch-controller-to-Boards-and-Room-Series-devices"
+url: "https://help.webex.com/en-us/article/fqm3au"
 last_updated: "2025-06-06"
 description: "You can connect a touch controller by direct connection or across the network
 (LAN)."

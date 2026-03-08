@@ -2,7 +2,7 @@
 title: "Configure and manage Webex Calling devices"
 product: "Webex Calling"
 article_id: "n9r1aac"
-url: "https://help.webex.com/en-us/article/n9r1aac/Configure-and-manage-Webex-Calling-devices"
+url: "https://help.webex.com/en-us/article/n9r1aac"
 last_updated: "2026-01-28"
 description: "You can assign and manage devices for users and workspaces in Control Hub.
 Choose to add by the MAC address or by generating an activation code to enter on

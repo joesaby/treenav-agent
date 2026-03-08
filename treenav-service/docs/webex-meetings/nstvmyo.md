@@ -2,7 +2,7 @@
 title: "Manage single sign-on integration in Control Hub"
 product: "Webex Meetings"
 article_id: "nstvmyo"
-url: "https://help.webex.com/en-us/article/nstvmyo/Manage-Single-Sign-On-integration-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/nstvmyo"
 last_updated: "2025-11-17"
 description: "Use the SSO management features in Control Hub for certificate management and
 general SSO maintenance activities, such as updating an expiring certificate or

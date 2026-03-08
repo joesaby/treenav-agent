@@ -2,7 +2,7 @@
 title: "Hoteling in Control Hub"
 product: "Webex Calling"
 article_id: "t2d9bx"
-url: "https://help.webex.com/en-us/article/t2d9bx/Hoteling-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/t2d9bx"
 last_updated: "2025-03-24"
 description: "Enable hoteling to temporarily load users&#x27; phone profiles onto a shared (host)
 phone, letting them make calls with their work number and access features from

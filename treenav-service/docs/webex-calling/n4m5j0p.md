@@ -2,7 +2,7 @@
 title: "Change the language used for specific call features"
 product: "Webex Calling"
 article_id: "n4m5j0p"
-url: "https://help.webex.com/en-us/article/n4m5j0p/Change-the-Language-Used-for-Specific-Call-Features"
+url: "https://help.webex.com/en-us/article/n4m5j0p"
 last_updated: "2024-09-24"
 description: "If you feel more comfortable in a different language, change the language that
 Webex displays. Your registered devices also change to the language you choose."

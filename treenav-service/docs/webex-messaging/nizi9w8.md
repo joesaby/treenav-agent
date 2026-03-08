@@ -2,14 +2,14 @@
 title: "Webex App | Set notifications for specific spaces"
 product: "Webex Messaging"
 article_id: "nizi9w8"
-url: "https://help.webex.com/en-us/article/nizi9w8/Webex-App-Set-Notifications-for-Certain-Spaces"
-last_updated: "2024-09-11"
+url: "https://help.webex.com/en-us/article/nizi9w8"
+last_updated: "2026-03-07"
 description: "Notifications help you keep up-to-date with what&#x27;s happening, so you don&#x27;t miss
 anything. You can customize your notification settings for specific spaces to
 raise or lower the priority of the messages posted to them. Notifications for
 conversations between you and another person are on by default, but you can mute
 them if you prefer."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 
@@ -22,8 +22,8 @@ Webex App allows you to set notifications in two ways: globally so that the sett
 - [Android](#id%5F116987)
 - [Web](#Cisco%5FTask.dita%5Fff2b04f1-29ab-4d60-a2b9-239a0ec52902)
 
-| In the space, click Space Information ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg), and choose Notifications. Then choose a setting and click Save. |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| In the space, click Space Information ![Settings button represented by a cog icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg), and choose Notifications. Then choose a setting and click Save. |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 | 1 | Swipe left on the space in the spaces list, tap More, then tap Notifications.... |
 | - | -------------------------------------------------------------------------------- |
@@ -33,5 +33,5 @@ Webex App allows you to set notifications in two ways: globally so that the sett
 | - | ---------------------------------------------------------------- |
 | 2 | Select your preferences for the space or mute notifications.     |
 
-| Go to the space settings ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg), select Notifications, and then set your preferences or mute notifications. |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Go to the space settings ![Settings button represented by a cog icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg), select Notifications, and then set your preferences or mute notifications. |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

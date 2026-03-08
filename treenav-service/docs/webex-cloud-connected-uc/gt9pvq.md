@@ -2,7 +2,7 @@
 title: "List of Cisco Endpoints Supported on Unified CM releases"
 product: "Webex Cloud-Connected UC"
 article_id: "gt9pvq"
-url: "https://help.webex.com/en-us/article/gt9pvq/List-of-Cisco-Endpoints-Supported-on-Unified-CM-releases"
+url: "https://help.webex.com/en-us/article/gt9pvq"
 last_updated: "2025-11-10"
 description: "Use this information to learn about the supported endpoints that work with
 different Unified CM releases."

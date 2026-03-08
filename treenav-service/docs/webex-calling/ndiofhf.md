@@ -2,7 +2,7 @@
 title: "Implement CUBE high availability as Local Gateway"
 product: "Webex Calling"
 article_id: "ndiofhf"
-url: "https://help.webex.com/en-us/article/ndiofhf/Implement-CUBE-High-Availability-as-Local-Gateway"
+url: "https://help.webex.com/en-us/article/ndiofhf"
 last_updated: "2025-04-04"
 description: "Local Gateway (LGW) is the exclusive solution for providing on-premises PSTN
 access to Cisco Webex Calling customers. This document guides you in configuring

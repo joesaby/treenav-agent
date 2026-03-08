@@ -2,7 +2,7 @@
 title: "Set up your Webex Calling plan in Account Management"
 product: "Webex Calling"
 article_id: "nhk7ezbb"
-url: "https://help.webex.com/en-us/article/nhk7ezbb/Set-up-your-Webex-Calling-plan-in-Account-Management"
+url: "https://help.webex.com/en-us/article/nhk7ezbb"
 last_updated: "2024-09-22"
 description: "If you purchased a call plan with multiple licenses from webex.com, get started
 by assigning your main number to invite additional users and submit transfer

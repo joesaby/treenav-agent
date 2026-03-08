@@ -2,7 +2,7 @@
 title: "Enable WebRTC and CVI to join a Microsoft Teams Meeting from Board, Desk, and Room Series"
 product: "Devices"
 article_id: "nsx4cpe"
-url: "https://help.webex.com/en-us/article/nsx4cpe/Enable-WebRTC-to-Join-a-Microsoft-Teams-Meeting-from-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/nsx4cpe"
 last_updated: "2025-06-06"
 description: "By enabling WebRTC and CVI in Control Hub, it is possible to join Microsoft
 Teams Meetings directly from Cisco devices."

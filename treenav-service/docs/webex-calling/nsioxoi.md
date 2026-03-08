@@ -2,7 +2,7 @@
 title: "Manage auto attendants"
 product: "Webex Calling"
 article_id: "nsioxoi"
-url: "https://help.webex.com/en-us/article/nsioxoi/Manage-auto-attendants-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/nsioxoi"
 last_updated: "2025-12-12"
 description: "Set up an auto attendant to answer incoming calls and provide menu options to
 direct callers to right person, hunt group, or voicemail without the help of a

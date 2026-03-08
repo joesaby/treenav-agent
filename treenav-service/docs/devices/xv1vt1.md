@@ -2,7 +2,7 @@
 title: "Search for devices in your organization"
 product: "Devices"
 article_id: "xv1vt1"
-url: "https://help.webex.com/en-us/article/xv1vt1/Search-for-Devices-in-Your-Organization"
+url: "https://help.webex.com/en-us/article/xv1vt1"
 last_updated: "2025-12-03"
 description: "You can search for devices in Control Hub. Use the interactive search field, pie
 chart, or pie chart legend to refine the results. A refined search can be

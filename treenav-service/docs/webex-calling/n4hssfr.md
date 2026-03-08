@@ -2,7 +2,7 @@
 title: "Demand PRT (problem report tool) collection in Control Hub"
 product: "Webex Calling"
 article_id: "n4hssfr"
-url: "https://help.webex.com/en-us/article/n4hssfr/Demand-PRT-problem-report-tool-collection-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/n4hssfr/Demand-PRT-(problem-report-tool)-collection-in-Control-Hub"
 last_updated: "2025-07-01"
 description: "With the new On-Demand PRT feature for Webex Calling, an Administrator from the
 Control Hub portal, can remotely initiate a PRT file collection (compressed set

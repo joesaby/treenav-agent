@@ -2,7 +2,7 @@
 title: "Enable or Disable Video for Calling in the Webex App"
 product: "Webex Calling"
 article_id: "ngsxohab"
-url: "https://help.webex.com/en-us/article/ngsxohab/Enable-or-Disable-Video-for-Calling-in-the-Webex-App"
+url: "https://help.webex.com/en-us/article/ngsxohab"
 last_updated: "2024-08-31"
 description: "Partners and customers with full administrator rights have the ability to
 disable video for calling and other Webex services on the Webex app. Enabling

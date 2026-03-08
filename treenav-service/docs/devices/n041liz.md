@@ -2,7 +2,7 @@
 title: "Manage web apps on Board and Desk Series"
 product: "Devices"
 article_id: "n041liz"
-url: "https://help.webex.com/en-us/article/n041liz/Manage-Web-Apps-on-Board-and-Desk-Series"
+url: "https://help.webex.com/en-us/article/n041liz"
 last_updated: "2025-02-12"
 description: "You can add, delete, and edit web apps directly from the settings menu on your
 device."

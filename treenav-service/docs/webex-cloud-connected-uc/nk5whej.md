@@ -2,7 +2,7 @@
 title: "Synchronize user and organizational contacts"
 product: "Webex Cloud-Connected UC"
 article_id: "nk5whej"
-url: "https://help.webex.com/en-us/article/nk5whej/Synchronize-User-and-Organizational-Contacts"
+url: "https://help.webex.com/en-us/article/nk5whej"
 last_updated: "2025-10-23"
 description: "Organizational contacts are identities imported or synchronized into Webex. You
 can search all users and organization contacts in an organization through Webex

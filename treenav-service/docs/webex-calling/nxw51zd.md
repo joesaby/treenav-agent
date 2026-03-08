@@ -2,7 +2,7 @@
 title: "Park calls on your phone"
 product: "Webex Calling"
 article_id: "nxw51zd"
-url: "https://help.webex.com/en-us/article/nxw51zd/Park-Calls-on-Your-Phone"
+url: "https://help.webex.com/en-us/article/nxw51zd"
 last_updated: "2024-09-14"
 description: "Park calls on your phone"
 tags: ["webex-calling", "devices"]

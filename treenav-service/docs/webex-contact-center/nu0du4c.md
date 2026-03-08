@@ -2,7 +2,7 @@
 title: "Desktop settings for Webex Contact Center"
 product: "Webex Contact Center"
 article_id: "nu0du4c"
-url: "https://help.webex.com/en-us/article/nu0du4c/Desktop-Settings-for-Webex-Contact-Center"
+url: "https://help.webex.com/en-us/article/nu0du4c/Desktop-settings-for-Webex-Contact-Center"
 last_updated: "2025-09-01"
 description: "You can use this article to set up Desktop Settings for Webex Contact Center.
 From the desktop settings, you can set up or manage desktop experience such as

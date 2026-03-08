@@ -2,7 +2,7 @@
 title: "Cisco Webex Edge Audio Customer Configuration Guide"
 product: "Edge Audio"
 article_id: "xmsy7d"
-url: "https://help.webex.com/en-us/article/xmsy7d/Cisco-Webex-Edge-Audio-Customer-Configuration-Guide"
+url: "https://help.webex.com/en-us/article/xmsy7d"
 last_updated: "2025-10-28"
 description: "Use this configuration guide to set up your Edge Audio solution. You will need
 access to Webex Site Administration or Control Hub, Cisco Unified Communications

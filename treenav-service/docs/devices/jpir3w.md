@@ -2,7 +2,7 @@
 title: "Webex Assistant for devices"
 product: "Devices"
 article_id: "jpir3w"
-url: "https://help.webex.com/en-us/article/jpir3w/Get-Started-with-Webex-Assistant-for-Devices"
+url: "https://help.webex.com/en-us/article/jpir3w"
 last_updated: "2024-11-28"
 description: "Webex Assistant for devices gives you a new way to control your Board, Desk, and
 Room Series devices by using voice commands."

@@ -2,12 +2,12 @@
 title: "Webex App | Add your Microsoft OneDrive or SharePoint Online account"
 product: "Webex Messaging"
 article_id: "nymj5jk"
-url: "https://help.webex.com/en-us/article/nymj5jk/Webex-Add-Your-Microsoft-OneDrive-or-SharePoint-Online-Account"
-last_updated: "2024-09-18"
+url: "https://help.webex.com/en-us/article/nymj5jk"
+last_updated: "2026-03-07"
 description: "You can access your company&#x27;s enterprise content management system from within
 Webex App. So, when you&#x27;re working on a project, and sharing ideas in the app,
 you can keep working on your shared documents right from the space."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

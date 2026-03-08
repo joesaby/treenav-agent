@@ -2,7 +2,7 @@
 title: "Get started with Board, Desk, and Room Series"
 product: "Devices"
 article_id: "n2um62p"
-url: "https://help.webex.com/en-us/article/n2um62p/Get-started-with-Webex-Desk-or-Room-Series"
+url: "https://help.webex.com/en-us/article/n2um62p"
 last_updated: "2025-10-30"
 description: "Once your Cisco Board, Desk, or Room Series device is successfully installed,
 you&#x27;re all set to begin! This device enables you to effortlessly make calls to

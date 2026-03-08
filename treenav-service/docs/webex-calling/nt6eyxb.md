@@ -2,7 +2,7 @@
 title: "Webex Calling media optimization with Interactive Connectivity Establishment (ICE)"
 product: "Webex Calling"
 article_id: "nt6eyxb"
-url: "https://help.webex.com/en-us/article/nt6eyxb/Webex-Calling-Media-Optimization-with-Interactive-Connectivity-Establishment-ICE"
+url: "https://help.webex.com/en-us/article/nt6eyxb"
 last_updated: "2025-06-10"
 description: "Webex Calling media optimization enables devices to send media directly,
 reducing latency and bandwidth for the best possible call experience."

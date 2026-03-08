@@ -2,7 +2,7 @@
 title: "Analytics for Your Webex for Government Portfolio"
 product: "Webex Meetings"
 article_id: "vvoefh"
-url: "https://help.webex.com/en-us/article/vvoefh/Analytics-for-Your-Webex-for-Government-Portfolio"
+url: "https://help.webex.com/en-us/article/vvoefh"
 last_updated: "2024-12-20"
 description: "Analytics in Cisco Webex Control Hub give administrators access to interactive
 data visualizations that show important information, such as usage and adoption

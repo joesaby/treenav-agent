@@ -1,0 +1,45 @@
+---
+title: "Webex App | WebView2 requirement"
+product: "Webex Suite"
+article_id: "nzpgci2"
+url: "https://help.webex.com/en-us/article/nzpgci2/Webex-App-%7C-WebView2-requirement"
+last_updated: "2024-09-18"
+description: "Webex App | WebView2 requirement"
+tags: ["webex-suite"]
+source: "help.webex.com"
+---
+
+# Webex App | WebView2 requirement
+
+Webex App displays some web-based content using an embedded browser. Microsoft has released a new embedded browser [WebView2](https://docs.microsoft.com/en-us/microsoft-edge/webview2/) that is recommended for Windows applications. 
+
+## Requirements
+
+- WebView2 is required by Webex App on Windows
+- Webex supports WebView2 version 118.0.2088.69 and later
+- Webex uses the [Microsoft's Evergreen Bootstraper](https://developer.microsoft.com/microsoft-edge/webview2/) to install WebView2
+
+## What you need to know:
+
+- WebView2 is based on Microsoft Edge and includes improved performance.
+- WebView2 enables Webex App to have lower memory usage, a smaller footprint on disk and faster updates.
+- WebView2 takes approximately 15 seconds to download, depending on networks.
+- Webex will attempt to install WebView2 before users can sign in to the app
+- Webex App will not install WebView2 in VDI environments. Administrators must install WebView2 in VDI environments before updating to the June 2022 Webex App 42.6.
+- If you choose to install WebView2 at your organization, we recommend using [Microsoft's Evergreen Bootstrapper or Evergreen Standalone Installer](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) to keep WebView2 current.
+
+## Timeline
+
+- **March 2022 (Webex App version 42.3)**  
+
+  - Existing installations of Webex App will attempt to install WebView2 on any computer that doesn’t already have it.
+- **April 2022 (Webex App version 42.4)**  
+
+  - New installations of Webex App on Windows will install WebView2 if it is not already installed, [based on an optional command line parameter](https://help.webex.com/en-us/article/nw5p67g/).
+  - The app will default to WebView2 to display embedded web content but will fall back to other technologies if WebView2 is not available.
+  - The app will continue to attempt to install WebView2 on machines that don’t have it.
+- **June 2022 (Webex App version 42.6) for Commercial organizations and August 2022 (Webex App version 42.8) for Webex for Government (FedRAMP) organizations**  
+
+  - WebView2 will be the only embedded browser supported by Webex App on Windows.
+  - Users without WebView2 will be blocked from signing in to the app until WebView2 is available on their machines.
+  - The app will continue to attempt to install WebView2 on machines that don’t have it.

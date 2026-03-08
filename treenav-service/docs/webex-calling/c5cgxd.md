@@ -2,7 +2,7 @@
 title: "Configuration of shared lines and virtual lines across locations"
 product: "Webex Calling"
 article_id: "c5cgxd"
-url: "https://help.webex.com/en-us/article/c5cgxd/Configuration-of-shared-lines-and-virtual-lines-across-locations"
+url: "https://help.webex.com/en-us/article/c5cgxd"
 last_updated: "2025-01-16"
 description: "This feature increases the scope of line assignment on Webex Calling devices by
 enabling an administrator to configure numbers from different Webex Calling

@@ -2,13 +2,13 @@
 title: "Disable delayed claim for your organization"
 product: "Webex Meetings"
 article_id: "e4ektc"
-url: "https://help.webex.com/en-us/article/e4ektc/Disable-Delayed-Claim-for-Your-Organization"
-last_updated: "2025-02-13"
+url: "https://help.webex.com/en-us/article/e4ektc"
+last_updated: "2026-03-05"
 description: "By default, users who are claimed into a Webex organization have 14 days to
 decide how they want to migrate from their free account to their paid
 organization. Administrators can turn off this setting and claim users
 immediately."
-tags: ["webex-meetings", "webex-webinars", "webex-training", "webex-support", "webex-calling", "webex-messaging", "webex-contact-center", "webex-events", "webex-events-(classic)", "webex-for-cisco-broadworks"]
+tags: ["webex-meetings", "webex-webinars", "webex-training", "webex-support", "webex-calling", "webex-messaging", "webex-contact-center", "webex-events", "webex-events-(classic)"]
 source: "help.webex.com"
 ---
 

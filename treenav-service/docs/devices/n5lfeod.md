@@ -2,7 +2,7 @@
 title: "Music mode for Board, Desk, and Room Series"
 product: "Devices"
 article_id: "n5lfeod"
-url: "https://help.webex.com/en-us/article/n5lfeod/Music-mode-for-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/n5lfeod"
 last_updated: "2025-11-10"
 description: "Using Music mode allows the dynamic range of music go through in a call. This
 creates a better experience in settings where it’s important to hear the nuances

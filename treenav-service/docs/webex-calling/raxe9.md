@@ -2,7 +2,7 @@
 title: "Listen to your voice messages"
 product: "Webex Calling"
 article_id: "raxe9"
-url: "https://help.webex.com/en-us/article/raxe9/Calling-User-Portal-Listen-to-Your-Voice-Messages"
+url: "https://help.webex.com/en-us/article/raxe9"
 last_updated: "2025-02-10"
 description: "You can listen to, download, and delete your voice messages from User Hub. A
 waiting indicator shows next to the voicemail tab when a message is waiting."

@@ -2,14 +2,14 @@
 title: "Set your Personal Room preferences"
 product: "Webex Meetings"
 article_id: "njvqg5x"
-url: "https://help.webex.com/en-us/article/njvqg5x/Set-Your-Webex-Meetings-Personal-Room-Preferences"
-last_updated: "2025-12-22"
+url: "https://help.webex.com/en-us/article/njvqg5x"
+last_updated: "2026-03-03"
 description: "You can change the name, URL, and host PIN of your Personal Room, and designate
 alternate hosts or cohosts for your Personal Room meetings. For added security,
 you can set your Personal Room to automatically lock after the meeting starts.
 People cannot enter a locked meeting; they wait in your lobby until you let them
 in."
-tags: ["webex-meetings"]
+tags: ["webex-meetings", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

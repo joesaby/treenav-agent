@@ -2,12 +2,12 @@
 title: "Webex App | View or download files shared in a space"
 product: "Webex Messaging"
 article_id: "bm2zbp"
-url: "https://help.webex.com/en-us/article/bm2zbp/Webex-App-View-or-download-files-shared-in-a-space"
-last_updated: "2025-12-04"
+url: "https://help.webex.com/en-us/article/bm2zbp"
+last_updated: "2026-03-07"
 description: "When people share files in a space, you can view them as they&#x27;re posted. Or, you
 can see a list of all recently shared files without scrolling through the
 messages."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

@@ -2,7 +2,7 @@
 title: "Join Webex meetings from Board, Desk, and Room Series"
 product: "Devices"
 article_id: "pq3vkab"
-url: "https://help.webex.com/en-us/article/pq3vkab/Join-Webex-meetings-from-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/pq3vkab"
 last_updated: "2025-06-06"
 description: "Webex Meetings and Cisco devices are working closer together, making it possible
 to join Webex and Personal Room meetings directly from your device."

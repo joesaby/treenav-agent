@@ -2,7 +2,7 @@
 title: "Webex Device Connector release notes"
 product: "Devices"
 article_id: "dxgq3o"
-url: "https://help.webex.com/en-us/article/dxgq3o/Webex-Device-Connector-release-notes"
+url: "https://help.webex.com/en-us/article/dxgq3o"
 last_updated: "2026-01-13"
 description: "Read about the latest Webex Device Connector software releases. We document new
 functionality, bug fixes, and general improvements."

@@ -2,7 +2,7 @@
 title: "Webex App | Voicemail"
 product: "Webex Calling"
 article_id: "kacvacb"
-url: "https://help.webex.com/en-us/article/kacvacb/Webex-App-Voicemail"
+url: "https://help.webex.com/en-us/article/kacvacb"
 last_updated: "2024-09-19"
 description: "You don&#x27;t have to worry about missing important calls. If someone calls you and
 you&#x27;re unable to answer their call, they can leave you a voice message. You see

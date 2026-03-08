@@ -1,6 +1,6 @@
 {
-  "lastCrawl": "2026-02-28T13:34:16.339Z",
-  "totalPages": 1744,
+  "lastCrawl": "2026-03-08T14:37:23.866Z",
+  "totalPages": 1755,
   "pages": {
     "https://help.webex.com/en-us/article/jma0f6/Your-Cisco-IP-Phone-7800-Series-Multiplatform-Phones": {
       "contentHash": "7de393236a67f42c",
@@ -8721,6 +8721,61 @@
       "contentHash": "6efde404fbcc30d2",
       "lastFetched": "2026-02-28T13:34:16.339Z",
       "outputPath": "_index/whats-new.md"
+    },
+    "https://help.webex.com/en-us/article/jcmqik/Cisco-Webex-Meetings-Integration-with-Slack": {
+      "contentHash": "befff5cd2f2854a5",
+      "lastFetched": "2026-03-08T14:28:48.842Z",
+      "outputPath": "webex-meetings/jcmqik.md"
+    },
+    "https://help.webex.com/en-us/article/n9e61edb/Webex-Meetings-integration-with-Slack": {
+      "contentHash": "723f0ea7ff1b629c",
+      "lastFetched": "2026-03-08T14:28:49.049Z",
+      "outputPath": "webex-meetings/n9e61edb.md"
+    },
+    "https://help.webex.com/en-us/article/nk5e1aq/Lock-your-personal-room-meetings-on-Board-Desk-and-Room-Series": {
+      "contentHash": "518a9a9726bdf42f",
+      "lastFetched": "2026-03-08T14:28:49.134Z",
+      "outputPath": "devices/nk5e1aq.md"
+    },
+    "https://help.webex.com/en-us/article/t9xctu/Get-started-with-Local-Gateway": {
+      "contentHash": "d9d11a38d5bbfe3d",
+      "lastFetched": "2026-03-08T14:37:22.125Z",
+      "outputPath": "webex-calling/t9xctu.md"
+    },
+    "https://help.webex.com/en-us/article/noei0ug/Configuring-a-Partner-Hosted-Gateway": {
+      "contentHash": "17e0b5ab275615f3",
+      "lastFetched": "2026-03-08T14:37:22.134Z",
+      "outputPath": "webex-calling/noei0ug.md"
+    },
+    "https://help.webex.com/en-us/article/n0xb944/Configure-trunks,-route-groups,-and-dial-plans-for-Webex-Calling": {
+      "contentHash": "e3bf5154bf3af6d8",
+      "lastFetched": "2026-03-08T14:37:23.026Z",
+      "outputPath": "webex-calling/n0xb944.md"
+    },
+    "https://help.webex.com/en-us/article/mykour/Alerts-center-in-Control-Hub": {
+      "contentHash": "91b130c1755f2627",
+      "lastFetched": "2026-03-08T14:37:23.039Z",
+      "outputPath": "webex-meetings/mykour.md"
+    },
+    "https://help.webex.com/en-us/article/cd6d84/Manage-your-domains": {
+      "contentHash": "4273b3ff8b50fa22",
+      "lastFetched": "2026-03-08T14:37:23.042Z",
+      "outputPath": "hybrid-services/cd6d84.md"
+    },
+    "https://help.webex.com/en-us/article/cd6d84": {
+      "contentHash": "52d27e6eced84c76",
+      "lastFetched": "2026-03-08T14:37:23.848Z",
+      "outputPath": "hybrid-services/cd6d84.md"
+    },
+    "https://help.webex.com/en-us/article/3gv4ci/Enable-webhooks-for-alerts-in-Control-Hub": {
+      "contentHash": "51c7d43a7a2df437",
+      "lastFetched": "2026-03-08T14:37:23.861Z",
+      "outputPath": "webex-meetings/3gv4ci.md"
+    },
+    "https://help.webex.com/en-us/article/nvics3k/Domain-management-in-Webex-for-Government": {
+      "contentHash": "58d9421afbebcaf1",
+      "lastFetched": "2026-03-08T14:37:23.866Z",
+      "outputPath": "webex-suite/nvics3k.md"
     }
   }
 }

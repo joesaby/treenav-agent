@@ -2,13 +2,13 @@
 title: "Rename a meeting, webinar, event, or training session recording"
 product: "Webex Meetings"
 article_id: "87r5rfb"
-url: "https://help.webex.com/en-us/article/87r5rfb/Rename-a-Webex-meeting-webinar-event-or-training-session-recording"
-last_updated: "2025-10-21"
+url: "https://help.webex.com/en-us/article/87r5rfb"
+last_updated: "2026-03-03"
 description: "Hosts can edit the name and description of their recordings. This is useful if
 you want to give a recording a more meaningful name before you share it with
 others. Hosts can also choose to exclude the panels and transcript in a
 recording."
-tags: ["webex-meetings", "webex-webinars"]
+tags: ["webex-meetings", "webex-webinars", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

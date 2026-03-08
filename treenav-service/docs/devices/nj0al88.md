@@ -2,7 +2,7 @@
 title: "Use Board, Desk, and Room series with the Webex App"
 product: "Devices"
 article_id: "nj0al88"
-url: "https://help.webex.com/en-us/article/nj0al88/Use-Boards-with-the-Webex-App"
+url: "https://help.webex.com/en-us/article/nj0al88"
 last_updated: "2025-11-10"
 description: "Use Board, Desk, and Room series with the Webex App"
 tags: ["devices"]

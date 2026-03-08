@@ -2,7 +2,7 @@
 title: "Configure privacy for line status monitoring, directed call pickup, and barge-in"
 product: "Webex Calling"
 article_id: "ow5s3w"
-url: "https://help.webex.com/en-us/article/ow5s3w/Prevent-someone-from-monitoring-a-user-s-line-status"
+url: "https://help.webex.com/en-us/article/ow5s3w"
 last_updated: "2024-08-30"
 description: "Any user in an organization can monitor the line status of other users by
 default. As an administrator, you can enable privacy for a user to only allow

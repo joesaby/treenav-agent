@@ -2,12 +2,12 @@
 title: "Webex App | Make someone a team moderator"
 product: "Webex Messaging"
 article_id: "xuwad5"
-url: "https://help.webex.com/en-us/article/xuwad5/Webex-App-Make-someone-a-team-moderator"
-last_updated: "2024-09-07"
+url: "https://help.webex.com/en-us/article/xuwad5"
+last_updated: "2026-03-07"
 description: "If you&#x27;re a team moderator in Webex App, you can select other people to be a
 moderator, too. Then they&#x27;ll be able to make the same changes to the team as
 you, like adding or removing people or changing the team info."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 
@@ -20,13 +20,13 @@ source: "help.webex.com"
 
 If you're a team moderator, you can add someone else as a moderator, which also adds them to the team.
 
-| Go to your Teams ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/431001-432000/432000.jpg) and choose the team. Select ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417329.jpg) Add Team Moderator and enter the person's name. You can also right-click on someone in the Team moderators list to remove them as a moderator. |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Go to your Teams ![Teams button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/431001-432000/432000.jpg) and choose the team. Select ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417329.jpg) Add Team Moderator and enter the person's name. You can also right-click on someone in the Team moderators list to remove them as a moderator. |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 If you're a team moderator, you can add someone else as a moderator, which also adds them to the team.
 
-| Go to Teams ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/431001-432000/432000.jpg) and choose the team. Select ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/433001-434000/433282.jpg) Add Team Moderator, and enter the person's name. To remove someone as a moderator, hover on their name in the Members list, click more ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417370.jpg), and select Remove as Moderator of the Team. |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Go to Teams ![Teams button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/431001-432000/432000.jpg) and choose the team. Select ![Add Team Moderator icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/433001-434000/433282.jpg) Add Team Moderator, and enter the person's name. To remove someone as a moderator, hover on their name in the Members list, click more ![More options icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417370.jpg), and select Remove as Moderator of the Team. |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 If you're a team moderator, you can also make someone else a moderator. However, you may need to add them to the team first, if they're not already a team member.
 
@@ -35,5 +35,5 @@ If you're a team moderator, you can also make someone else a moderator. However,
 
 If you're a team moderator, you can add someone else as a moderator, which also adds them to the team.
 
-| Go to Teams ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/431001-432000/432000.jpg) and choose the team. Select ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/433001-434000/433282.jpg) Add Team Moderator, and enter the person's name. To remove someone as a moderator, hover on their name in the Members list, click more ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417370.jpg), and select Remove as Team Moderator. |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Go to Teams ![Teams button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/431001-432000/432000.jpg) and choose the team. Select ![Add Team Moderator icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/430001-440000/433001-434000/433282.jpg) Add Team Moderator, and enter the person's name. To remove someone as a moderator, hover on their name in the Members list, click more ![More options icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/410001-420000/417001-418000/417370.jpg), and select Remove as Team Moderator. |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

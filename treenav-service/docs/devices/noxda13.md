@@ -2,7 +2,7 @@
 title: "Delete a Device"
 product: "Devices"
 article_id: "noxda13"
-url: "https://help.webex.com/en-us/article/noxda13/Delete-a-Device"
+url: "https://help.webex.com/en-us/article/noxda13"
 last_updated: "2025-11-13"
 description: "You can delete a device or multiple devices in Cisco Webex Control Hub. Once the
 devices are deleted, they are permanently removed from your organization and

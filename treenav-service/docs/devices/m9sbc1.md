@@ -2,7 +2,7 @@
 title: "Make a call with a touch controller"
 product: "Devices"
 article_id: "m9sbc1"
-url: "https://help.webex.com/en-us/article/m9sbc1/Make-a-call-with-a-touch-controller"
+url: "https://help.webex.com/en-us/article/m9sbc1"
 last_updated: "2025-06-06"
 description: "Use the touch controller to make and answer calls on your Cisco device."
 tags: ["devices", "webex-calling"]

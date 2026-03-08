@@ -2,7 +2,7 @@
 title: "Configure Virtual Agent-Voice in Webex Contact Center"
 product: "Webex Contact Center"
 article_id: "n6gaghu"
-url: "https://help.webex.com/en-us/article/n6gaghu/Virtual-Agent-Voice-in-Webex-Contact-Center"
+url: "https://help.webex.com/en-us/article/n6gaghu"
 last_updated: "2025-12-03"
 description: "Use this article to enable the Virtual Agent–Voice feature by integrating Webex
 Contact Center with cloud-based AI services."

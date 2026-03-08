@@ -2,7 +2,7 @@
 title: "Webex Edge for Devices"
 product: "Devices"
 article_id: "cy2l2z"
-url: "https://help.webex.com/en-us/article/cy2l2z/Webex-Edge-for-Devices"
+url: "https://help.webex.com/en-us/article/cy2l2z"
 last_updated: "2025-12-16"
 description: "Webex Edge for Devices enables you to keep your devices on-premises registered
 while getting access to cloud-only features. You also get access to Control Hub

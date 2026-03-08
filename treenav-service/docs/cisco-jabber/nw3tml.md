@@ -2,7 +2,7 @@
 title: "Cisco Jabber User and Administration Articles"
 product: "Cisco Jabber"
 article_id: "nw3tml"
-url: "https://help.webex.com/en-us/article/nw3tml/Forward-Voice-Messages-to-other-People"
+url: "https://help.webex.com/en-us/article/nw3tml"
 last_updated: "2025-04-11"
 description: "All Jabber documentation can now be found on Cisco.com."
 tags: ["cisco-jabber"]

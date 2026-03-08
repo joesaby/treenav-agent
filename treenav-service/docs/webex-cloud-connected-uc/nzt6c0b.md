@@ -2,7 +2,7 @@
 title: "Set up Webex Cloud-Connected UC for on-premises devices"
 product: "Webex Cloud-Connected UC"
 article_id: "nzt6c0b"
-url: "https://help.webex.com/en-us/article/nzt6c0b/Set-Up-Webex-Cloud-Connected-UC-for-On-Premises-Devices"
+url: "https://help.webex.com/en-us/article/nzt6c0b/Set-up-Webex-Cloud-Connected-UC-for-on-premises-devices"
 last_updated: "2026-01-21"
 description: "You must set up the on-premises devices in your organization to communicate with
 the Control Hub. Once the devices are connected, you can view telemetry and

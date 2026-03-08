@@ -2,7 +2,7 @@
 title: "Outside room booking with a wall mounted Room Navigator"
 product: "Devices"
 article_id: "me7z9t"
-url: "https://help.webex.com/en-us/article/me7z9t/Outside-room-booking-with-a-wall-mounted-Room-Navigator"
+url: "https://help.webex.com/en-us/article/me7z9t"
 last_updated: "2024-12-16"
 description: "With room booking, you can see the availability status for the room and book the
 room for an ad hoc meeting."

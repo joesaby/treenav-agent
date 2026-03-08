@@ -2,7 +2,7 @@
 title: "Webex App | Known Issues in Meetings"
 product: "Webex Meetings"
 article_id: "ny3ch3m"
-url: "https://help.webex.com/en-us/article/ny3ch3m/Known-Issues-for-Cisco-Webex-Meetings"
+url: "https://help.webex.com/en-us/article/ny3ch3m"
 last_updated: "2025-12-16"
 description: "If you&#x27;re experiencing an issue with meetings in Webex App, check to see if it&#x27;s
 something that we already know about and have a recommended workaround."

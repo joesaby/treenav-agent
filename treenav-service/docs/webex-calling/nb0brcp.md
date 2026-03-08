@@ -2,7 +2,7 @@
 title: "Configure layouts for Cisco phones in Control Hub"
 product: "Webex Calling"
 article_id: "nb0brcp"
-url: "https://help.webex.com/en-us/article/nb0brcp/Configure-Layouts-for-Cisco-MPP-Devices-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/nb0brcp"
 last_updated: "2025-12-04"
 description: "Use the configure layouts feature to view a phone’s default layout or customize
 the programmable line keys (PLK) on the phone and on any attached Key Expansion

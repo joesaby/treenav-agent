@@ -2,7 +2,7 @@
 title: "Assign services to managed gateways"
 product: "Webex Calling"
 article_id: "n0qkgho"
-url: "https://help.webex.com/en-us/article/n0qkgho/Assign-Services-to-Managed-Gateways"
+url: "https://help.webex.com/en-us/article/n0qkgho"
 last_updated: "2025-09-23"
 description: "Know how to assign a Webex Calling service to a managed gateway for enabling new
 functionality or for enhanced management."

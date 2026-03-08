@@ -2,7 +2,7 @@
 title: "Shared line appearance for Webex App"
 product: "Webex Calling"
 article_id: "d6gavk"
-url: "https://help.webex.com/en-us/article/d6gavk/Shared-line-appearance-for-Webex-App"
+url: "https://help.webex.com/en-us/article/d6gavk"
 last_updated: "2025-04-03"
 description: "Shared line feature is about assigning one phone number to multiple devices.
 Users can answer the calls made to that phone number from multiple devices. They

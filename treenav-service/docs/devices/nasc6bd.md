@@ -2,7 +2,7 @@
 title: "Raise hand in a meeting on Board, Desk, and Room Series"
 product: "Devices"
 article_id: "nasc6bd"
-url: "https://help.webex.com/en-us/article/nasc6bd/Raise-Hand-in-a-meeting-on-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/nasc6bd"
 last_updated: "2026-01-16"
 description: "Use the raise hand button to let others know you have a question or a comment
 without interrupting the conversation."

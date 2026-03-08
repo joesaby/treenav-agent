@@ -2,8 +2,8 @@
 title: "Webex App | Start a conversation"
 product: "Webex Messaging"
 article_id: "zi4dpc"
-url: "https://help.webex.com/en-us/article/zi4dpc/Webex-App-Start-a-Conversation-with-Someone"
-last_updated: "2026-02-05"
+url: "https://help.webex.com/en-us/article/zi4dpc"
+last_updated: "2026-03-07"
 description: "We&#x27;re making it easier to get the conversation flowing in Webex App. Quickly
 send a message to one or more people without creating a space first."
 tags: ["webex-messaging", "webex-for-cisco-broadworks"]

@@ -2,7 +2,7 @@
 title: "Troubleshoot Webex Calling calls in Control Hub"
 product: "Webex Calling"
 article_id: "frj1efb"
-url: "https://help.webex.com/en-us/article/frj1efb/Troubleshoot-Webex-Calling-Media-Quality-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/frj1efb"
 last_updated: "2025-11-24"
 description: "The troubleshooting view in Webex Calling allows administrators to troubleshoot
 connectivity and media-related quality issues for Webex Calling calls. You can

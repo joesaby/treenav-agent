@@ -2,8 +2,8 @@
 title: "Webex App | Error messages for Calling"
 product: "Webex Calling"
 article_id: "r75fdv"
-url: "https://help.webex.com/en-us/article/r75fdv/Webex-App-Error-Messages-For-Calling"
-last_updated: "2025-02-13"
+url: "https://help.webex.com/en-us/article/r75fdv"
+last_updated: "2026-03-05"
 description: "If you use phone services in Webex App, you may see an error message in the app
 that lets you know if there&#x27;s an issue and the steps you can take to fix it."
 tags: ["webex-calling", "webex-for-cisco-broadworks"]

@@ -2,7 +2,7 @@
 title: "Configure and manage voicemail settings for a Webex Calling user"
 product: "Webex Calling"
 article_id: "hc69wk"
-url: "https://help.webex.com/en-us/article/hc69wk/Configure-and-manage-voicemail-settings-for-a-Webex-Calling-user"
+url: "https://help.webex.com/en-us/article/hc69wk"
 last_updated: "2026-02-26"
 description: "Enable a user&#x27;s voicemail and voicemail settings in Control Hub by giving them
 the ability to send calls to voicemail when they&#x27;re busy or can&#x27;t get to the

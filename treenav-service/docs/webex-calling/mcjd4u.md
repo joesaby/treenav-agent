@@ -2,7 +2,7 @@
 title: "Manage a shared voicemail and inbound fax box for Webex Calling"
 product: "Webex Calling"
 article_id: "mcjd4u"
-url: "https://help.webex.com/en-us/article/mcjd4u/Manage-a-shared-voicemail-and-inbound-fax-box-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/mcjd4u"
 last_updated: "2025-10-07"
 description: "You can create a shared voicemail and inbound fax mailbox and assign to users or
 call routing features. The voicemail group feature allows you to set up message

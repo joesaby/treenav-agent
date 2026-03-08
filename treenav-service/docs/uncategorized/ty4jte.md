@@ -2,7 +2,7 @@
 title: "Add a proxy"
 product: "uncategorized"
 article_id: "ty4jte"
-url: "https://help.webex.com/en-us/article/ty4jte/Add-a-Proxy"
+url: "https://help.webex.com/en-us/article/ty4jte"
 last_updated: "2020-08-04"
 description: "Add a proxy"
 source: "help.webex.com"

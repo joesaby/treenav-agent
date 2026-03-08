@@ -2,7 +2,7 @@
 title: "Feature access codes for Webex Calling"
 product: "Webex Calling"
 article_id: "0zgzwj"
-url: "https://help.webex.com/en-us/article/0zgzwj/Feature-access-codes-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/0zgzwj"
 last_updated: "2025-05-12"
 description: "Feature access codes (FACs), also known as star codes, give you access to
 advanced calling features. Your Webex App and IP phone support FACs."

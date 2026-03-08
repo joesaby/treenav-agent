@@ -2,7 +2,7 @@
 title: "Closed captioning on Board, Desk, and Room Series"
 product: "Devices"
 article_id: "5geecr"
-url: "https://help.webex.com/en-us/article/5geecr/Closed-captioning-on-Board-Desk-and-Room-Series"
+url: "https://help.webex.com/en-us/article/5geecr"
 last_updated: "2025-08-04"
 description: "You can toggle on closed captioning in a meeting from your device. With closed
 captioning you won’t miss a word."

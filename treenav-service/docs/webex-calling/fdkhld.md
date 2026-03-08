@@ -2,7 +2,7 @@
 title: "Configure your voicemail settings"
 product: "Webex Calling"
 article_id: "fdkhld"
-url: "https://help.webex.com/en-us/article/fdkhld/Configure-your-voicemail-settings-in-the-calling-user-portal"
+url: "https://help.webex.com/en-us/article/fdkhld"
 last_updated: "2026-02-26"
 description: "You can manage your voicemail settings, such as greetings, transcription,
 storage, and notification from User Hub."

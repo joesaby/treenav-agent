@@ -2,7 +2,7 @@
 title: "Integrated Audio for Webex Calling"
 product: "Webex Calling"
 article_id: "nb8s63q"
-url: "https://help.webex.com/en-us/article/nb8s63q/Integrated-Audio-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/nb8s63q"
 last_updated: "2024-08-31"
 description: "With Webex Calling, when using call-in numbers for Webex Meetings, these calls
 stay in the Webex cloud, which means there is no additional PSTN cost to call in

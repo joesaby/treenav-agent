@@ -2,7 +2,7 @@
 title: "Migrate Personal Contacts to Webex"
 product: "Webex Cloud-Connected UC"
 article_id: "naoxf7u"
-url: "https://help.webex.com/en-us/article/naoxf7u/Migrate-Personal-Contacts-to-Webex"
+url: "https://help.webex.com/en-us/article/naoxf7u"
 last_updated: "2025-03-12"
 description: "Use Control Hub to migrate your end users&#x27; Jabber custom contacts or any
 third-party custom contact source to Webex personal contacts."

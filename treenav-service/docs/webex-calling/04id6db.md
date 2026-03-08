@@ -2,7 +2,7 @@
 title: "Cisco VoIP Emergency Calling Policy"
 product: "Webex Calling"
 article_id: "04id6db"
-url: "https://help.webex.com/en-us/article/04id6db/Cisco-VoIP-Emergency-Calling-Policy"
+url: "https://help.webex.com/en-us/article/04id6db"
 last_updated: "2024-08-30"
 description: "Read this policy before you initiate your service."
 tags: ["webex-calling"]

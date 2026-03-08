@@ -2,7 +2,7 @@
 title: "Annotate on Board and Desk Series"
 product: "Devices"
 article_id: "nivf3bo"
-url: "https://help.webex.com/en-us/article/nivf3bo/Annotate-on-Board-and-Desk-Series"
+url: "https://help.webex.com/en-us/article/nivf3bo"
 last_updated: "2025-11-27"
 description: "You can draw and make notes on the content you&#x27;re sharing on Cisco Board and
 Desk Series devices in the same way as you work on digital whiteboards. Drawing

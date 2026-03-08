@@ -2,7 +2,7 @@
 title: "Singapore data center for Webex Calling"
 product: "Webex Calling"
 article_id: "nmjf42d"
-url: "https://help.webex.com/en-us/article/nmjf42d/Webex-Calling-Singapore-Data-Center"
+url: "https://help.webex.com/en-us/article/nmjf42d"
 last_updated: "2025-03-28"
 description: "The Webex Calling Singapore Media Pop Data Center offers edge services, media
 services, and interconnections with partners such as Cloud-Connected PSTN

@@ -2,7 +2,7 @@
 title: "Wireless sharing with AirPlay"
 product: "Devices"
 article_id: "ndlsg3c"
-url: "https://help.webex.com/en-us/article/ndlsg3c/Wireless-sharing-with-AirPlay"
+url: "https://help.webex.com/en-us/article/ndlsg3c"
 last_updated: "2025-04-10"
 description: "Apple AirPlay is now part of the Webex experience."
 tags: ["devices"]

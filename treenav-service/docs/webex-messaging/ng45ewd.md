@@ -2,7 +2,7 @@
 title: "Webex App | Problems displaying emojis on Windows"
 product: "Webex Messaging"
 article_id: "ng45ewd"
-url: "https://help.webex.com/en-us/article/ng45ewd/Webex-App-Problems-displaying-emojis-on-Windows"
+url: "https://help.webex.com/en-us/article/ng45ewd"
 last_updated: "2024-09-19"
 description: "The display quality of emojis in Webex App depends on the version of the Segoe
 UI Emoji font that your Windows operating system is using."

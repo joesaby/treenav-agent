@@ -2,7 +2,7 @@
 title: "Change Users' Phone Numbers"
 product: "Webex Calling"
 article_id: "nvjt3ce"
-url: "https://help.webex.com/en-us/article/nvjt3ce/Change-Users-Phone-Numbers"
+url: "https://help.webex.com/en-us/article/nvjt3ce"
 last_updated: "2024-09-20"
 description: "Change Users&#x27; Phone Numbers"
 tags: ["webex-calling"]

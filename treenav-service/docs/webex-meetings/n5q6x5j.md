@@ -2,7 +2,7 @@
 title: "Sign-in issues with Webex"
 product: "Webex Meetings"
 article_id: "n5q6x5j"
-url: "https://help.webex.com/en-us/article/n5q6x5j/Sign-in-issues-with-Webex"
+url: "https://help.webex.com/en-us/article/n5q6x5j"
 last_updated: "2024-09-15"
 description: "Having trouble signing into Webex Meetings or Webex App? Here&#x27;s your one-stop
 shop for the help you need to get up and running. We&#x27;ve included some links that

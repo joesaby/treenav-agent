@@ -2,7 +2,7 @@
 title: "Edge Audio prerequisites"
 product: "Edge Audio"
 article_id: "nkhp692"
-url: "https://help.webex.com/en-us/article/nkhp692/Edge-Audio-prerequisites"
+url: "https://help.webex.com/en-us/article/nkhp692"
 last_updated: "2025-03-22"
 description: "Before you deploy Edge Audio, make sure that your Webex sites, Unified
 Communications Managers, and Expressways meet these requirements."

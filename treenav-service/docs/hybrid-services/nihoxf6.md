@@ -2,7 +2,7 @@
 title: "Design Hybrid Services Deployments"
 product: "Hybrid Services"
 article_id: "nihoxf6"
-url: "https://help.webex.com/en-us/article/nihoxf6/Design-Cisco-Webex-Hybrid-Services-Deployments"
+url: "https://help.webex.com/en-us/article/nihoxf6"
 last_updated: "2024-09-15"
 description: "For information about Cisco Webex Hybrid Services design, architecture, and a
 technical overview, see the preferred architecture guides at

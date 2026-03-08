@@ -2,7 +2,7 @@
 title: "Use the whiteboard on Board and Desk Series"
 product: "Devices"
 article_id: "zfhy55"
-url: "https://help.webex.com/en-us/article/zfhy55/Use-the-whiteboard-on-Board-and-Desk-Series"
+url: "https://help.webex.com/en-us/article/zfhy55"
 last_updated: "2025-12-08"
 description: "Use your Board or Desk Series device&#x27;s whiteboard to enhance meetings and
 presentations with interactive visuals. Draw and write in all directions without

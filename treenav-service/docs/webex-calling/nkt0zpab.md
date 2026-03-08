@@ -2,7 +2,7 @@
 title: "Voicemail transcription for Webex Calling"
 product: "Webex Calling"
 article_id: "nkt0zpab"
-url: "https://help.webex.com/en-us/article/nkt0zpab/Voicemail-transcription-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/nkt0zpab"
 last_updated: "2025-10-10"
 description: "With voicemail transcription, users receive an email containing the voicemail
 transcription in the email body and the original voicemail as a .WAV file

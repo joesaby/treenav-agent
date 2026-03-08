@@ -2,7 +2,7 @@
 title: "Webex App for Windows not pairing with Board, Desk, and Room series"
 product: "Webex Suite"
 article_id: "uk6ssc"
-url: "https://help.webex.com/en-us/article/uk6ssc/Webex-App-for-Windows-not-Pairing-with-Cisco-Webex-Rooms"
+url: "https://help.webex.com/en-us/article/uk6ssc"
 last_updated: "2025-06-06"
 description: "Webex App for Windows not pairing with Board, Desk, and Room series"
 tags: ["webex-suite", "devices"]

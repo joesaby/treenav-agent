@@ -2,7 +2,7 @@
 title: "Configure wireless sharing with AirPlay"
 product: "Devices"
 article_id: "n29ja5v"
-url: "https://help.webex.com/en-us/article/n29ja5v/Configure-wireless-sharing-with-AirPlay"
+url: "https://help.webex.com/en-us/article/n29ja5v"
 last_updated: "2025-06-18"
 description: "Apple AirPlay is now part of the Cisco experience."
 tags: ["devices"]

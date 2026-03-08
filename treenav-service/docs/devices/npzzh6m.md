@@ -2,7 +2,7 @@
 title: "Release notes for RoomOS software"
 product: "Devices"
 article_id: "npzzh6m"
-url: "https://help.webex.com/en-us/article/npzzh6m/Resolved-issues-in-previous-RoomOS-releases"
+url: "https://help.webex.com/en-us/article/npzzh6m"
 last_updated: "2020-11-27"
 description: "Get an overview of new features and capabilities available for your Webex
 registered Board, Desk, and Room Series devices."
@@ -23,7 +23,7 @@ New features and fixed issues specific for **Cisco collaboration devices for Mic
 ### Announcements
 
 - For Cisco collaboration devices for Microsoft Teams Rooms, Microsoft only supports RoomOS software that they have released on Teams Admin Center. RoomOS versions on the Stable channel are therefore not necessarily supported by Microsoft. See: [latest RoomOS software version supported by Microsoft](https://learn.microsoft.com/microsoftteams/devices/certified-hardware-android?tabs=firmware#cisco).  
-The latest software version supported by Microsoft: RoomOS 26.2.1.8, based on RoomOS January 2026\. This software version includes Teams Rooms App 1449/1.0.96.2025341701.
+The latest software version supported by Microsoft: RoomOS 26.3.1.5, based on RoomOS February 2026\. This software version includes Teams Rooms App 1449/1.0.96.2025341701.
 
 - [What's new: RoomOS 26](#reference-template%5Fc76e87ef-617e-41ec-bf9e-2549926eb276)
 - [What's new: RoomOS 11](#Cisco%5FReference.dita%5Fb1294883-a8f5-4702-98fd-bb42af91aa5f)
@@ -1396,7 +1396,7 @@ Define areas that your meeting room cameras should ignore, like screens or certa
 
 You can find open and fixed customer found caveats in [the bug search tool](https://bst.cloudapps.cisco.com/bugsearch). 
 
-- [RoomOS 26](https://bst.cloudapps.cisco.com/bugsearch?pf=prdNm&sb=anfr&rls=26.3.1-RoomOS%5FFebruary%5F2026&kw=%2A&bt=custV)
+- [RoomOS 26](https://bst.cloudapps.cisco.com/bugsearch?pf=prdNm&sb=anfr&rls=26.4.1-RoomOS%5FMarch%5F2026&kw=%2A&bt=custV)
 - [RoomOS 11](https://bst.cloudapps.cisco.com/bugsearch?pf=prdNm&sb=anfr&rls=11.36.1-Webex&kw=%2A&bt=custV)
 
 Use your cisco.com user ID and password to log in, and search for a specific product and software version. 

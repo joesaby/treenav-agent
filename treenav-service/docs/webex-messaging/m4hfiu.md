@@ -2,7 +2,7 @@
 title: "Webex App | 6 Special things about general spaces"
 product: "Webex Messaging"
 article_id: "m4hfiu"
-url: "https://help.webex.com/en-us/article/m4hfiu/Webex-App-6-Special-Things-About-General-Spaces"
+url: "https://help.webex.com/en-us/article/m4hfiu"
 last_updated: "2024-09-19"
 description: "When you get added to a team, you&#x27;re automatically added to a unique General
 space, which has several special characteristics."

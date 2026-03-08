@@ -2,7 +2,7 @@
 title: "Room setup and installation of Board, Desk, and Room Series devices"
 product: "Devices"
 article_id: "ng9h54cb"
-url: "https://help.webex.com/en-us/article/ng9h54cb/Room-setup-and-installation-of-Board-Desk-and-Room-Series-devices"
+url: "https://help.webex.com/en-us/article/ng9h54cb/Room-setup-and-installation-of-Board,-Desk,-and-Room-Series-devices"
 last_updated: "2024-12-12"
 description: "Here you can find the information you need to install your Board, Desk, and Room
 Series devices. To ensure the best possible user experience, start your planning

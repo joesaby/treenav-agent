@@ -2,7 +2,7 @@
 title: "Enable Borderless CTI through Webex Cloud-Connected UC"
 product: "Webex Cloud-Connected UC"
 article_id: "00tesu"
-url: "https://help.webex.com/en-us/article/00tesu/Enable-Borderless-CTI-through-Cloud-Connected-UC"
+url: "https://help.webex.com/en-us/article/00tesu"
 last_updated: "2025-02-17"
 description: "Computer Telephony Integration (CTI) allows WebexApp users to manage calls and
 access customer data, both on-premise and remotely. The Borderless CTI feature

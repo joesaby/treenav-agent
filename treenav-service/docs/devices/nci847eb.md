@@ -2,7 +2,7 @@
 title: "Remove default buttons from the user interface on Board, Desk, and Room Series devices"
 product: "Devices"
 article_id: "nci847eb"
-url: "https://help.webex.com/en-us/article/nci847eb/Remove-default-buttons-from-the-user-interface-on-Webex-Board-Desk-and-Room-Series-devices"
+url: "https://help.webex.com/en-us/article/nci847eb/Remove-default-buttons-from-the-user-interface-on-Webex-Board,-Desk,-and-RoomSeries-devices"
 last_updated: "2025-06-06"
 description: "You might never use a default button, like keypad or share. Having unused
 buttons in the user interface of a device can cause confusion. In these cases,

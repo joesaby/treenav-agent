@@ -2,12 +2,12 @@
 title: "Webex App | Update the app to the latest release"
 product: "Webex Calling"
 article_id: "g1otrv"
-url: "https://help.webex.com/en-us/article/g1otrv/Webex-App-Update-the-app-to-the-latest-release"
-last_updated: "2025-01-31"
+url: "https://help.webex.com/en-us/article/g1otrv"
+last_updated: "2026-03-07"
 description: "Keep your Webex App up to date after installing it. We’re always updating the
 app, adding new features, and improving existing ones. You can check the release
 notes for your app to find the latest version."
-tags: ["webex-calling", "webex-meetings", "webex-messaging"]
+tags: ["webex-calling", "webex-meetings", "webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

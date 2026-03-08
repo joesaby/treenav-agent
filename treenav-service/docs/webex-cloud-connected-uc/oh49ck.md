@@ -2,7 +2,7 @@
 title: "Enable or Disable Webex Cloud-Connected UC Services in Control Hub"
 product: "Webex Cloud-Connected UC"
 article_id: "oh49ck"
-url: "https://help.webex.com/en-us/article/oh49ck/Enable-or-Disable-Webex-Cloud-Connected-UC-Services-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/oh49ck"
 last_updated: "2024-08-31"
 description: "Enable or Disable Webex Cloud-Connected UC Services in Control Hub"
 tags: ["webex-cloud-connected-uc"]

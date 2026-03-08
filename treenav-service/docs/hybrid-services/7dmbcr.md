@@ -2,7 +2,7 @@
 title: "Deployment Guides for Webex Hybrid Services"
 product: "Hybrid Services"
 article_id: "7dmbcr"
-url: "https://help.webex.com/en-us/article/7dmbcr/Deployment-Guides-for-Webex-Hybrid-Services"
+url: "https://help.webex.com/en-us/article/7dmbcr"
 last_updated: "2024-09-15"
 description: "This article contains links to all the deployment guides for Webex Hybrid
 Services. Use these guides for on-premises prerequisites, capacity planning,

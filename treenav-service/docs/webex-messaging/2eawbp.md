@@ -2,8 +2,8 @@
 title: "Webex App | Add fun to your messages with emojis"
 product: "Webex Messaging"
 article_id: "2eawbp"
-url: "https://help.webex.com/en-us/article/2eawbp/Webex-App-Add-Fun-to-Your-Messages-with-Emojis"
-last_updated: "2025-06-05"
+url: "https://help.webex.com/en-us/article/2eawbp"
+last_updated: "2026-03-05"
 description: "Add some fun to your content by including emojis in your messages. You can also
 add emojis to space and team names."
 tags: ["webex-messaging"]

@@ -2,7 +2,7 @@
 title: "Webex App | Share content wirelessly to Webex devices"
 product: "Webex Calling"
 article_id: "pceb9t"
-url: "https://help.webex.com/en-us/article/pceb9t/Webex-App-Share-content-wirelessly-to-Webex-devices"
+url: "https://help.webex.com/en-us/article/pceb9t"
 last_updated: "2025-09-16"
 description: "When you connect to Board, Desk, and Room Series devices, you can share content
 wirelessly when you&#x27;re not in a call or meeting from Webex App."

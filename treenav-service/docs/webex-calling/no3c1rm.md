@@ -2,7 +2,7 @@
 title: "Set the preferred language for your organization in Control Hub"
 product: "Webex Calling"
 article_id: "no3c1rm"
-url: "https://help.webex.com/en-us/article/no3c1rm/Set-the-preferred-language-for-your-organization-in-Control-Hub"
+url: "https://help.webex.com/en-us/article/no3c1rm"
 last_updated: "2025-10-30"
 description: "You can change the language settings in Control Hub, and the settings are
 applied to new users when they&#x27;re onboarded. The language setting affects their

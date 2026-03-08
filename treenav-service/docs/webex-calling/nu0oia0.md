@@ -2,7 +2,7 @@
 title: "Bulk provisioning Webex Calling elements using CSV"
 product: "Webex Calling"
 article_id: "nu0oia0"
-url: "https://help.webex.com/en-us/article/nu0oia0/Bulk-provisioning-Webex-Calling-elements-using-CSV"
+url: "https://help.webex.com/en-us/article/nu0oia0"
 last_updated: "2026-01-30"
 description: "Webex Calling leverages Comma Separated Value (CSV) files to quickly export and
 import provision-able elements to the cloud. By importing a file, the Webex

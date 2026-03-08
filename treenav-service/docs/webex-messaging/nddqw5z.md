@@ -2,11 +2,11 @@
 title: "Webex App | Check Who's Seen Your Message"
 product: "Webex Messaging"
 article_id: "nddqw5z"
-url: "https://help.webex.com/en-us/article/nddqw5z/Webex-App-Check-Who-s-Seen-Your-Message"
-last_updated: "2024-09-07"
+url: "https://help.webex.com/en-us/article/nddqw5z"
+last_updated: "2026-03-07"
 description: "When people read a message or look in a space in Webex App, you&#x27;ll see their
 profile pictures in the Seen by list."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

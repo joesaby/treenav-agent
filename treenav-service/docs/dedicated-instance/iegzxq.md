@@ -2,7 +2,7 @@
 title: "Integrated Audio configuration for Dedicated Instance for Webex Calling"
 product: "Dedicated Instance"
 article_id: "iegzxq"
-url: "https://help.webex.com/en-us/article/iegzxq/Integrated-Audio-configuration-for-Dedicated-Instance-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/iegzxq/Integrated-Audio-configuration-guide-for-Webex-Calling-Dedicated-Instance"
 last_updated: "2024-08-31"
 description: "you can join your Webex meeting with call-in and call-back features using on-net
 calling and having PSTN backup method."

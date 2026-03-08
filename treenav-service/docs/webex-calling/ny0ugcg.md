@@ -2,7 +2,7 @@
 title: "Configure in-call features from Control Hub"
 product: "Webex Calling"
 article_id: "ny0ugcg"
-url: "https://help.webex.com/en-us/article/ny0ugcg/Enable-or-disable-screen-sharing-for-Calling-in-Webex-App"
+url: "https://help.webex.com/en-us/article/ny0ugcg"
 last_updated: "2025-12-16"
 description: "Use the incoming call(in-call) setting to turn on available features when
 joining a webex call."

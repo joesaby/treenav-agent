@@ -2,8 +2,8 @@
 title: "What's new in Webex Calling"
 product: "Webex Calling"
 article_id: "pvqqx"
-url: "https://help.webex.com/en-us/article/pvqqx/Known-issues-for-Webex-Calling"
-last_updated: "2026-02-26"
+url: "https://help.webex.com/en-us/article/pvqqx"
+last_updated: "2026-03-05"
 description: "We&#x27;ve added a lot of exciting new features in Webex Calling. Take a moment to
 familiarize yourself with what&#x27;s new in language and regional support, device
 activation, dial plan improvements, and much more."
@@ -19,6 +19,16 @@ source: "help.webex.com"
 - [Known Issues](#generic-template%5F710e4fa3-35af-4379-b537-e2166aa58b78)
 
 We want to make sure that you know about the major updates made available in Webex Calling.
+
+## March
+
+**March 3, 2026** 
+
+## Add the Hide/Show feature to the Calling feature template
+
+Administrators can use the Hide/Show feature in the Calling feature template to control which features are visible or hidden for specific user groups.
+
+For details, see [Hide Calling settings in a user account](https://help.webex.com/article/nm0irkr) and [Configure settings templates in Control Hub](https://help.webex.com/article/n5uf91x/).
 
 ## February
 
@@ -4797,10 +4807,6 @@ Some of the following features are available in Beta if you've accepted the Cisc
 
 ## February
 
-### Add the Hide/Show feature to the Calling feature template
-
-The Hide/Show feature will be incorporated to the Calling feature template. This enhancement allows administrators to manage the Hide/Show settings for a group of users through the template. 
-
 ### Custom call recording and compliance announcements 
 
 Replace generic call recording messages with customized audio that aligns with your legal, regulatory, and brand requirements.
@@ -4915,6 +4921,8 @@ What’s changing:
 
 - New notification format for emails and texts—Notifications sent by Webex Calling for voicemail (via both email and text), fax messaging, incoming call notifications, and emergency call alerts will feature a new, modernized format. This update provides a more consistent and branded user experience. The new text notification format, which includes an increased content size, applies to both voicemail and fax notifications.
 - Fax and voice messaging—Fax messages larger than 14 MB will be automatically split and sent across multiple emails. The maximum allowed voicemail message duration is being reduced from 10 minutes to 7 minutes. This change is to adhere to the size restrictions imposed by email service providers used by Cisco. This ensures compliance with the maximum message size limits and facilitates successful delivery without exceeding provider-imposed thresholds.
+
+For more information, see [Webex Calling service update for email distribution](https://help.webex.com/nooozecb/).
 
 ## September 2025
 

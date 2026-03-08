@@ -2,7 +2,7 @@
 title: "Features available by license type for Webex Calling"
 product: "Webex Calling"
 article_id: "nkfl0f3"
-url: "https://help.webex.com/en-us/article/nkfl0f3/Webex-Calling-feature-support-matrix"
+url: "https://help.webex.com/en-us/article/nkfl0f3"
 last_updated: "2026-01-23"
 description: "Webex Calling licenses can be assigned to Users or Workspaces depending on the
 feature requirements."

@@ -2,7 +2,7 @@
 title: "Enroll Cisco IOS managed gateways to Webex Cloud"
 product: "Webex Calling"
 article_id: "xftgfc"
-url: "https://help.webex.com/en-us/article/xftgfc/Enroll-Cisco-IOS-Managed-Gateways-to-Webex-Cloud"
+url: "https://help.webex.com/en-us/article/xftgfc/Enroll-Cisco-IOS-managed-gateways-to-Webex-Cloud"
 last_updated: "2025-10-30"
 description: "Connecting your IOS managed gateway devices to Cisco Webex Control Hub, allows
 you to manage and monitor them from anywhere, together with the rest of your

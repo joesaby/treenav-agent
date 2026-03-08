@@ -2,15 +2,15 @@
 title: "Webex App | Reduce File Size when Sharing"
 product: "Webex Messaging"
 article_id: "niapzg"
-url: "https://help.webex.com/en-us/article/niapzg/Webex-App-Reduce-File-Size-when-Sharing"
-last_updated: "2024-09-17"
+url: "https://help.webex.com/en-us/article/niapzg"
+last_updated: "2026-03-07"
 description: "When you&#x27;re using Webex App on the go, you&#x27;re often connecting using cellular
 data rather than Wi-Fi. So, when you&#x27;re sharing images or video that are larger
 than 5 MB, you might have reduced bandwidth or limited data roaming that
 prevents you from successfully sending the message. You can automatically reduce
 the video or image size when you send it, to reduce how much data you need to
 get it posted."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 

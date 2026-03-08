@@ -2,7 +2,7 @@
 title: "Supported devices for Webex Calling"
 product: "Webex Calling"
 article_id: "qkwt4j"
-url: "https://help.webex.com/en-us/article/qkwt4j/Supported-devices-for-Webex-Calling"
+url: "https://help.webex.com/en-us/article/qkwt4j"
 last_updated: "2026-01-22"
 description: "You can use any of these phones for Webex Calling. For Webex devices in shared
 mode, you register them to the cloud and then add Webex Calling PSTN service to

@@ -2,7 +2,7 @@
 title: "Configure Moving a Webex Call into a Meeting"
 product: "Webex Calling"
 article_id: "nx2lm2f"
-url: "https://help.webex.com/en-us/article/nx2lm2f/Configure-Moving-a-Webex-Call-into-a-Meeting"
+url: "https://help.webex.com/en-us/article/nx2lm2f"
 last_updated: "2024-09-15"
 description: "When users are on a call with someone who&#x27;s internal or external to their
 organization, they can take advantage of advanced meeting features such as

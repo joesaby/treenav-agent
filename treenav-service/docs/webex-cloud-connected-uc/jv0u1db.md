@@ -2,7 +2,7 @@
 title: "Webex Cloud-Connected UC Overview"
 product: "Webex Cloud-Connected UC"
 article_id: "jv0u1db"
-url: "https://help.webex.com/en-us/article/jv0u1db/Webex-Cloud-Connected-UC-Overview"
+url: "https://help.webex.com/en-us/article/jv0u1db"
 last_updated: "2025-09-17"
 description: "Webex Cloud-Connected UC Overview"
 tags: ["webex-cloud-connected-uc"]

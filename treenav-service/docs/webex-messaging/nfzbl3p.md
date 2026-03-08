@@ -2,12 +2,12 @@
 title: "Webex App | Move a space into a team"
 product: "Webex Messaging"
 article_id: "nfzbl3p"
-url: "https://help.webex.com/en-us/article/nfzbl3p/Webex-App-Move-a-space-into-a-team"
-last_updated: "2024-09-07"
+url: "https://help.webex.com/en-us/article/nfzbl3p"
+last_updated: "2026-03-07"
 description: "Some spaces benefit from being opened up to a larger group of people. By moving
 your space into a team, you can make it easier for team members to join the
 conversation."
-tags: ["webex-messaging"]
+tags: ["webex-messaging", "webex-for-cisco-broadworks"]
 source: "help.webex.com"
 ---
 
@@ -27,23 +27,23 @@ You can't move a space into a team if:
 - [Android](#id%5F135585)
 - [Web](#Cisco%5FTask.dita%5Faa81bdc9-a291-4eff-bb71-795aad288a10)
 
-| 1 | In the space, click Space Information ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg) and then choose Add this space to a team. |
-| - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2 | Select a team and click Add.                                                                                                                                                                             |
+| 1 | In the space, click Space Information ![Settings button represented by a cog icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg) and then choose Add this space to a team. |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select a team and click Add.                                                                                                                                                                                                                      |
 
-| 1 | In the space, click Space information ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg) and then choose Add this space to a team. |
-| - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2 | Select a team and click Add to the team. You can also right-click on a space in your spaces list and select Add this space to a team.                                                                    |
+| 1 | In the space, click Space information ![Settings button represented by a cog icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg) and then choose Add this space to a team. |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select a team and click Add to the team. You can also right-click on a space in your spaces list and select Add this space to a team.                                                                                                             |
 
-| 1 | In the space, go to the activity menu ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/461001-462000/461853.jpg), tap Info, and then tap Add this space to a team. |
-| - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2 | Select a team and then tap OK.                                                                                                                                                                                   |
+| 1 | In the space, go to the activity menu ![More options button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/460001-470000/461001-462000/461853.jpg), tap Info, and then tap Add this space to a team. |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select a team and then tap OK.                                                                                                                                                                                                      |
 
-| 1 | In the space, go to the activity menu ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/453001-454000/453339.jpg), tap Info, and then tap Add this space to a team. |
-| - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2 | Select a team and then tap ADD.                                                                                                                                                                                  |
+| 1 | In the space, go to the activity menu ![More Options button](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/450001-460000/453001-454000/453339.jpg), tap Info, and then tap Add this space to a team. |
+| - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2 | Select a team and then tap ADD.                                                                                                                                                                                                     |
 
-| 1 | In the space, click ![](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg) and then choose Add space to team. |
-| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2 | If your space is moderated, select Remove moderators and repeat Step 1.                                                                                                         |
-| 3 | Select a team and click Done.                                                                                                                                                   |
+| 1 | In the space, click ![Settings button represented by a cog icon](https://cisco-api.ingeniuxondemand.com/DITA/content/en/us/td/i/400001-500000/420001-430000/427001-428000/427579.jpg) and then choose Add space to team. |
+| - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2 | If your space is moderated, select Remove moderators and repeat Step 1.                                                                                                                                                  |
+| 3 | Select a team and click Done.                                                                                                                                                                                            |
