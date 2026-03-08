@@ -83,20 +83,18 @@ def _extract_text(result: Any) -> str:
 # Message trimming
 # ---------------------------------------------------------------------------
 
-# ~15K tokens budget for conversation history (leaves headroom for output +
-# tool schemas within a 30K TPM limit).  1 token ≈ 4 characters.
-_MAX_HISTORY_CHARS = 60_000
-
-
 def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
-    """Drop old turns so the history stays within the token budget.
+    """Prune history so only the current turn retains full tool context.
 
-    Messages are grouped by conversation turn (each turn starts at a
-    HumanMessage).  We always keep the current (most recent) turn and add
-    older turns from newest to oldest until the character budget is exhausted.
-    Dropping at turn boundaries keeps every ToolMessage paired with its
-    preceding AIMessage, which the OpenAI API requires.
+    For completed prior turns we keep only the HumanMessage and the final
+    AIMessage (the answer the user saw).  All intermediate tool calls and
+    tool results are dropped — they're already summarised in the AI answer.
+
+    The current (in-progress) turn is kept intact so the agent can continue
+    its reasoning loop with its own tool results still visible.
     """
+    from langchain_core.messages import AIMessage
+
     # Split into turns — each turn begins at a HumanMessage.
     turns: list[list[AnyMessage]] = []
     current: list[AnyMessage] = []
@@ -110,20 +108,25 @@ def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
         turns.append(current)
 
     if len(turns) <= 1:
-        return messages  # Nothing to trim.
+        return messages  # Only one turn — nothing to prune.
 
-    # Always keep the latest (current) turn.
-    result = [turns[-1]]
-    used = sum(len(str(m.content)) for m in turns[-1])
+    # For each completed prior turn keep only: HumanMessage + last AIMessage
+    # (the final answer, which has no tool_calls).
+    pruned: list[AnyMessage] = []
+    for turn in turns[:-1]:
+        human_msgs = [m for m in turn if isinstance(m, HumanMessage)]
+        # The final AI answer is the last AIMessage that has no tool_calls.
+        ai_answers = [
+            m for m in turn
+            if isinstance(m, AIMessage) and not getattr(m, "tool_calls", None)
+        ]
+        pruned.extend(human_msgs)
+        if ai_answers:
+            pruned.append(ai_answers[-1])
 
-    for turn in reversed(turns[:-1]):
-        cost = sum(len(str(m.content)) for m in turn)
-        if used + cost > _MAX_HISTORY_CHARS:
-            break
-        result.insert(0, turn)
-        used += cost
-
-    return [msg for turn in result for msg in turn]
+    # Current turn stays untouched.
+    pruned.extend(turns[-1])
+    return pruned
 
 
 # ---------------------------------------------------------------------------
