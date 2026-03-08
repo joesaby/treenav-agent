@@ -209,6 +209,7 @@ def get_llm(model: str | None = None) -> ChatOpenAI:
         model=model or DEFAULT_MODEL,
         api_key=os.environ.get("OPENAI_KEY"),
         max_tokens=4096,
+        model_kwargs={"parallel_tool_calls": False},
     )
 
 
