@@ -1,14 +1,21 @@
 """
 DocNav LangGraph ReAct Agent
 
-The LLM autonomously navigates the document tree by deciding which MCP tools
-to call and in what order, rather than following a hardcoded pipeline.
+Three-phase pipeline:
+  plan  →  agent ↔ tools (ReAct loop)  →  critique  →  agent ↔ tools (if gaps found)  →  END
+
+- plan:     Reformulates the raw question into a structured search strategy so the
+            ReAct loop starts with a clear decomposition rather than guessing.
+- agent:    Calls the LLM with tools bound; the LLM decides which MCP tools to call.
+- tools:    Executes the tool calls requested by the LLM.
+- critique: Reviews the proposed answer for completeness and either approves it or
+            triggers another tool round to fill gaps.  Runs once per user turn.
 """
 
 import os
-from typing import Annotated, Any, TypedDict  # Any used in _extract_text
+from typing import Annotated, Any, TypedDict
 
-from langchain_core.messages import AnyMessage, HumanMessage, SystemMessage, ToolMessage
+from langchain_core.messages import AIMessage, AnyMessage, HumanMessage, SystemMessage, ToolMessage
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
@@ -43,6 +50,28 @@ When documents contain URLs or hyperlinks, reproduce them verbatim — never par
 
 Format your response in Markdown — use headers, bullet points, bold, and fenced code blocks where appropriate."""
 
+PLAN_PROMPT = """You are a search strategist for a document navigation agent.
+
+Given the user's question, produce a brief structured search plan that the agent will follow.
+Your plan should:
+1. Identify the distinct sub-topics in the question (e.g. "SBC types", "port reference", "local gateway overview")
+2. Suggest the best tool sequence for each sub-topic (search_documents keyword, then get_node_content for specifics)
+3. Flag any terms that likely need exact document IDs (e.g. version numbers, vendor names, port numbers)
+
+Output only the plan — a short bulleted list. Do NOT answer the question itself. Do NOT call any tools."""
+
+CRITIQUE_PROMPT = """You are a completeness reviewer for a document navigation agent.
+
+The assistant above has produced a proposed answer. Review it against the original user question.
+
+Check each part of the question:
+- Is every sub-topic addressed with specific detail (not vague summaries)?
+- Are all URLs, version numbers, port numbers, and vendor names reproduced verbatim from the docs?
+- Are there "→ References" or document links in the tool results that weren't followed but are relevant?
+
+If the answer is complete and accurate: output it as the final response (you may improve formatting).
+If something is missing: call the appropriate tools to fetch the missing information, then write the complete answer."""
+
 # ---------------------------------------------------------------------------
 # State
 # ---------------------------------------------------------------------------
@@ -50,6 +79,7 @@ Format your response in Markdown — use headers, bullet points, bold, and fence
 
 class DocNavState(TypedDict):
     messages: Annotated[list[AnyMessage], add_messages]
+    critique_done: bool   # True after critique has run once for this turn
 
 
 # ---------------------------------------------------------------------------
@@ -58,11 +88,7 @@ class DocNavState(TypedDict):
 
 
 def _extract_text(result: Any) -> str:
-    """Normalise MCP tool results to plain text.
-
-    langchain-mcp-adapters may return str, list[dict], or a LangChain message
-    object. Normalise all to a plain string so lc_<uuid> IDs never appear.
-    """
+    """Normalise MCP tool results to plain text."""
     if isinstance(result, str):
         return result
     if isinstance(result, list):
@@ -80,10 +106,6 @@ def _extract_text(result: Any) -> str:
     return str(result)
 
 
-# ---------------------------------------------------------------------------
-# Message trimming
-# ---------------------------------------------------------------------------
-
 def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
     """Prune history so only the current turn retains full tool context.
 
@@ -94,8 +116,6 @@ def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
     The current (in-progress) turn is kept intact so the agent can continue
     its reasoning loop with its own tool results still visible.
     """
-    from langchain_core.messages import AIMessage
-
     # Split into turns — each turn begins at a HumanMessage.
     turns: list[list[AnyMessage]] = []
     current: list[AnyMessage] = []
@@ -116,7 +136,6 @@ def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
     pruned: list[AnyMessage] = []
     for turn in turns[:-1]:
         human_msgs = [m for m in turn if isinstance(m, HumanMessage)]
-        # The final AI answer is the last AIMessage that has no tool_calls.
         ai_answers = [
             m for m in turn
             if isinstance(m, AIMessage) and not getattr(m, "tool_calls", None)
@@ -159,6 +178,25 @@ def get_llm(model: str | None = None) -> ChatOpenAI:
 # ---------------------------------------------------------------------------
 
 
+async def plan(state: DocNavState) -> DocNavState:
+    """Reformulate the user's question into a structured search plan.
+
+    Runs once at the start of each user turn.  The plan is injected as an
+    AIMessage so the agent node sees it as prior context and follows it.
+    """
+    messages = _trim_messages(list(state["messages"]))
+    llm = get_llm()  # No tools — plan node only reasons, never calls tools.
+
+    plan_messages = [
+        SystemMessage(content=PLAN_PROMPT),
+        *[m for m in messages if isinstance(m, HumanMessage)][-1:],  # last question only
+    ]
+    response = await llm.ainvoke(plan_messages)
+    # Inject plan as an AI message so the agent sees it as prior reasoning.
+    plan_msg = AIMessage(content=f"[Search plan]\n{response.content}")
+    return {"messages": [plan_msg], "critique_done": False}
+
+
 async def agent(state: DocNavState) -> DocNavState:
     """Call the LLM with MCP tools bound. The LLM decides what to call."""
     client = get_mcp_client()
@@ -166,7 +204,6 @@ async def agent(state: DocNavState) -> DocNavState:
     llm = get_llm().bind_tools(mcp_tools)
 
     messages = _trim_messages(list(state["messages"]))
-    # Prepend system prompt if this is the start of the conversation
     if not isinstance(messages[0], SystemMessage):
         messages = [SystemMessage(content=SYSTEM_PROMPT)] + messages
 
@@ -195,13 +232,51 @@ async def tools(state: DocNavState) -> DocNavState:
     return {"messages": results}
 
 
+async def critique(state: DocNavState) -> DocNavState:
+    """Review the proposed answer for completeness; fetch missing info if needed.
+
+    Runs once per user turn (critique_done prevents re-entry).  The critique
+    LLM has tools bound so it can do additional tool calls when it finds gaps.
+    """
+    client = get_mcp_client()
+    mcp_tools = await client.get_tools()
+    llm = get_llm().bind_tools(mcp_tools)
+
+    messages = _trim_messages(list(state["messages"]))
+    if not isinstance(messages[0], SystemMessage):
+        messages = [SystemMessage(content=SYSTEM_PROMPT)] + messages
+
+    # Append critique instruction so the LLM knows its role in this pass.
+    messages = messages + [SystemMessage(content=CRITIQUE_PROMPT)]
+
+    response = await llm.ainvoke(messages)
+    # Mark critique as done so we don't loop back here after any extra tool calls.
+    return {"messages": [response], "critique_done": True}
+
+
 # ---------------------------------------------------------------------------
 # Routing
 # ---------------------------------------------------------------------------
 
 
-def should_continue(state: DocNavState) -> str:
-    """Continue to tools if the LLM made tool calls, otherwise finish."""
+def after_plan(state: DocNavState) -> str:
+    return "agent"
+
+
+def after_agent(state: DocNavState) -> str:
+    """Route to tools, critique, or END depending on agent output."""
+    last_msg = state["messages"][-1]
+    if getattr(last_msg, "tool_calls", None):
+        return "tools"
+    # No tool calls — agent has a proposed answer.
+    # Send to critique unless critique already ran this turn.
+    if not state.get("critique_done", False):
+        return "critique"
+    return END
+
+
+def after_critique(state: DocNavState) -> str:
+    """Route to tools if critique wants more info, otherwise finish."""
     last_msg = state["messages"][-1]
     if getattr(last_msg, "tool_calls", None):
         return "tools"
@@ -214,15 +289,19 @@ def should_continue(state: DocNavState) -> str:
 
 
 def build_graph():
-    """Build and compile the DocNav ReAct graph."""
+    """Build and compile the DocNav plan→ReAct→critique graph."""
     g = StateGraph(DocNavState)
 
+    g.add_node("plan", plan)
     g.add_node("agent", agent)
     g.add_node("tools", tools)
+    g.add_node("critique", critique)
 
-    g.set_entry_point("agent")
-    g.add_conditional_edges("agent", should_continue, {"tools": "tools", END: END})
+    g.set_entry_point("plan")
+    g.add_conditional_edges("plan", after_plan, {"agent": "agent"})
+    g.add_conditional_edges("agent", after_agent, {"tools": "tools", "critique": "critique", END: END})
     g.add_edge("tools", "agent")
+    g.add_conditional_edges("critique", after_critique, {"tools": "tools", END: END})
 
     return g.compile()
 
