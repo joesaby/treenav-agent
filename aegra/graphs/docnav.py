@@ -6,7 +6,7 @@ to call and in what order, rather than following a hardcoded pipeline.
 """
 
 import os
-from typing import Annotated, Any, TypedDict
+from typing import Annotated, Any, TypedDict  # Any used in _extract_text
 
 from langchain_core.messages import AnyMessage, SystemMessage, ToolMessage
 from langchain_mcp_adapters.client import MultiServerMCPClient
@@ -49,7 +49,6 @@ Format your response in Markdown — use headers, bullet points, bold, and fence
 
 class DocNavState(TypedDict):
     messages: Annotated[list[AnyMessage], add_messages]
-    mcp_tools: list[Any]  # fetched once at entry
 
 
 # ---------------------------------------------------------------------------
@@ -109,17 +108,10 @@ def get_llm(model: str | None = None) -> ChatOpenAI:
 # ---------------------------------------------------------------------------
 
 
-async def init(state: DocNavState) -> dict[str, Any]:
-    if state.get("mcp_tools"):
-        return {}  # already initialized
-    client = get_mcp_client()
-    tools = await client.get_tools()
-    return {"mcp_tools": tools}
-
-
 async def agent(state: DocNavState) -> DocNavState:
     """Call the LLM with MCP tools bound. The LLM decides what to call."""
-    mcp_tools = state.get("mcp_tools", [])
+    client = get_mcp_client()
+    mcp_tools = await client.get_tools()
     llm = get_llm().bind_tools(mcp_tools)
 
     messages = list(state["messages"])
@@ -133,7 +125,8 @@ async def agent(state: DocNavState) -> DocNavState:
 
 async def tools(state: DocNavState) -> DocNavState:
     """Execute tool calls made by the LLM in the last AI message."""
-    mcp_tools = state.get("mcp_tools", [])
+    client = get_mcp_client()
+    mcp_tools = await client.get_tools()
     tools_by_name = {t.name: t for t in mcp_tools}
 
     last_msg = state["messages"][-1]
@@ -173,12 +166,10 @@ def build_graph():
     """Build and compile the DocNav ReAct graph."""
     g = StateGraph(DocNavState)
 
-    g.add_node("init", init)
     g.add_node("agent", agent)
     g.add_node("tools", tools)
 
-    g.set_entry_point("init")
-    g.add_edge("init", "agent")
+    g.set_entry_point("agent")
     g.add_conditional_edges("agent", should_continue, {"tools": "tools", END: END})
     g.add_edge("tools", "agent")
 
