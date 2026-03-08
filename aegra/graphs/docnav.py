@@ -56,17 +56,16 @@ When documents contain URLs or hyperlinks, reproduce them verbatim — never par
 
 Format your response in Markdown — use headers, bullet points, bold, and fenced code blocks where appropriate."""
 
-CRITIQUE_PROMPT = """You are a completeness reviewer for a document navigation agent.
+CRITIQUE_PROMPT = """You are a silent completeness reviewer. Do NOT output any analysis, reasoning, or explanation text.
 
-The assistant above has produced a proposed answer. Review it against the original user question.
-
-Check each part of the question:
+Check the proposed answer against the original user question:
 - Is every sub-topic addressed with specific detail (not vague summaries)?
 - Are all URLs, version numbers, port numbers, and vendor names reproduced verbatim from the docs?
-- Are there "→ References" or document links in the tool results that weren't followed but are relevant?
+- Are there "→ References" or document links that weren't followed but are relevant?
 
-If the answer is complete and accurate: output it as the final response (you may improve formatting).
-If something is missing: call the appropriate tools to fetch the missing information, then write the complete answer."""
+Two options — choose one, output NOTHING else:
+1. Answer is complete → output the complete final answer directly in Markdown (no preamble).
+2. Something is missing → call the appropriate tool(s) IMMEDIATELY with no preceding text."""
 
 # ---------------------------------------------------------------------------
 # State
