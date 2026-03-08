@@ -8,7 +8,7 @@ to call and in what order, rather than following a hardcoded pipeline.
 import os
 from typing import Annotated, Any, TypedDict  # Any used in _extract_text
 
-from langchain_core.messages import AnyMessage, SystemMessage, ToolMessage
+from langchain_core.messages import AnyMessage, HumanMessage, SystemMessage, ToolMessage
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph
@@ -80,6 +80,53 @@ def _extract_text(result: Any) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Message trimming
+# ---------------------------------------------------------------------------
+
+# ~15K tokens budget for conversation history (leaves headroom for output +
+# tool schemas within a 30K TPM limit).  1 token ≈ 4 characters.
+_MAX_HISTORY_CHARS = 60_000
+
+
+def _trim_messages(messages: list[AnyMessage]) -> list[AnyMessage]:
+    """Drop old turns so the history stays within the token budget.
+
+    Messages are grouped by conversation turn (each turn starts at a
+    HumanMessage).  We always keep the current (most recent) turn and add
+    older turns from newest to oldest until the character budget is exhausted.
+    Dropping at turn boundaries keeps every ToolMessage paired with its
+    preceding AIMessage, which the OpenAI API requires.
+    """
+    # Split into turns — each turn begins at a HumanMessage.
+    turns: list[list[AnyMessage]] = []
+    current: list[AnyMessage] = []
+    for msg in messages:
+        if isinstance(msg, HumanMessage) and current:
+            turns.append(current)
+            current = [msg]
+        else:
+            current.append(msg)
+    if current:
+        turns.append(current)
+
+    if len(turns) <= 1:
+        return messages  # Nothing to trim.
+
+    # Always keep the latest (current) turn.
+    result = [turns[-1]]
+    used = sum(len(str(m.content)) for m in turns[-1])
+
+    for turn in reversed(turns[:-1]):
+        cost = sum(len(str(m.content)) for m in turn)
+        if used + cost > _MAX_HISTORY_CHARS:
+            break
+        result.insert(0, turn)
+        used += cost
+
+    return [msg for turn in result for msg in turn]
+
+
+# ---------------------------------------------------------------------------
 # MCP & LLM factories
 # ---------------------------------------------------------------------------
 
@@ -114,7 +161,7 @@ async def agent(state: DocNavState) -> DocNavState:
     mcp_tools = await client.get_tools()
     llm = get_llm().bind_tools(mcp_tools)
 
-    messages = list(state["messages"])
+    messages = _trim_messages(list(state["messages"]))
     # Prepend system prompt if this is the start of the conversation
     if not isinstance(messages[0], SystemMessage):
         messages = [SystemMessage(content=SYSTEM_PROMPT)] + messages
