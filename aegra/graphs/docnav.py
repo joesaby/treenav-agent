@@ -28,6 +28,10 @@ from langgraph.graph.message import add_messages
 DEFAULT_MODEL = os.environ.get("DOCNAV_MODEL", "gpt-4o")
 TREENAV_MCP_URL = os.environ.get("TREENAV_MCP_URL", "http://treenav-service:3100")
 
+# Cap each tool result so accumulated context never exceeds 30K TPM.
+# 8000 chars ≈ 2000 tokens; 5 calls = ~10K tokens max for tool results.
+MAX_TOOL_RESULT_CHARS = int(os.environ.get("MAX_TOOL_RESULT_CHARS", "8000"))
+
 SYSTEM_PROMPT = """You are DocNav, an intelligent document navigation assistant.
 You help users find information in documentation by navigating a live document tree.
 
@@ -247,6 +251,8 @@ async def tools(state: DocNavState) -> DocNavState:
         else:
             raw = await tool.ainvoke(tc["args"])
             content = _extract_text(raw)
+            if len(content) > MAX_TOOL_RESULT_CHARS:
+                content = content[:MAX_TOOL_RESULT_CHARS] + "\n\n...[result truncated — use get_node_content with specific node IDs for more detail]"
         results.append(ToolMessage(content=content, tool_call_id=tc["id"]))
 
     return {"messages": results}
