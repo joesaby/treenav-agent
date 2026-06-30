@@ -3,7 +3,7 @@
 #
 # Usage: ./scripts/sync-docs.sh [--dry-run]
 #
-# Source: ~/git/webex-crawler/webex-docs/
+# Source: webex-crawler/webex-docs/ (run `cd webex-crawler && bun run crawl` first)
 # Dest:   treenav-service/docs/
 
 set -euo pipefail
@@ -11,7 +11,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-SRC="${WEBEX_DOCS_PATH:-$HOME/git/webex-crawler/webex-docs}"
+SRC="${WEBEX_DOCS_PATH:-$REPO_ROOT/webex-crawler/webex-docs}"
 DEST="$REPO_ROOT/treenav-service/docs"
 
 if [[ ! -d "$SRC" ]]; then
