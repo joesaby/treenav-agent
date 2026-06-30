@@ -3,7 +3,7 @@ import glob
 import re
 from pathlib import Path
 
-root = Path(__file__).resolve().parent
+root = Path(__file__).resolve().parent.parent
 doc_dir = root / "webex-docs"
 files = glob.glob(f"{doc_dir}/**/*.md", recursive=True)
 doc_dir = str(doc_dir)
@@ -54,7 +54,7 @@ for file_path in files:
 obsolete_files.sort()
 no_content_files.sort()
 
-output_file = root / "dry_run_results.txt"
+output_file = Path(__file__).resolve().parent / "dry_run_results.txt"
 with open(output_file, "w", encoding="utf-8") as f:
     f.write("=== OBSOLETE FILES (Moved, Retired, etc.) ===\n")
     for path in obsolete_files:

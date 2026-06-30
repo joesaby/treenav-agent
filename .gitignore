@@ -39,3 +39,6 @@ htmlcov/
 
 # Git worktrees
 .worktrees/
+
+# Crawled Webex docs (local only — run ./scripts/crawl-docs.sh)
+webex-docs/

@@ -6,7 +6,7 @@ from ollama import Client
 
 client = Client(host='http://127.0.0.1:11434')
 
-root = Path(__file__).resolve().parent
+root = Path(__file__).resolve().parent.parent
 doc_dir = root / "webex-docs"
 files = glob.glob(f"{doc_dir}/**/*.md", recursive=True)
 doc_dir = str(doc_dir)
@@ -19,7 +19,7 @@ failed_files = []
 # Evaluate the 195 candidate files flagged by the old script
 candidate_files = []
 try:
-    with open(root / "dry_run_results.txt", "r") as f:
+    with open(Path(__file__).resolve().parent / "dry_run_results.txt", "r") as f:
         for line in f:
             if line.startswith("- "):
                 rel_path = line[2:].strip()
@@ -85,7 +85,7 @@ obsolete_files.sort()
 no_content_files.sort()
 valid_files.sort()
 
-output_file = root / "dry_run_results_llm.txt"
+output_file = Path(__file__).resolve().parent / "dry_run_results_llm.txt"
 with open(output_file, "w", encoding="utf-8") as f:
     f.write("=== OBSOLETE FILES (Moved, Retired, etc.) ===\n")
     for path in obsolete_files:

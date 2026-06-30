@@ -28,7 +28,7 @@ export interface CrawlOptions {
 }
 
 export const DEFAULT_CRAWL_OPTIONS: CrawlOptions = {
-  outputDir: "./webex-docs",
+  outputDir: "../webex-docs",
   concurrency: 5,
   delayMs: 200,
   locale: "en-us",
